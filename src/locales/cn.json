@@ -163,5 +163,8 @@
     "COUNTRY": "国家",
     "SAVE": "保存",
     "PROFILE_SAVED_SUCCESSFULLY": "个人信息保存成功"
+  },
+  "test": {
+    "TEST": "这是一个测试"
   }
 }

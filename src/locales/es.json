@@ -163,5 +163,8 @@
     "COUNTRY": "País",
     "SAVE": "Guardar",
     "PROFILE_SAVED_SUCCESSFULLY": "Perfil guardado exitosamente"
+  },
+  "test": {
+    "TEST": "Esto es una prueba"
   }
 }
