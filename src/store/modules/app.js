@@ -19,7 +19,7 @@ const mutations = {
 }
 
 const state = {
-  appTitle: 'My Awesome App',
+  appTitle: 'Destiny 2 Teamfinder',
   appVersion: packageJson.version
 }
 
