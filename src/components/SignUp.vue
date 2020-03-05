@@ -96,7 +96,7 @@
                 :data-vv-as="$t('signup.STEAMID64')"
                 :error="errors.has('steamid64')"
                 :error-messages="errors.collect('steamid64')"
-                v-validate.disable="'required'"
+                v-validate.disable="'required|min:17'"
                 autocomplete="off"
               ></v-text-field>
             </v-flex>
