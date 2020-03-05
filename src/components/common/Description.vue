@@ -11,8 +11,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.height {
-  height: 1000vh;
-}
-</style>
+<style scoped></style>
