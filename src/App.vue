@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <Toolbar />
-    <v-content>
+    <v-content class="mx-0 my-4 pa-0">
       <loading />
       <transition name="fade" mode="out-in">
         <router-view />
