@@ -129,7 +129,8 @@ export default {
       email: '',
       password: '',
       confirmPassword: '',
-      contry: ''
+      contry: '',
+      steamid64: ''
     }
   },
   methods: {
@@ -142,7 +143,8 @@ export default {
           lastName: this.lastname,
           email: this.email,
           password: this.password,
-          contry: this.contry
+          contry: this.contry,
+          steamid64: this.steamid64
         })
       }
     }
