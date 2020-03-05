@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-layout row wrap>
-      <Heading :title="$t('login.TITLE')" />
+      <Title :title="$t('login.TITLE')" />
       <Description :description="$t('login.DESCRIPTION')" />
       <v-flex xs12 sm6 offset-sm3>
         <form @submit.prevent="submit">
@@ -44,8 +44,8 @@
                 small
                 flat
                 class="btnForgotPassword"
-                >{{ $t('login.FORGOT_PASSWORD') }}</v-btn
-              >
+                >{{ $t('login.FORGOT_PASSWORD') }}
+              </v-btn>
             </v-flex>
           </v-layout>
         </form>

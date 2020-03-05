@@ -1,9 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
-      <Description :description="$t('about.DESCRIPTION')" />
-    </v-layout>
-    <ProjectDescription />
+    <D2Profile :test="$t('myProfile.TITLE')" />
   </v-container>
 </template>
 
