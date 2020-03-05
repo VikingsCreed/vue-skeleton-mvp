@@ -28,6 +28,7 @@ const actions = {
     return new Promise((resolve, reject) => {
       const data = {
         name: payload.name,
+        lastname: payload.lastname,
         email: payload.email,
         role: payload.role,
         phone: payload.phone,
