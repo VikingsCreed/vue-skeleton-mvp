@@ -143,6 +143,8 @@
     "LASTNAME": "Lastname",
     "EMAIL": "E-mail",
     "PASSWORD": "Password",
+    "COUNTRY": "Country",
+    "STEAMID64": "SteamID64",
     "CONFIRM_PASSWORD": "Confirm Password",
     "SIGN_ME_UP": "Sign me up"
   },

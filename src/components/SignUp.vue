@@ -77,16 +77,27 @@
             </v-flex>
             <v-flex>
               <v-text-field
-                id="contry"
-                name="contry"
-                type="contry"
-                :label="$t('singup.CONTRY')"
-                v-model="contry"
-                :data-vv-as="$t('signup.CONTRY')"
-                :error="errors.has('contry')"
-                :error-messages="errors.collect('contry')"
-                v-validate.disable="'required|min:5'"
-                ref="contry"
+                id="country"
+                lastname="country"
+                :label="$t('signup.COUNTRY')"
+                v-model="country"
+                :data-vv-as="$t('signup.COUNTRY')"
+                :error="errors.has('country')"
+                :error-messages="errors.collect('country')"
+                v-validate.disable="'required'"
+                autocomplete="off"
+              ></v-text-field>
+            </v-flex>
+            <v-flex>
+              <v-text-field
+                id="steamid64"
+                lastname="steamid64"
+                :label="$t('signup.STEAMID64')"
+                v-model="steamid64"
+                :data-vv-as="$t('signup.STEAMID64')"
+                :error="errors.has('steamid64')"
+                :error-messages="errors.collect('steamid64')"
+                v-validate.disable="'required'"
                 autocomplete="off"
               ></v-text-field>
             </v-flex>
