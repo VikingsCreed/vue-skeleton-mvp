@@ -18,6 +18,7 @@
                 autocomplete="off"
               ></v-text-field>
             </v-flex>
+
             <v-flex>
               <v-text-field
                 id="email"
@@ -61,6 +62,21 @@
                 autocomplete="off"
               ></v-text-field>
             </v-flex>
+            <v-flex>
+              <v-text-field
+                id="contry"
+                name="contry"
+                type="contry"
+                :label="$t('singup.CONTRY')"
+                v-model="contry"
+                :data-vv-as="$t('signup.CONTRY')"
+                :error="errors.has('contry')"
+                :error-messages="errors.collect('contry')"
+                v-validate.disable="'required|min:5'"
+                ref="contry"
+                autocomplete="off"
+              ></v-text-field>
+            </v-flex>
             <v-flex text-xs-center mt-5>
               <SubmitButton :text="$t('signup.SIGN_ME_UP')" />
             </v-flex>
@@ -88,7 +104,8 @@ export default {
       name: '',
       email: '',
       password: '',
-      confirmPassword: ''
+      confirmPassword: '',
+      contry: ''
     }
   },
   methods: {
@@ -99,7 +116,8 @@ export default {
         await this.userSignUp({
           name: this.name,
           email: this.email,
-          password: this.password
+          password: this.password,
+          contry: this.contry
         })
       }
     }
