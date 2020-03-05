@@ -82,6 +82,7 @@
     "TITLE": "Users",
     "headers": {
       "NAME": "Name",
+      "LASTNAME": "Lastname",
       "EMAIL": "E-mail",
       "ROLE": "Role",
       "VERIFIED": "Verified",
@@ -139,6 +140,7 @@
   "signup": {
     "TITLE": "Signup",
     "NAME": "Name",
+    "LASTNAME": "Lastname",
     "EMAIL": "E-mail",
     "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Confirm Password",
@@ -156,6 +158,7 @@
     "CONFIRM_NEW_PASSWORD": "Confirm New Password",
     "PASSWORD_CHANGED": "Password changed successfully",
     "NAME": "Name",
+    "LASTNAME": "Lastname",
     "EMAIL": "E-mail",
     "PHONE": "Phone",
     "CITY": "City",

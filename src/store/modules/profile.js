@@ -75,6 +75,7 @@ const mutations = {
   [types.FILL_PROFILE](state, data) {
     state.profile.verified = data.verified
     state.profile.name = data.name
+    state.profile.lastname = data.lastname
     state.profile.email = data.email
     state.profile.phone = data.phone
     state.profile.city = data.city
@@ -86,6 +87,9 @@ const mutations = {
     switch (data.key) {
       case 'name':
         state.profile.name = data.value
+        break
+      case 'lastname':
+        state.profile.lastname = data.value
         break
       case 'phone':
         state.profile.phone = data.value
@@ -112,6 +116,7 @@ const state = {
   profile: {
     verified: false,
     name: '',
+    lastname: '',
     email: '',
     phone: '',
     city: '',
