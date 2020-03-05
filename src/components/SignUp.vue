@@ -21,6 +21,19 @@
 
             <v-flex>
               <v-text-field
+                id="lastName"
+                lastName="lastName"
+                :label="$t('signup.LASTNAME')"
+                v-model="lastName"
+                :data-vv-as="$t('signup.LASTNAME')"
+                :error="errors.has('lastName')"
+                :error-messages="errors.collect('lastName')"
+                v-validate.disable="'required'"
+                autocomplete="off"
+              ></v-text-field>
+            </v-flex>
+            <v-flex>
+              <v-text-field
                 id="email"
                 name="email"
                 type="email"
