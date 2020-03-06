@@ -1,6 +1,7 @@
 <template>
-  <v-container fluid>
-    <D2Profile :test="$t('myProfile.TITLE')" />
+  <v-container>
+    <Title :title="$t('myProfile.TITLE')" class="mx-auto" />
+    <D2Profile />
   </v-container>
 </template>
 
