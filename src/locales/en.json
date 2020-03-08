@@ -94,6 +94,7 @@
     "CONFIRM_PASSWORD": "Confirm Password"
   },
   "landing": {
+    "HEAD": "TeamFinder",
     "TITLE": "Landing",
     "DESCRIPTION": "This page is publicly available.",
     "BUY_ME_A_COFFEE": "Buy me a coffee",
