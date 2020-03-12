@@ -1,28 +1,35 @@
-<template lang="pug">
-  div#app
-    div(
-      v-for="user in users"
-      :key="users.id"
-    )
-      h1 {{ user.name }}
-      p {{ user.email }}
-    button(@click="fetchUsers") Click me!
+<template>
+  <div class="hello">
+    <h1>JOKE</h1>
+    <button @click="showJoke()">Show Joke Dude</button>
+    <div>
+      <p>{{ joke }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'app',
+  name: 'Test',
+  props: {
+    msg: String
+  },
   data() {
     return {
-      users: []
+      joke: ''
     }
   },
   methods: {
-    fetchUsers() {
-      const baseURI = 'https://jsonplaceholder.typicode.com/users'
-      this.$http.get(baseURI).then(result => {
-        this.users = result.data
-      })
+    async showJoke() {
+      const config = {
+        headers: {
+          // eslint-disable-next-line prettier/prettier
+          'Accept': 'application/json'
+        }
+      }
+      const joke = await axios.get('https://icanhazdadjoke.com', config)
+      this.joke = joke.data.joke
     }
   }
 }

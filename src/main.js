@@ -8,9 +8,8 @@ import i18n from '@/plugins/i18n'
 import App from '@/App.vue'
 import router from '@/router'
 import { store } from '@/store'
-import axios from 'axios'
 
-Vue.prototype.$http = axios
+window.axios = require('axios')
 Vue.config.productionTip = false
 
 const app = new Vue({
