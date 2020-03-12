@@ -28,114 +28,104 @@
         "DO_YOU_REALLY_WANT_TO_DELETE_THIS_ITEM": "Möchten Sie diesen Artikel wirklich löschen?",
         "CLOSE": "Schließen",
         "SAVED_SUCCESSFULLY": "Erfolgreich gespeichert",
-        "DELETED_SUCCESSFULLY": "Deleted successfully",
-        "CREATED": "Created At",
-        "UPDATED": "Updated At",
-        "GO_BACK": "Go back"
+        "DELETED_SUCCESSFULLY": "Erfolgreich gelöscht",
+        "CREATED": "Hergestellt in",
+        "UPDATED": "Aktualisiert am",
+        "GO_BACK": "Geh zurück"
     },
     "loading": {
-        "PLEASE_WAIT": "Please wait..."
+        "PLEASE_WAIT": "Warten Sie mal..."
     },
-    "footer": {
-        "MADE_WITH": "Made with",
-        "BY": "by"
-    },
+    
     "menuItems": {
-        "HOME": "Home",
-        "ABOUT": "About",
-        "MY_PROFILE": "My Profile",
-        "SIGNUP": "Sign Up",
-        "LOGIN": "Login",
-        "LOGOUT": "Logout"
+        "HOME": "Zuhause",
+        "ABOUT": "Über",
+        "MY_PROFILE": "Mein Profil",
+        "SIGNUP": "Anmelden",
+        "LOGIN": "Einloggen",
+        "LOGOUT": "Ausloggen"
     },
     "adminItems": {
         "ADMIN": "Admin",
-        "CITIES": "Cities",
-        "USERS": "Users"
+        "CITIES": "Städte",
+        "USERS": "Benutzer"
     },
     "roles": {
         "ADMIN": "Administrator",
-        "USER": "User"
+        "USER": "Benutzer"
     },
     "dataTable": {
-        "NEW_ITEM": "New Item",
-        "EDIT_ITEM": "Edit Item",
+        "NEW_ITEM": "Neuer Gegenstand",
+        "EDIT_ITEM": "Element bearbeiten",
         "CANCEL": "Cancel",
-        "SAVE": "Save",
-        "EDIT": "Edit",
-        "DELETE": "Delete",
-        "RESET": "Reset",
-        "ACTIONS": "Actions",
-        "ROWS_PER_PAGE": "Rows per page",
-        "NO_DATA": "No data",
-        "NO_RESULTS": "No results",
-        "OF": "of",
-        "SEARCH": "Search"
+        "SAVE": "Speichern",
+        "EDIT": "Bearbeiten",
+        "DELETE": "Löschen",
+        "RESET": "Zurücksetzen",
+        "ACTIONS": "Aktionen",
+        "ROWS_PER_PAGE": "Zeilen pro Seite",
+        "NO_DATA": "Keine Daten",
+        "NO_RESULTS": "Keine Ergebnisse",
+        "OF": "von",
+        "SEARCH": "Suche"
     },
     "cities": {
-        "TITLE": "Cities",
+        "TITLE": "Städte",
         "headers": {
             "NAME": "Name"
         }
     },
     "users": {
-        "TITLE": "Users",
+        "TITLE": "Benutzer",
         "headers": {
             "NAME": "Name",
-            "LASTNAME": "Lastname",
+            "LASTNAME": "Familienname",
             "EMAIL": "E-mail",
-            "ROLE": "Role",
-            "VERIFIED": "Verified",
-            "CITY": "City",
-            "COUNTRY": "Country",
-            "PHONE": "Phone"
+            "ROLE": "Rolle",
+            "VERIFIED": "Verifiziert",
+            "CITY": "Stadt",
+            "COUNTRY": "Land",
+            "PHONE": "Telefon"
         },
-        "PASSWORD": "Password",
-        "CONFIRM_PASSWORD": "Confirm Password"
+        "PASSWORD": "Passwort",
+        "CONFIRM_PASSWORD": "Kennwort bestätigen"
     },
     "landing": {
-        "TITLE": "Landing",
-        "DESCRIPTION": "This page is publicly available.",
-        "BUY_ME_A_COFFEE": "Buy me a coffee",
-        "BUY_ME_A_COFFEE_DESCRIPTION": "I'm doing my best to provide you a good experience when using my apps, so if you like what I'm doing and wish to say \"thanks!\", please click the button and buy me a coffee.",
-        "DESCRIPTION_VUE": "This project is created to help other web developers create a basic VueJS app in an easy way.",
-        "DESCRIPTION_API": "Demo is also linked to a Node.js express.js MongoDB JWT REST API project that shows how this frontend can be integrated to an API.",
-        "API_DOCUMENTATION": "API documentation",
-        "FRONTEND_DOCUMENTATION": "Frontend documentation"
+        "TITLE": "Landung"
     },
     "home": {
-        "TITLE": "Protected Home",
-        "GREETING": "Welcome %{0}",
-        "DESCRIPTION": "This page is only available privately when the users log in with their credentials",
-        "VERIFY_YOUR_ACCOUNT": "IMPORTANT: Verify your account",
-        "VERIFY_YOUR_ACCOUNT_DESCRIPTION": "You must verify your account by clicking the link sent to your E-mail to be able to enjoy all our app features",
-        "CLOSE": "Close"
+        "TITLE": "Geschütztes Zuhause",
+        "GREETING": "Herzlich willkommen %{0}",
+        "DESCRIPTION": "Diese Seite ist nur privat verfügbar, wenn sich die Benutzer mit ihren Anmeldeinformationen anmelden",
+        "VERIFY_YOUR_ACCOUNT": "WICHTIG: Überprüfen Sie Ihr Konto",
+        "VERIFY_YOUR_ACCOUNT_DESCRIPTION": "Sie müssen Ihr Konto überprüfen, indem Sie auf den Link klicken, der an Ihre E-Mail gesendet wurde, um alle unsere App-Funktionen nutzen zu können",
+        "CLOSE": "Schließen"
     },
     "about": {
-        "TITLE": "About",
-        "DESCRIPTION": "This page is publicly available"
+        "TITLE": "Über",
+        "DESCRIPTION": "Diese Seite ist öffentlich zugänglich"
     },
     "login": {
-        "TITLE": "Login",
-        "DESCRIPTION": "This is a demo. Database resets every 30 mins. So anything you do will be lost after a short time.<br />E-mail: admin@admin.com <br />Password: 12345",
+        "TITLE": "Einloggen",
+        "DESCRIPTION": "",
         "EMAIL": "E-mail",
-        "PASSWORD": "Password",
-        "LOGIN": "Login",
-        "FORGOT_PASSWORD": "Forgot password?"
+        "PASSWORD": "Passwort",
+        "LOGIN": "Einloggen",
+        "FORGOT_PASSWORD": "Passwort vergessen?"
     },
     "forgotPassword": {
-        "TITLE": "Forgot my password",
+        "TITLE": "Ich habe mein Passwort vergessen",
         "EMAIL": "E-mail",
-        "DESCRIPTION": "Enter your E-mail address so we can send you a message with instructions to recover your password",
-        "RECOVER": "Recover",
-        "RESET_EMAIL_SENT": "We have sent a message to %{0} with instructions to recover your password"
+        "DESCRIPTION": "Geben Sie Ihre E-Mail-Adresse ein, damit wir Ihnen eine Nachricht mit Anweisungen zum Wiederherstellen Ihres Passworts senden können",
+        "RECOVER": "Genesen",
+        "RESET_EMAIL_SENT": "Wir haben eine Nachricht an %{0} mit Anweisungen zum Wiederherstellen Ihres Passworts gesendet"
     },
     "resetPassword": {
-        "TITLE": "Change Password",
-        "PASSWORD": "Password",
-        "CONFIRM_PASSWORD": "Confirm Password",
-        "CHANGE_PASSWORD": "Change Password",
-        "PASSWORD_CHANGED": "Password changed successfully"
+        "TITLE": "Passwort ändern",
+        "PASSWORD": "Passwort",
+        "CONFIRM_PASSWORD": "Kennwort bestätigen",
+        "CHANGE_PASSWORD": "Passwort ändern",
+        "PASSWORD_CHANGED": "das Passwort wurde erfolgreich geändert"
     },
     "signup": {
         "TITLE": "Anmelden",
@@ -149,27 +139,27 @@
         "SIGN_ME_UP": "Melden Sie mich an"
     },
     "verify": {
-        "TITLE": "E-mail verification",
-        "EMAIL_VERIFIED": "E-mail verified successfully"
+        "TITLE": "E-Mail-Verifizierung",
+        "EMAIL_VERIFIED": "E-Mail erfolgreich verifiziert"
     },
     "myProfile": {
-        "TITLE": "My profile",
-        "CHANGE_MY_PASSWORD": "Change My Password",
-        "CURRENT_PASSWORD": "Current Password",
-        "NEW_PASSWORD": "New Password",
-        "CONFIRM_NEW_PASSWORD": "Confirm New Password",
-        "PASSWORD_CHANGED": "Password changed successfully",
+        "TITLE": "Mein Profil",
+        "CHANGE_MY_PASSWORD": "Ändere mein Passwort",
+        "CURRENT_PASSWORD": "Jetziges Passwort",
+        "NEW_PASSWORD": "Neues Kennwort",
+        "CONFIRM_NEW_PASSWORD": "Bestätige neues Passwort",
+        "PASSWORD_CHANGED": "das Passwort wurde erfolgreich geändert",
         "NAME": "Name",
-        "LASTNAME": "Lastname",
+        "LASTNAME": "Familienname",
         "EMAIL": "E-mail",
-        "PHONE": "Phone",
-        "CITY": "City",
-        "NO_RESULTS_FOUND": "No results found",
-        "COUNTRY": "Country",
-        "SAVE": "Save",
-        "PROFILE_SAVED_SUCCESSFULLY": "Profile saved successfuly"
+        "PHONE": "Telefon",
+        "CITY": "Stadt",
+        "NO_RESULTS_FOUND": "keine Ergebnisse gefunden",
+        "COUNTRY": "Land",
+        "SAVE": "Speichern",
+        "PROFILE_SAVED_SUCCESSFULLY": "Profil erfolgreich gespeichert"
     },
     "test": {
-        "TEST": "This is a test"
+        "TEST": "Das ist ein Test"
     }
 }
