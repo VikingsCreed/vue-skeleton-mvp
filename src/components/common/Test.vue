@@ -1,35 +1,28 @@
-<template>
-  <v-container grid-list-xl>
-    <v-layout v-bind="binding">
-      <v-flex>
-        <v-card dark color="primary">
-          <v-card-text>one</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex>
-        <v-card dark color="secondary">
-          <v-card-text>two</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex>
-        <v-card dark color="accent">
-          <v-card-text>three</v-card-text>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
+<template lang="pug">
+  div#app
+    div(
+      v-for="user in users"
+      :key="users.id"
+    )
+      h1 {{ user.name }}
+      p {{ user.email }}
+    button(@click="fetchUsers") Click me!
 </template>
+
 <script>
 export default {
-  computed: {
-    binding() {
-      const binding = {}
-
-      if (this.$vuetify.breakpoint.mdAndUp) {
-        binding.column = true
-      }
-
-      return binding
+  name: 'app',
+  data() {
+    return {
+      users: []
+    }
+  },
+  methods: {
+    fetchUsers() {
+      const baseURI = 'https://jsonplaceholder.typicode.com/users'
+      this.$http.get(baseURI).then(result => {
+        this.users = result.data
+      })
     }
   }
 }
