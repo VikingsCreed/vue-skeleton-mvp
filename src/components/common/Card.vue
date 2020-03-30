@@ -94,7 +94,6 @@ export default {
     getCharacter(char, i) {
       this.char = char
       this.i = i
-      console.log(i)
       $.ajax({
         url: `${bungieLink}/3/Profile/${this.steam}/Character/${char}/?components=200`,
         headers: {
