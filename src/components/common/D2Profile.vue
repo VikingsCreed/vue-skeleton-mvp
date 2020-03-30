@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <v-container
+      ><h1>{{ profileName }}</h1></v-container
+    >
     <v-app id="inspire">
       <v-container grid-list-md text-xs-center fluid>
         <v-layout row wrap>
@@ -712,9 +715,36 @@
 </template>
 
 <script>
+/* eslint-disable no-undef */
+const steamID = '4611686018479295544'
+// ! API KEY
+const apiKey = '50f95795086b4612a97afa04a35c9211'
+// * Default links for player info, images and definitions
+const bungieLink = 'https://www.bungie.net/Platform/Destiny2'
 export default {
   name: 'D2Profile',
-  props: { myProfile: String }
+  props: { myProfile: String },
+  data() {
+    return {
+      profileName: String,
+      char1Name: String,
+      char2Name: String,
+      char3Name: String
+    }
+  },
+  mounted() {
+    $.ajax({
+      url: `${bungieLink}/3/Profile/${steamID}/?components=100`,
+      headers: {
+        'X-API-Key': apiKey
+      }
+    }).done(json => {
+      this.profileName = json.Response.profile.data.userInfo.displayName
+      this.char1Name = json.Response.profile.data.characterIds[0]
+      this.char2Name = json.Response.profile.data.characterIds[1]
+      this.char3Name = json.Response.profile.data.characterIds[2]
+    })
+  }
 }
 </script>
 
