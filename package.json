@@ -3,6 +3,9 @@
   "version": "4.2.1",
   "description": "VueJS Vuetify Vue Router Vuex - Basic Project Skeleton - Starter Web App. Written on JavaScript using async/await.",
   "license": "MIT",
+  "engines": {
+    "node": "12.14.x"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/VikingsCreed/vue-skeleton-mvp.git"
