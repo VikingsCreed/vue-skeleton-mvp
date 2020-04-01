@@ -8,14 +8,16 @@
         <v-layout row wrap>
           <v-flex>
             <v-card class="mx-auto" max-width="29.625em">
-              <v-img src="./../../../public/emblem.jpg" class="profile-card">
+              <v-img v-bind:src="bungie + emblems[0]" class="profile-card">
                 <br />
                 <v-col class="d-flex emblem-text">
                   <v-card-title
                     class="justify-end display-1 font-weight-thin race-text"
-                    >Human Warlock</v-card-title
+                    >{{ races[0] }} {{ classes[0] }}</v-card-title
                   >
-                  <v-card-title class="justify-end display-1">900</v-card-title>
+                  <v-card-title class="justify-end display-1">{{
+                    lights[0]
+                  }}</v-card-title>
                 </v-col>
               </v-img>
               <v-container>
@@ -25,10 +27,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + kinetic[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[0] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -44,10 +46,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + energy[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -62,64 +64,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + heavy[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[2] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -133,105 +81,93 @@
                   </v-flex>
                   <v-spacer></v-spacer>
                   <v-flex>
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + helmet[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[4] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + arms[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[5] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + chest[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[6] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + legs[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[7] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + classItem[0]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[8] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip left max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
@@ -242,14 +178,16 @@
           </v-flex>
           <v-flex>
             <v-card class="mx-auto" max-width="29.625em">
-              <v-img src="./../../../public/emblem.jpg" class="profile-card">
+              <v-img v-bind:src="bungie + emblems[1]" class="profile-card">
                 <br />
                 <v-col class="d-flex emblem-text">
                   <v-card-title
                     class="justify-end display-1 font-weight-thin race-text"
-                    >Human Warlock</v-card-title
+                    >{{ races[1] }} {{ classes[1] }}</v-card-title
                   >
-                  <v-card-title class="justify-end display-1">900</v-card-title>
+                  <v-card-title class="justify-end display-1">{{
+                    lights[1]
+                  }}</v-card-title>
                 </v-col>
               </v-img>
               <v-container>
@@ -259,10 +197,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + kinetic[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[9] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -278,10 +216,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + energy[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[10] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -296,64 +234,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + heavy[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[11] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -367,105 +251,93 @@
                   </v-flex>
                   <v-spacer></v-spacer>
                   <v-flex>
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + helmet[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[12] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + arms[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[13] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + chest[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[14] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + legs[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[15] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + classItem[1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[16] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip left max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
@@ -476,14 +348,16 @@
           </v-flex>
           <v-flex>
             <v-card class="mx-auto" max-width="29.625em">
-              <v-img src="./../../../public/emblem.jpg" class="profile-card">
+              <v-img v-bind:src="bungie + emblems[2]" class="profile-card">
                 <br />
                 <v-col class="d-flex emblem-text">
                   <v-card-title
                     class="justify-end display-1 font-weight-thin race-text"
-                    >Human Warlock</v-card-title
+                    >{{ races[2] }} {{ classes[2] }}</v-card-title
                   >
-                  <v-card-title class="justify-end display-1">900</v-card-title>
+                  <v-card-title class="justify-end display-1">{{
+                    lights[2]
+                  }}</v-card-title>
                 </v-col>
               </v-img>
               <v-container>
@@ -493,10 +367,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + kinetic[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[17] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -512,10 +386,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + energy[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[18] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -530,64 +404,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + heavy[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[19] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
@@ -601,105 +421,93 @@
                   </v-flex>
                   <v-spacer></v-spacer>
                   <v-flex>
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + helmet[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[20] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + arms[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[21] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + chest[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[22] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + legs[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[23] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
-                    <v-tooltip left max-width="105px">
+                    <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + classItem[2]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ itemNames[24] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info mx-auto"
                       ><p class="gear-text">
                         <img
                           class="afinity"
                           src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip left max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
                         />900
                       </p></v-flex
                     >
@@ -716,36 +524,221 @@
 
 <script>
 /* eslint-disable no-undef */
-const steamID = '4611686018479295544'
+/* eslint-disable max-statements */
+/* eslint-disable prettier/prettier */
 // ! API KEY
 const apiKey = '50f95795086b4612a97afa04a35c9211'
 // * Default links for player info, images and definitions
 const bungieLink = 'https://www.bungie.net/Platform/Destiny2'
+const bungie = 'https://www.bungie.net'
+const bungieManifest = `${bungieLink}/Manifest`
+const bungieItem = `${bungieManifest}/DestinyInventoryItemDefinition/`
+
 export default {
-  name: 'D2Profile',
-  props: { myProfile: String },
   data() {
     return {
-      profileName: String,
-      char1Name: String,
-      char2Name: String,
-      char3Name: String
+      steam: String,
+      name: String,
+      bungie: 'https://www.bungie.net',
+      chars: [],
+      lights: [],
+      emblems: [],
+      classes: [],
+      races: [],
+      kinetic: [],
+      energy: [],
+      heavy: [],
+      helmet: [],
+      arms: [],
+      chest: [],
+      legs: [],
+      classItem: [],
+      itemIcons: [],
+      itemNames: [],
+      trash: []
     }
   },
   mounted() {
-    $.ajax({
-      url: `${bungieLink}/3/Profile/${steamID}/?components=100`,
-      headers: {
-        'X-API-Key': apiKey
-      }
-    }).done(json => {
-      this.profileName = json.Response.profile.data.userInfo.displayName
-      this.char1Name = json.Response.profile.data.characterIds[0]
-      this.char2Name = json.Response.profile.data.characterIds[1]
-      this.char3Name = json.Response.profile.data.characterIds[2]
-    })
+
+      const steamId = this.getSteamId()
+      this.steam = steamId
+      this.getProfile()
+
+  },
+  methods: {
+    getSteamId() {
+      return '4611686018479295544'
+    },
+    getProfile() {
+      $.ajax({
+        url: `${bungieLink}/3/Profile/${this.steam}/?components=100`,
+        headers: {
+          'X-API-Key': apiKey
+        }
+      }).done(json => {
+        const name = json.Response.profile.data.userInfo.displayName
+        this.name = name
+        for (let i = 0; i < 3; i++) {
+          const character = json.Response.profile.data.characterIds[i]
+          this.chars.push(character)
+          this.getCharacter(character)
+        }
+      })
+    },
+    getWeaponList(character, jsonChar, jsonRace, jsonClass, charRace, charClass) {
+      this.character = character
+      this.charClass = charClass
+      this.charRace = charRace
+      this.jsonChar = jsonChar
+      this.jsonRace = jsonRace
+      $.ajax({
+        url: `${bungieLink}/3/Profile/${this.steam}/Character/${character}/?components=205`,
+        headers: {
+          'X-API-Key': apiKey
+        }
+      }).done(jsonWeapon => {
+         this.getPaste(jsonChar, jsonRace, jsonClass, jsonWeapon, charRace, charClass)
+      })
+    },
+    getWeapon(itemHash) {
+      this.itemHash = itemHash
+
+      $.ajax({
+        url: bungieItem + itemHash,
+        headers: {
+          'X-API-Key': apiKey
+        }
+      }).done(jsonItems => {
+        const weaponType = jsonItems.Response.itemCategoryHashes[0]
+        const armourType = jsonItems.Response.itemCategoryHashes[1]
+        const itemIcon = jsonItems.Response.displayProperties.icon
+
+       if (weaponType === 2) {
+          this.kinetic.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else if (weaponType === 3) {
+          this.energy.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else if (weaponType === 4) {
+          this.heavy.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else if (armourType === 45) {
+          this.helmet.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else if (armourType === 46) {
+          this.arms.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else if (armourType === 47) {
+          this.chest.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else if (armourType === 48) {
+          this.legs.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else if (armourType === 49) {
+          this.classItem.push(itemIcon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } else{
+          this.trash.push(itemIcon)
+          this.trash.push(jsonItems.Response.displayProperties.name)
+        }
+
+
+
+
+        /* if (weaponType < 5 || (armourType > 44 && armourType < 50)) {
+          this.itemIcons.push(jsonItems.Response.displayProperties.icon)
+          this.itemNames.push(jsonItems.Response.displayProperties.name)
+        } */
+      })
+    },
+    /* ITEM TYPES HASH[0]
+      Kinetic : 2
+      Energy : 3
+      Heavy : 4
+      Helm : 45
+      Hands : 46
+      Chest : 47
+      Boots : 48
+      ClassItem : 49
+    */
+    getCharacter(character) {
+      this.character = character
+      $.ajax({
+        url: `${bungieLink}/3/Profile/${this.steam}/Character/${character}/?components=200`,
+        headers: {
+          'X-API-Key': apiKey
+        }
+      }).done(jsonChar => {
+        const charRace = jsonChar.Response.character.data.raceHash
+        const charClass = jsonChar.Response.character.data.classHash
+        this.getCharacterDefinition(character, charRace, charClass, jsonChar)
+      })
+    },
+    getCharacterDefinition(character, charRace, charClass, jsonChar) {
+      this.character = character
+      this.charRace = charRace
+      this.charClass = charClass
+      this.jsonChar = jsonChar
+      $.ajax({
+        url: bungieManifest,
+        headers: {
+          'X-API-Key': apiKey
+        }
+      }).done(def => {
+        const raceDefinition =
+          def.Response.jsonWorldComponentContentPaths.en.DestinyRaceDefinition
+        const classDefinition =
+          def.Response.jsonWorldComponentContentPaths.en.DestinyClassDefinition
+        this.getRace(character, raceDefinition, charRace, classDefinition, charClass, jsonChar)
+      })
+    },
+    getRace(character, raceDefinition, charRace, classDefinition, charClass, jsonChar) {
+      this.character = character
+      this.raceDefinition = raceDefinition
+      this.charRace = charRace
+      this.classDefinition = classDefinition
+      this.charClass = charClass
+      this.jsonChar = jsonChar
+      $.ajax({
+        url: bungie + raceDefinition
+      }).done(jsonRace => {
+        this.getClass(character, classDefinition, charClass, charRace, jsonChar, jsonRace)
+      })
+    },
+    getClass(character, classDefinition, charClass, charRace, jsonChar, jsonRace) {
+      this.character = character
+      this.classDefinition = classDefinition
+      this.charClass = charClass
+      this.charRace = charRace
+      this.jsonChar = jsonChar
+      this.jsonRace = jsonRace
+
+      $.ajax({
+        url: bungie + classDefinition
+      }).done(jsonClass => {
+        this.getWeaponList(character, jsonChar, jsonRace, jsonClass, charRace, charClass)
+        // this.getPaste(jsonChar, jsonRace, jsonClass, charRace, charClass)
+      })
+  },
+  getPaste(jsonChar, jsonRace, jsonClass, jsonWeapon, charRace, charClass) {
+    this.jsonChar = jsonChar
+    this.jsonRace = jsonRace
+    this.jsonClass = jsonClass
+    this.jsonWeapon = jsonWeapon
+    this.charClass = charClass
+    this.charRace = charRace
+    this.lights.push(jsonChar.Response.character.data.light)
+    this.emblems.push(jsonChar.Response.character.data.emblemBackgroundPath)
+    this.races.push(jsonRace[charRace].displayProperties.name)
+    this.classes.push(jsonClass[charClass].displayProperties.name)
+    for (let i = 0; i < 17; i++) {
+          const itemHash = jsonWeapon.Response.equipment.data.items[i].itemHash
+          this.getWeapon(itemHash)
+    }
+  }
   }
 }
+
 </script>
 
 <style scoped>
