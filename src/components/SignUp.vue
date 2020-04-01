@@ -22,7 +22,7 @@
             <v-flex>
               <v-text-field
                 id="lastname"
-                lastname="lastname"
+                name="lastname"
                 :label="$t('signup.LASTNAME')"
                 v-model="lastname"
                 :data-vv-as="$t('signup.LASTNAME')"
@@ -78,7 +78,7 @@
             <v-flex>
               <v-text-field
                 id="country"
-                lastname="country"
+                name="country"
                 :label="$t('signup.COUNTRY')"
                 v-model="country"
                 :data-vv-as="$t('signup.COUNTRY')"
@@ -91,7 +91,7 @@
             <v-flex>
               <v-text-field
                 id="steamid64"
-                lastname="steamid64"
+                name="steamid64"
                 :label="$t('signup.STEAMID64')"
                 v-model="steamid64"
                 :data-vv-as="$t('signup.STEAMID64')"
