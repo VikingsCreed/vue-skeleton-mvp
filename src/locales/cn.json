@@ -82,6 +82,7 @@
     "TITLE": "用户",
     "headers": {
       "NAME": "姓名",
+      "LASTNAME": "姓",
       "EMAIL": "邮箱",
       "ROLE": "角色",
       "VERIFIED": "已验证",
@@ -139,8 +140,11 @@
   "signup": {
     "TITLE": "注册",
     "NAME": "姓名",
+    "LASTNAME": "姓",
     "EMAIL": "邮件",
     "PASSWORD": "密码",
+    "COUNTRY": "国家",
+    "STEAMID64": "SteamID64",
     "CONFIRM_PASSWORD": "确认密码",
     "SIGN_ME_UP": "注册"
   },
@@ -156,6 +160,7 @@
     "CONFIRM_NEW_PASSWORD": "确认新密码",
     "PASSWORD_CHANGED": "密码修改成功",
     "NAME": "姓名",
+    "LASTNAME": "姓",
     "EMAIL": "邮箱",
     "PHONE": "电话",
     "CITY": "城市",
