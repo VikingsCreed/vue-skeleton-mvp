@@ -661,10 +661,6 @@ export default {
           this.trash.push(itemIcon)
           this.trash.push(jsonItems.Response.displayProperties.name)
         }
-
-
-
-
         /* if (weaponType < 5 || (armourType > 44 && armourType < 50)) {
           this.itemIcons.push(jsonItems.Response.displayProperties.icon)
           this.itemNames.push(jsonItems.Response.displayProperties.name)

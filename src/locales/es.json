@@ -75,13 +75,13 @@
   "cities": {
     "TITLE": "Ciudades",
     "headers": {
-      "NAME": "Nombre"
+      "FIRSTNAME": "Nombre"
     }
   },
   "users": {
     "TITLE": "Usuarios",
     "headers": {
-      "NAME": "Nombre",
+      "FIRSTNAME": "Nombre",
       "EMAIL": "E-mail",
       "ROLE": "Rol",
       "VERIFIED": "Verificado",
@@ -138,7 +138,7 @@
   },
   "signup": {
     "TITLE": "Registro",
-    "NAME": "Nombre",
+    "FIRSTNAME": "Nombre",
     "EMAIL": "E-mail",
     "PASSWORD": "Contraseña",
     "CONFIRM_PASSWORD": "Confirmar Contraseña",
@@ -155,7 +155,7 @@
     "NEW_PASSWORD": "Nueva Contraseña",
     "CONFIRM_NEW_PASSWORD": "Confirmar Nueva Contraseña",
     "PASSWORD_CHANGED": "Contraseña cambiada exitosamente",
-    "NAME": "Nombre",
+    "FIRSTNAME": "Nombre",
     "EMAIL": "E-mail",
     "PHONE": "Teléfono",
     "CITY": "Ciudad",
