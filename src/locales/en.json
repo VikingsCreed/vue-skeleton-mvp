@@ -75,13 +75,13 @@
   "cities": {
     "TITLE": "Cities",
     "headers": {
-      "NAME": "Name"
+      "FIRSTNAME": "Firstname"
     }
   },
   "users": {
     "TITLE": "Users",
     "headers": {
-      "NAME": "Name",
+      "FIRSTNAME": "Firstname",
       "LASTNAME": "Lastname",
       "EMAIL": "E-mail",
       "ROLE": "Role",
@@ -140,7 +140,7 @@
   },
   "signup": {
     "TITLE": "Signup",
-    "NAME": "Name",
+    "FIRSTNAME": "Firstname",
     "LASTNAME": "Lastname",
     "EMAIL": "E-mail",
     "PASSWORD": "Password",
@@ -160,7 +160,7 @@
     "NEW_PASSWORD": "New Password",
     "CONFIRM_NEW_PASSWORD": "Confirm New Password",
     "PASSWORD_CHANGED": "Password changed successfully",
-    "NAME": "Name",
+    "FIRSTNAME": "Firstname",
     "LASTNAME": "Lastname",
     "EMAIL": "E-mail",
     "PHONE": "Phone",
@@ -173,4 +173,5 @@
   "test": {
     "TEST": "This is a test"
   }
+
 }
