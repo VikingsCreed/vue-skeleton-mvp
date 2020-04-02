@@ -10,8 +10,11 @@
     "404": "404 Page not found",
     "EMAIL_IS_NOT_VALID": "E-mail not valid",
     "IS_EMPTY": "Empty fields",
+    "NAME_EMPTY": "Name",
+    "STEAM_EMPTY": "steam",
     "ERROR": "Error",
     "MISSING": "Missing fields",
+
     "NOT_FOUND_OR_ALREADY_VERIFIED": "Not found or already verified",
     "NOT_FOUND_OR_ALREADY_USED": "Not found or already used",
     "NOT_FOUND": "Not found",
@@ -88,7 +91,8 @@
       "VERIFIED": "Verified",
       "CITY": "City",
       "COUNTRY": "Country",
-      "PHONE": "Phone"
+      "PHONE": "Phone",
+      "STEAMID64": "Steamid64"
     },
     "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Confirm Password"
@@ -165,6 +169,7 @@
     "EMAIL": "E-mail",
     "PHONE": "Phone",
     "CITY": "City",
+    "STEAMID64": "SteamID64",
     "NO_RESULTS_FOUND": "No results found",
     "COUNTRY": "Country",
     "SAVE": "Save",

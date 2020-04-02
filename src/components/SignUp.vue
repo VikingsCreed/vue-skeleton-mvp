@@ -130,7 +130,7 @@ export default {
       email: '',
       password: '',
       confirmPassword: '',
-      contry: '',
+      country: '',
       steamid64: ''
     }
   },
@@ -140,11 +140,11 @@ export default {
       const valid = await this.$validator.validateAll()
       if (valid) {
         await this.userSignUp({
-          firstname: this.name,
-          lastName: this.lastname,
+          name: this.name,
+          lastname: this.lastname,
           email: this.email,
           password: this.password,
-          contry: this.contry,
+          country: this.country,
           steamid64: this.steamid64
         })
       }
