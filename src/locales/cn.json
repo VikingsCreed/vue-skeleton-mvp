@@ -75,13 +75,13 @@
   "cities": {
     "TITLE": "城市列表",
     "headers": {
-      "NAME": "名称"
+      "FIRSTNAME": "名称"
     }
   },
   "users": {
     "TITLE": "用户",
     "headers": {
-      "NAME": "姓名",
+      "FIRSTNAME": "姓名",
       "LASTNAME": "姓",
       "EMAIL": "邮箱",
       "ROLE": "角色",
@@ -139,7 +139,7 @@
   },
   "signup": {
     "TITLE": "注册",
-    "NAME": "姓名",
+    "FIRSTNAME": "姓名",
     "LASTNAME": "姓",
     "EMAIL": "邮件",
     "PASSWORD": "密码",
@@ -159,7 +159,7 @@
     "NEW_PASSWORD": "新密码",
     "CONFIRM_NEW_PASSWORD": "确认新密码",
     "PASSWORD_CHANGED": "密码修改成功",
-    "NAME": "姓名",
+    "FIRSTNAME": "姓名",
     "LASTNAME": "姓",
     "EMAIL": "邮箱",
     "PHONE": "电话",

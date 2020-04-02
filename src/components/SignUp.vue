@@ -7,13 +7,13 @@
           <v-layout column>
             <v-flex>
               <v-text-field
-                id="name"
-                name="name"
-                :label="$t('signup.NAME')"
+                id="firstname"
+                name="firstname"
+                :label="$t('signup.FIRSTNAME')"
                 v-model="name"
-                :data-vv-as="$t('signup.NAME')"
-                :error="errors.has('name')"
-                :error-messages="errors.collect('name')"
+                :data-vv-as="$t('signup.FIRSTNAME')"
+                :error="errors.has('firstname')"
+                :error-messages="errors.collect('firstname')"
                 v-validate.disable="'required'"
                 autocomplete="off"
               ></v-text-field>
@@ -125,7 +125,7 @@ export default {
   },
   data() {
     return {
-      name: '',
+      firstname: '',
       lastname: '',
       email: '',
       password: '',
@@ -140,7 +140,7 @@ export default {
       const valid = await this.$validator.validateAll()
       if (valid) {
         await this.userSignUp({
-          name: this.name,
+          firstname: this.name,
           lastName: this.lastname,
           email: this.email,
           password: this.password,
@@ -152,7 +152,7 @@ export default {
   },
   created() {
     if (this.$store.state.auth.isTokenSet) {
-      router.push({ name: 'home' })
+      router.push({ firstname: 'home' })
     }
   }
 }
