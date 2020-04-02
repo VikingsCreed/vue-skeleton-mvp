@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="sidebar" app disable-resize-watcher>
       <v-list>
         <v-list-tile>
-          <v-list-tile-content>{{ appTitle }}</v-list-tile-content>
+          <v-list-tile-content class="test">{{ appTitle }}</v-list-tile-content>
           <v-list-tile-action>
             <v-btn icon @click.stop="sidebar = !sidebar">
               <v-icon>mdi-chevron-left</v-icon>
@@ -54,7 +54,7 @@
         <v-toolbar-side-icon @click="sidebar = !sidebar"></v-toolbar-side-icon>
       </span>
       <v-toolbar-title class="headline text-uppercase ml-0">
-        <div v-resize-text>
+        <div>
           <router-link
             :to="{ name: 'home' }"
             tag="span"
@@ -257,3 +257,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.test {
+  font-size: 1em;
+}
+</style>
