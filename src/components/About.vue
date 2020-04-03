@@ -2,7 +2,7 @@
   <v-container fluid>
     <Title :title="$t('myProfile.TITLE')" class="mx-auto" />
     <D2Profile />
-    <Test />
+    <Card />
   </v-container>
 </template>
 

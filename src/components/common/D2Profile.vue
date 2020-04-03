@@ -12,6 +12,7 @@
                     class="justify-end display-1 font-weight-thin race-text"
                     >{{ races[0] }} {{ classes[0] }}</v-card-title
                   >
+
                   <v-card-title class="justify-end display-1">{{
                     lights[0]
                   }}</v-card-title>
