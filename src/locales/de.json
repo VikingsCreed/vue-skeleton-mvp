@@ -102,8 +102,11 @@
         "CLOSE": "Schließen"
     },
     "about": {
-        "TITLE": "Über",
-        "DESCRIPTION": "Diese Seite ist öffentlich zugänglich"
+        "TITLE": "Über uns",
+        "WELCOME": "Willkommen beim inoffiziellen Destiny 2 Teamfinder!",
+        "WHATTODO": "Finden Sie ein Team und führen Sie Ihre Mission scheinbar schnell und einfach mit der Verwendung unserer Teamfinder-Funktion aus, wenn Sie ein Konto bei uns erstellt haben. Sie können einfach das Karam-System verwenden, um Feedback direkt an Ihr Team und einzelne Spieler zu geben, wenn das Team.",
+        "THETEAM": "Das Team besteht aus 4 Studenten, die derzeit IT 2. Jahr an der Universität von Souteast Norway, Bé studieren. Diese Website ist ein Schulprojekt und unsere Abschlussprüfung im Fach APP2000. Die Beauftragten war es, eine Applicatio für eine Website zu machen, entweder eine Anwendung des Professors oder eine Anwendung unserer eigenen Wahl vom Professor genehmigt.",
+        "INQURY": "Für alle Anfragen kontaktieren Sie uns bitte auf den folgenden Plattformen in der Fußzeile."
     },
     "login": {
         "TITLE": "Einloggen",
