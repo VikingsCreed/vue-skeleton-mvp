@@ -1,3 +1,4 @@
+// Her importeres alle componenter som brukes på siden.
 import Vue from 'vue'
 import Heading from '@/components/common/Heading.vue'
 import Description from '@/components/common/Description.vue'

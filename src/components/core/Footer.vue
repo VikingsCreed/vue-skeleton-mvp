@@ -1,3 +1,4 @@
+<!--Footer for hele nettsiden-->
 <template>
   <v-footer dark padless>
     <v-card class="flex" flat tile>
@@ -29,6 +30,7 @@ export default {
     }
   },
   data: () => ({
+    // Henter ikoner fra Font Awesome
     icons: [
       'fab fa-facebook',
       'fab fa-twitter',
