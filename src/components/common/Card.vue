@@ -334,7 +334,6 @@ export default {
                           itemIconsChar2 = this.getItemIconsChar2(item2).done(
                             this.handleItemIcon2
                           )
-                          console.log(item2)
                         }
                         this.progress(10)
                         let item3 = 0
@@ -342,7 +341,6 @@ export default {
                           itemIconsChar3 = this.getItemIconsChar3(item3).done(
                             this.handleItemIcon3
                           )
-                          console.log(item3)
                         }
                         $.when(
                           timer,
@@ -350,24 +348,6 @@ export default {
                           itemIconsChar2,
                           itemIconsChar1
                         ).done(() => {
-                          console.log(this.characters)
-                          console.log(this.emblem)
-                          console.log(this.light)
-                          console.log(this.cls)
-                          console.log(this.race)
-                          console.log(this.char1ItemHashes)
-                          console.log(this.char2ItemHashes)
-                          console.log(this.char3ItemHashes)
-                          console.log(this.char1ItemInstanceId)
-                          console.log(this.char2ItemInstanceId)
-                          console.log(this.char3ItemInstanceId)
-                          console.log(this.weapons.kineticIcon)
-                          console.log(this.weapons.kineticName)
-                          console.log(this.weapons.energyName)
-                          console.log(this.weapons.heavyName)
-                          console.log(this.weapons.kineticLight)
-
-                          console.log('Finished')
                           $('#myProgress').animate({ width: '0.0001%' }, 600)
                           document.getElementById('cards').style.visibility =
                             'visible'
