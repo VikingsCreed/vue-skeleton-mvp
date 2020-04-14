@@ -1,3 +1,4 @@
+<!-- Meny for hele nettsiden -->
 <template>
   <div>
     <v-navigation-drawer v-model="sidebar" app disable-resize-watcher>
@@ -168,6 +169,7 @@ export default {
       ]
     }
   },
+  // Her implementeres drop down for flerspråklighet
   components: {
     LocaleChanger
   },
@@ -180,6 +182,11 @@ export default {
     }
   },
   computed: {
+    /*
+      Under har du divese komponenter som blir returnert.
+      Du får ulike komponenter ut ifra rettigheter, altså om du er admin eller innlogget bruker
+    */
+
     ...mapGetters(['appTitle', 'isTokenSet', 'user']),
     admin() {
       return this.user !== null ? this.user.role === 'admin' : false

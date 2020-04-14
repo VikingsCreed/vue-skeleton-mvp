@@ -111,8 +111,11 @@
     "CLOSE": "Cerrar"
   },
   "about": {
-    "TITLE": "Acerca de...",
-    "DESCRIPTION": "Esta página está disponible públicamente."
+    "TITLE": "Acerca de nosotros",
+    "WELCOME": "¡Bienvenido al no oficial Destiny 2 teamfinder!",
+    "WHATTODO": "Encuentra un equipo y ejecuta tu misión sin parecer, rápida y fácil con el uso de nuestra función teamfinder, cuando hayas creado una cuenta con nosotros. Simplemente puedes usar el sistema karam para dar retroalimentación directamente a tu equipo y jugadores individuales si el equipo.",
+    "THETEAM": "El equipo está formado por 4 estudiantes que actualmente estudian 2o año de TI en la Universidad de Souteast Norway, Bo. Este sitio web es un proyecto escolar y nuestro examen final en la asignatura «APP2000». El asignado era hacer un aplicador para un sitio web, ya sea una solicitud del profesor o una aplicación de nuestra propia elección aprobada por el profesor.",
+    "INQURY": "Para cualquier consulta por favor póngase en contacto con nosotros en las plataformas de seguimiento que se encuentran en el pie de página."
   },
   "login": {
     "TITLE": "Ingresar",

@@ -305,6 +305,7 @@ export default {
                   this.handleRaceManifest
                 )
                 this.progress(5)
+<<<<<<< HEAD
                 $.when(clsManifest, raceManifest).done(() => {
                   itemHashes1 = this.getItemHashes1().done(
                     this.handleItemHashes1
@@ -378,6 +379,18 @@ export default {
                       })
                     })
                   })
+=======
+                $.when(timer, clsManifest, raceManifest).done(() => {
+                  // console.log(this.characters)
+                  //  console.log(this.emblem)
+                  // console.log(this.light)
+                  //  console.log(this.cls)
+                  //   console.log(this.race)
+                  //   console.log('Finished')
+                  $('#myProgress').animate({ width: '0.0001%' }, 600)
+                  document.getElementById('cards').style.visibility = 'visible'
+                  $('#cards').animate({ width: '100%' }, 600)
+>>>>>>> 4ed6169ef7cabed6cceab2626f1872394f66215f
                 })
               })
             })

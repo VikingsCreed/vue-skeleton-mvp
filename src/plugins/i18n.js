@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
 Vue.use(VueI18n)
-
+// "[A-Za-z0-9-_]" sjekker for lovlige verdier.
 const loadLocaleMessages = () => {
   const locales = require.context(
     '../locales',
@@ -19,7 +19,7 @@ const loadLocaleMessages = () => {
   })
   return messages
 }
-
+// Setter fallback språk til Engelsk om noe ikke er oversatt.
 export default new VueI18n({
   locale: navigator.language.slice(0, 2) || 'en',
   fallbackLocale: 'en',

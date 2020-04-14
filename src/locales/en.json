@@ -117,8 +117,12 @@
     "CLOSE": "Close"
   },
   "about": {
-    "TITLE": "About",
-    "DESCRIPTION": "This page is publicly available"
+    "TITLE": "About us",
+    "WELCOME": "Welcome to the unofficial Destiny 2 teamfinder!",
+    "WHATTODO": "Find a team and execute your mission seemless, fast and easy with the use of our teamfinder function, when you have created an account with us. You can simply use the karam system to give feedback directly to your team and individual players if the team.",
+    "THETEAM": "The team consist of 4 students currently studying IT 2nd year at the University college of Souteast Norway, Bø. This website is a school project and our final exam in the subject «APP2000». The assignemt was to make an applicatio for a website, either an application from the professor or one application of our own choice approved by the professor.",
+    "INQURY": "For any inquires please contact us on the follow platforms found in the footer."
+    
   },
   "login": {
     "TITLE": "Login",
