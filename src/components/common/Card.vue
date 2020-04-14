@@ -36,10 +36,28 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + weapons.kineticIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ weapons.kineticLight[n - 1] }}</span></v-tooltip
+                    >
+                    <v-flex class="gear-info"
+                      ><p class="gear-text">
+                        <img
+                          class="afinity"
+                          src="./../../../public/solar.png"
+                          width="width: calc(var(--item-size) / 6);"
+                        />{{ lightChar1[n - 1] }}
+                      </p></v-flex
+                    >
+                    <v-tooltip right max-width="105px">
+                      <template v-slot:activator="{ on }">
+                        <v-img
+                          v-on="on"
+                          v-bind:src="bungie + weapons.energyIcon[n - 1]"
+                          class="item-img mx-auto"
+                        ></v-img> </template
+                      ><span>{{ weapons.energyName[n - 1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info"
                       ><p class="gear-text">
@@ -54,28 +72,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + weapons.heavyIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          src="./../../../public/xenofage.jpg"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ weapons.heavyName[n - 1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info"
                       ><p class="gear-text">
@@ -93,10 +93,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + armour.headIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ armour.headName[n - 1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info"
                       ><p class="gear-text">
@@ -110,10 +110,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + armour.armsIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ armour.armsName[n - 1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info"
                       ><p class="gear-text">
@@ -127,10 +127,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + armour.chestIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ armour.chestName[n - 1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info"
                       ><p class="gear-text">
@@ -144,10 +144,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + armour.legsIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ armour.legsName[n - 1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info"
                       ><p class="gear-text">
@@ -161,10 +161,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="./../../../public/xenofage.jpg"
+                          v-bind:src="bungie + armour.classIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>Xenofage Machine Gun</span></v-tooltip
+                      ><span>{{ armour.className[n - 1] }}</span></v-tooltip
                     >
                     <v-flex class="gear-info"
                       ><p class="gear-text">
@@ -186,6 +186,7 @@
 </template>
 <script>
 /* eslint-disable no-undef */
+/* eslint-disable max-statements */
 // ! API KEY
 const apiKey = '50f95795086b4612a97afa04a35c9211'
 // * Default links for player info, images and definitions
@@ -212,31 +213,49 @@ export default {
       clsHash: [],
       light: [],
       emblem: [],
+      char1ItemHashes: [],
+      char1ItemInstanceId: [],
+      char2ItemHashes: [],
+      char2ItemInstanceId: [],
+      char3ItemHashes: [],
+      char3ItemInstanceId: [],
+      lightChar1: [],
+      lightChar2: [],
+      lightChar3: [],
+      name: [],
       weapons: {
         kineticIcon: [],
+        kineticName: [],
         kineticLight: [],
         kineticSinge: [],
         energyIcon: [],
+        energyName: [],
         energyLight: [],
         energySinge: [],
         heavyIcon: [],
+        heavyName: [],
         heavyLight: [],
         heavySinge: []
       },
       armour: {
         headIcon: [],
+        headName: [],
         headLight: [],
         headSinge: [],
         armsIcon: [],
+        armsName: [],
         armsLight: [],
         armsSinge: [],
         chestIcon: [],
+        chestName: [],
         chestLight: [],
         chestSinge: [],
         legsIcon: [],
+        legsName: [],
         legsLight: [],
         legsSinge: [],
         classIcon: [],
+        className: [],
         classLight: [],
         classSinge: []
       },
@@ -252,8 +271,15 @@ export default {
     let manifest
     let clsManifest
     let raceManifest
+    let itemHashes1
+    let itemHashes2
+    let itemHashes3
+    let itemIconsChar1
+    let itemIconsChar2
+    let itemIconsChar3
     const timer = $.Deferred()
-    setTimeout(timer.resolve, 5000)
+    setTimeout(timer.resolve, 10000)
+    // const timeOut = $.Deferred()
     // eslint-disable-next-line prefer-const
     membershipId = this.getMembershipId().done(this.handleMembershipId)
     $.when(membershipId).done(() => {
@@ -272,24 +298,86 @@ export default {
               this.progress(5)
               manifest = this.getManifest().done(this.handleManifest)
               $.when(manifest).done(() => {
-                this.progress(5)
-
+                this.progress(10)
                 clsManifest = this.getClsManifest().done(this.handleClsManifest)
                 this.progress(5)
                 raceManifest = this.getRaceManifest().done(
                   this.handleRaceManifest
                 )
                 this.progress(5)
-                $.when(timer, clsManifest, raceManifest).done(() => {
-                  console.log(this.characters)
-                  console.log(this.emblem)
-                  console.log(this.light)
-                  console.log(this.cls)
-                  console.log(this.race)
-                  console.log('Finished')
-                  $('#myProgress').animate({ width: '0.0001%' }, 600)
-                  document.getElementById('cards').style.visibility = 'visible'
-                  $('#cards').animate({ width: '100%' }, 600)
+                $.when(clsManifest, raceManifest).done(() => {
+                  itemHashes1 = this.getItemHashes1().done(
+                    this.handleItemHashes1
+                  )
+                  this.progress(1)
+                  $.when(itemHashes1).done(() => {
+                    itemHashes2 = this.getItemHashes2().done(
+                      this.handleItemHashes2
+                    )
+                    this.progress(1)
+                    $.when(itemHashes2).done(() => {
+                      itemHashes3 = this.getItemHashes3().done(
+                        this.handleItemHashes3
+                      )
+                      this.progress(1)
+                      $.when(itemHashes3).done(() => {
+                        this.progress(10)
+                        let item = 0
+                        for (item in this.char1ItemHashes) {
+                          itemIconsChar1 = this.getItemIconsChar1(item).done(
+                            this.handleItemIcon1
+                          )
+                        }
+                        this.progress(10)
+                        let item2 = 0
+                        for (item2 in this.char2ItemHashes) {
+                          itemIconsChar2 = this.getItemIconsChar2(item2).done(
+                            this.handleItemIcon2
+                          )
+                          console.log(item2)
+                        }
+                        this.progress(10)
+                        let item3 = 0
+                        for (item3 in this.char3ItemHashes) {
+                          itemIconsChar3 = this.getItemIconsChar3(item3).done(
+                            this.handleItemIcon3
+                          )
+                          console.log(item3)
+                        }
+                        $.when(
+                          timer,
+                          itemIconsChar3,
+                          itemIconsChar2,
+                          itemIconsChar1
+                        ).done(() => {
+                          console.log(this.characters)
+                          console.log(this.emblem)
+                          console.log(this.light)
+                          console.log(this.cls)
+                          console.log(this.race)
+                          console.log(this.char1ItemHashes)
+                          console.log(this.char2ItemHashes)
+                          console.log(this.char3ItemHashes)
+                          console.log(this.char1ItemInstanceId)
+                          console.log(this.char2ItemInstanceId)
+                          console.log(this.char3ItemInstanceId)
+                          console.log(this.weapons.kineticIcon)
+                          console.log(this.weapons.kineticName)
+                          console.log(this.weapons.energyName)
+                          console.log(this.weapons.heavyName)
+                          console.log(this.weapons.kineticLight)
+
+                          console.log('Finished')
+                          $('#myProgress').animate({ width: '0.0001%' }, 600)
+                          document.getElementById('cards').style.visibility =
+                            'visible'
+                          $('#cards').animate({ width: '100%' }, 600)
+                          this.$forceUpdate()
+                        })
+                        //  })
+                      })
+                    })
+                  })
                 })
               })
             })
@@ -405,6 +493,204 @@ export default {
       this.race.push(data[raceHash2].displayProperties.name)
       const raceHash3 = this.raceHash[2]
       this.race.push(data[raceHash3].displayProperties.name)
+    },
+    getItemHashes1() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[0]}/?components=205`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemHashes1(data) {
+      for (let i = 0; i < 17; i++) {
+        this.char1ItemHashes.push(
+          data.Response.equipment.data.items[i].itemHash
+        )
+        this.char1ItemInstanceId.push(
+          data.Response.equipment.data.items[i].itemInstanceId
+        )
+      }
+    },
+    getItemHashes2() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[1]}/?components=205`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemHashes2(data) {
+      for (let i = 0; i < 17; i++) {
+        this.char2ItemHashes.push(
+          data.Response.equipment.data.items[i].itemHash
+        )
+        this.char2ItemInstanceId.push(
+          data.Response.equipment.data.items[i].itemInstanceId
+        )
+      }
+    },
+    getItemHashes3() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[2]}/?components=205`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemHashes3(data) {
+      for (let i = 0; i < 17; i++) {
+        this.char3ItemHashes.push(
+          data.Response.equipment.data.items[i].itemHash
+        )
+        this.char3ItemInstanceId.push(
+          data.Response.equipment.data.items[i].itemInstanceId
+        )
+      }
+    },
+    getItemIconsChar1(i) {
+      return $.ajax({
+        url: bungieItem + this.char1ItemHashes[i],
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    getItemIconsChar2(i) {
+      return $.ajax({
+        url: bungieItem + this.char2ItemHashes[i],
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    getItemIconsChar3(i) {
+      return $.ajax({
+        url: bungieItem + this.char3ItemHashes[i],
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemIcon1(data) {
+      const weaponCategoryHash = data.Response.itemCategoryHashes[0]
+      const armourCategoryHash = data.Response.itemCategoryHashes[1]
+      if (weaponCategoryHash === 2) {
+        this.weapons.kineticIcon[0] = data.Response.displayProperties.icon
+        this.weapons.kineticName[0] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 3) {
+        this.weapons.energyIcon[0] = data.Response.displayProperties.icon
+        this.weapons.energyName[0] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 4) {
+        this.weapons.heavyIcon[0] = data.Response.displayProperties.icon
+        this.weapons.heavyName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 45) {
+        this.armour.headIcon[0] = data.Response.displayProperties.icon
+        this.armour.headName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 46) {
+        this.armour.armsIcon[0] = data.Response.displayProperties.icon
+        this.armour.armsName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 47) {
+        this.armour.chestIcon[0] = data.Response.displayProperties.icon
+        this.armour.chestName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 48) {
+        this.armour.legsIcon[0] = data.Response.displayProperties.icon
+        this.armour.legsName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 49) {
+        this.armour.classIcon[0] = data.Response.displayProperties.icon
+        this.armour.className[0] = data.Response.displayProperties.name
+      } else {
+        this.trash.push(data.Response)
+      }
+    },
+    handleItemIcon2(data) {
+      const weaponCategoryHash = data.Response.itemCategoryHashes[0]
+      const armourCategoryHash = data.Response.itemCategoryHashes[1]
+      if (weaponCategoryHash === 2) {
+        this.weapons.kineticIcon[1] = data.Response.displayProperties.icon
+        this.weapons.kineticName[1] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 3) {
+        this.weapons.energyIcon[1] = data.Response.displayProperties.icon
+        this.weapons.energyName[1] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 4) {
+        this.weapons.heavyIcon[1] = data.Response.displayProperties.icon
+        this.weapons.heavyName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 45) {
+        this.armour.headIcon[1] = data.Response.displayProperties.icon
+        this.armour.headName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 46) {
+        this.armour.armsIcon[1] = data.Response.displayProperties.icon
+        this.armour.armsName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 47) {
+        this.armour.chestIcon[1] = data.Response.displayProperties.icon
+        this.armour.chestName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 48) {
+        this.armour.legsIcon[1] = data.Response.displayProperties.icon
+        this.armour.legsName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 49) {
+        this.armour.classIcon[1] = data.Response.displayProperties.icon
+        this.armour.className[1] = data.Response.displayProperties.name
+      } else {
+        this.trash.push(data.Response)
+      }
+    },
+    handleItemIcon3(data) {
+      const weaponCategoryHash = data.Response.itemCategoryHashes[0]
+      const armourCategoryHash = data.Response.itemCategoryHashes[1]
+      if (weaponCategoryHash === 2) {
+        this.weapons.kineticIcon[2] = data.Response.displayProperties.icon
+        this.weapons.kineticName[2] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 3) {
+        this.weapons.energyIcon[2] = data.Response.displayProperties.icon
+        this.weapons.energyName[2] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 4) {
+        this.weapons.heavyIcon[2] = data.Response.displayProperties.icon
+        this.weapons.heavyName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 45) {
+        this.armour.headIcon[2] = data.Response.displayProperties.icon
+        this.armour.headName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 46) {
+        this.armour.armsIcon[2] = data.Response.displayProperties.icon
+        this.armour.armsName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 47) {
+        this.armour.chestIcon[2] = data.Response.displayProperties.icon
+        this.armour.chestName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 48) {
+        this.armour.legsIcon[2] = data.Response.displayProperties.icon
+        this.armour.legsName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 49) {
+        this.armour.classIcon[2] = data.Response.displayProperties.icon
+        this.armour.className[2] = data.Response.displayProperties.name
+      } else {
+        this.trash.push(data.Response)
+      }
     }
   }
 }
