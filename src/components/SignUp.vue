@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-layout row wrap>
       <v-flex xs12 sm6 offset-sm3>
-        <Title :title="$t('signup.TITLE')" class="pt-5" />
+        <Title :title="$t('signup')" class="pt-5" />
         <form @submit.prevent="submit">
           <v-layout column>
             <v-flex>
@@ -100,6 +100,7 @@
                 v-validate.disable="'required|min:17'"
                 autocomplete="off"
               ></v-text-field>
+              <Card :title="$t('steamID64Help')" />
             </v-flex>
             <v-flex text-xs-center mt-5>
               <SubmitButton :text="$t('signup.SIGN_ME_UP')" />

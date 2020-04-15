@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <Title :title="$t('myProfile.TITLE')" class="mx-auto" />
+    <Title :title="$t('myProfile')" class="mx-auto" />
   </v-container>
 </template>
 

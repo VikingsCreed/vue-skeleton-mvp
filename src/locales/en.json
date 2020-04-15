@@ -181,6 +181,16 @@
   },
   "test": {
     "TEST": "This is a test"
+  },
+  "steamID64Help":{
+    "TITLE": "Where you can find your SteamID64",
+    "STEP1": "1: Go to: ",
+    "STEP2": "2: Enter your steam accout name in the input prompt.  ",
+    "STEP3": "3: Click lookup",
+    "STEP4": "4: When you have found your profile you can see your steamID64 is listed at line 3",
+    "LINK": "https://steamid.io/",
+    "OPTIONAL": "Or you can just this steamID64 if you just want to test this site: 76561198117522343",
+    "OK": "Got it!"
   }
 
 }
