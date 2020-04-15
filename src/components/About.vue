@@ -1,7 +1,6 @@
 <template>
   <v-container fluid>
     <Title :title="$t('myProfile.TITLE')" class="mx-auto" />
-    <Card />
   </v-container>
 </template>
 

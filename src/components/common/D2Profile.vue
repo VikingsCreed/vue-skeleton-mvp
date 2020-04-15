@@ -1,513 +1,116 @@
 <template>
   <div id="app">
     <v-app id="inspire">
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
       <v-container grid-list-md text-xs-center fluid>
-        <v-layout row wrap>
-          <v-flex>
+        <v-layout row wrap id="cards">
+          <v-flex v-for="n in 3" :key="n">
             <v-card class="mx-auto" max-width="29.625em">
-              <v-img v-bind:src="bungie + emblems[0]" class="profile-card">
+              <v-img v-bind:src="bungie + emblem[n - 1]" class="profile-card">
                 <br />
                 <v-col class="d-flex emblem-text">
                   <v-card-title
                     class="justify-end display-1 font-weight-thin race-text"
-                    >{{ races[0] }} {{ classes[0] }}</v-card-title
+                    >{{ race[n - 1] }} {{ cls[n - 1] }}</v-card-title
                   >
-
                   <v-card-title class="justify-end display-1">{{
-                    lights[0]
+                    light[n - 1]
                   }}</v-card-title>
                 </v-col>
               </v-img>
               <v-container>
-                <v-layout row warp>
+                <v-layout>
                   <v-flex>
+                    <v-tooltip right max-width="80px">
+                      <template v-slot:activator="{ on }">
+                        <v-img
+                          v-on="on"
+                          v-bind:src="bungie + subClassIcon[n - 1]"
+                          class="class-img mx-auto"
+                        ></v-img> </template
+                      ><span>{{ subClassName[n - 1] }}</span></v-tooltip
+                    >
                     <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          v-bind:src="bungie + kinetic[0]"
-                          class="item-img mx-auto mt-5"
+                          v-bind:src="bungie + weapons.kineticIcon[n - 1]"
+                          class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ itemNames[0] }}</span></v-tooltip
+                      ><span>{{ weapons.kineticName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          v-bind:src="bungie + itemSinge[0]"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
+                    <v-tooltip right max-width="105px">
+                      <template v-slot:activator="{ on }">
+                        <v-img
+                          v-on="on"
+                          v-bind:src="bungie + weapons.energyIcon[n - 1]"
+                          class="item-img mx-auto"
+                        ></v-img> </template
+                      ><span>{{ weapons.energyName[n - 1] }}</span></v-tooltip
                     >
 
                     <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          v-bind:src="bungie + energy[0]"
+                          v-bind:src="bungie + weapons.heavyIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ itemNames[1] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          v-bind:src="bungie + itemSinge[1]"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + heavy[0]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[2] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          v-bind:src="bungie + itemSinge[2]"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
+                      ><span>{{ weapons.heavyName[n - 1] }}</span></v-tooltip
                     >
                   </v-flex>
                   <v-spacer></v-spacer>
                   <v-flex>
-                    <v-tooltip right max-width="105px">
+                    <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          v-bind:src="bungie + helmet[0]"
+                          v-bind:src="bungie + armour.headIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ itemNames[4] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          v-bind:src="bungie + itemSinge[3]"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + arms[0]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[5] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + chest[0]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[6] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + legs[0]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[7] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + classItem[0]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[8] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card>
-          </v-flex>
-          <v-flex>
-            <v-card class="mx-auto" max-width="29.625em">
-              <v-img v-bind:src="bungie + emblems[1]" class="profile-card">
-                <br />
-                <v-col class="d-flex emblem-text">
-                  <v-card-title
-                    class="justify-end display-1 font-weight-thin race-text"
-                    >{{ races[1] }} {{ classes[1] }}</v-card-title
-                  >
-                  <v-card-title class="justify-end display-1">{{
-                    lights[1]
-                  }}</v-card-title>
-                </v-col>
-              </v-img>
-              <v-container>
-                <v-layout row warp>
-                  <v-flex>
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + kinetic[1]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[9] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
+                      ><span>{{ armour.headName[n - 1] }}</span></v-tooltip
                     >
 
-                    <v-tooltip right max-width="105px">
+                    <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          v-bind:src="bungie + energy[1]"
+                          v-bind:src="bungie + armour.armsIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ itemNames[10] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + heavy[1]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[11] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                  </v-flex>
-                  <v-spacer></v-spacer>
-                  <v-flex>
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + helmet[1]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[12] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + arms[1]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[13] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + chest[1]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[14] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + legs[1]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[15] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + classItem[1]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[16] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card>
-          </v-flex>
-          <v-flex>
-            <v-card class="mx-auto" max-width="29.625em">
-              <v-img v-bind:src="bungie + emblems[2]" class="profile-card">
-                <br />
-                <v-col class="d-flex emblem-text">
-                  <v-card-title
-                    class="justify-end display-1 font-weight-thin race-text"
-                    >{{ races[2] }} {{ classes[2] }}</v-card-title
-                  >
-                  <v-card-title class="justify-end display-1">{{
-                    lights[2]
-                  }}</v-card-title>
-                </v-col>
-              </v-img>
-              <v-container>
-                <v-layout row warp>
-                  <v-flex>
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + kinetic[2]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[17] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
+                      ><span>{{ armour.armsName[n - 1] }}</span></v-tooltip
                     >
 
-                    <v-tooltip right max-width="105px">
+                    <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          v-bind:src="bungie + energy[2]"
+                          v-bind:src="bungie + armour.chestIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ itemNames[18] }}</span></v-tooltip
+                      ><span>{{ armour.chestName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
+
+                    <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          v-bind:src="bungie + heavy[2]"
+                          v-bind:src="bungie + armour.legsIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ itemNames[19] }}</span></v-tooltip
+                      ><span>{{ armour.legsName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                  </v-flex>
-                  <v-spacer></v-spacer>
-                  <v-flex>
-                    <v-tooltip right max-width="105px">
+
+                    <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          v-bind:src="bungie + helmet[2]"
+                          v-bind:src="bungie + armour.classIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ itemNames[20] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + arms[2]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[21] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + chest[2]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[22] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + legs[2]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[23] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
-                    <v-tooltip right max-width="105px">
-                      <template v-slot:activator="{ on }">
-                        <v-img
-                          v-on="on"
-                          v-bind:src="bungie + classItem[2]"
-                          class="item-img mx-auto"
-                        ></v-img> </template
-                      ><span>{{ itemNames[24] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info mx-auto"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
+                      ><span>{{ armour.className[n - 1] }}</span></v-tooltip
                     >
                   </v-flex>
                 </v-layout>
@@ -519,278 +122,512 @@
     </v-app>
   </div>
 </template>
-
 <script>
 /* eslint-disable no-undef */
 /* eslint-disable max-statements */
-/* eslint-disable prettier/prettier */
 // ! API KEY
 const apiKey = '50f95795086b4612a97afa04a35c9211'
 // * Default links for player info, images and definitions
 const bungieLink = 'https://www.bungie.net/Platform/Destiny2'
+const bungieSteamID =
+  'https://www.bungie.net/Platform/User/GetMembershipFromHardLinkedCredential/SteamId/'
 const bungie = 'https://www.bungie.net'
 const bungieManifest = `${bungieLink}/Manifest`
 const bungieItem = `${bungieManifest}/DestinyInventoryItemDefinition/`
-
-
+let width = 0
 export default {
+  name: 'Card',
   data() {
     return {
-      steam: String,
-      name: String,
+      membership: String,
       bungie: 'https://www.bungie.net',
-      chars: [],
-      lights: [],
-      emblems: [],
-      classes: [],
-      races: [],
-      kinetic: [],
-      energy: [],
-      heavy: [],
-      helmet: [],
-      arms: [],
-      chest: [],
-      legs: [],
-      classItem: [],
-      itemIcons: [],
-      itemNames: [],
-      itemLights: [],
-      itemSinge: [],
+      test: [1, 2, 3],
+      characters: [],
+      race: [],
+      raceManifest: String,
+      raceHash: [],
+      cls: [],
+      clsManifest: String,
+      clsHash: [],
+      light: [],
+      emblem: [],
+      char1ItemHashes: [],
+      char1ItemInstanceId: [],
+      char2ItemHashes: [],
+      char2ItemInstanceId: [],
+      char3ItemHashes: [],
+      char3ItemInstanceId: [],
+      lightChar1: [],
+      lightChar2: [],
+      lightChar3: [],
+      name: [],
+      subClassIcon: [],
+      subClassName: [],
+      weapons: {
+        kineticIcon: [],
+        kineticName: [],
+        energyIcon: [],
+        energyName: [],
+        heavyIcon: [],
+        heavyName: []
+      },
+      armour: {
+        headIcon: [],
+        headName: [],
+        armsIcon: [],
+        armsName: [],
+        chestIcon: [],
+        chestName: [],
+        legsIcon: [],
+        legsName: [],
+        classIcon: [],
+        className: []
+      },
       trash: []
     }
   },
   mounted() {
-
-      const steamId = this.getSteamId()
-      this.steam = steamId
-      this.getProfile()
-
+    let membershipId
+    let chars
+    let charInfo1
+    let charInfo2
+    let charInfo3
+    let manifest
+    let clsManifest
+    let raceManifest
+    let itemHashes1
+    let itemHashes2
+    let itemHashes3
+    let itemIconsChar1
+    let itemIconsChar2
+    let itemIconsChar3
+    const timer = $.Deferred()
+    setTimeout(timer.resolve, 10000)
+    // const timeOut = $.Deferred()
+    // eslint-disable-next-line prefer-const
+    membershipId = this.getMembershipId().done(this.handleMembershipId)
+    $.when(membershipId).done(() => {
+      width = 0
+      this.progress(10)
+      chars = this.getCharacters().done(this.handleChars)
+      $.when(chars).done(() => {
+        this.progress(5)
+        charInfo1 = this.getCharacter1Info().done(this.handleCharInfo)
+        $.when(charInfo1).done(() => {
+          this.progress(5)
+          charInfo2 = this.getCharacter2Info().done(this.handleCharInfo)
+          $.when(charInfo2).done(() => {
+            this.progress(5)
+            charInfo3 = this.getCharacter3Info().done(this.handleCharInfo)
+            $.when(charInfo3).done(() => {
+              this.progress(5)
+              manifest = this.getManifest().done(this.handleManifest)
+              $.when(manifest).done(() => {
+                this.progress(10)
+                clsManifest = this.getClsManifest().done(this.handleClsManifest)
+                this.progress(5)
+                raceManifest = this.getRaceManifest().done(
+                  this.handleRaceManifest
+                )
+                this.progress(5)
+                $.when(clsManifest, raceManifest).done(() => {
+                  itemHashes1 = this.getItemHashes1().done(
+                    this.handleItemHashes1
+                  )
+                  this.progress(5)
+                  $.when(itemHashes1).done(() => {
+                    itemHashes2 = this.getItemHashes2().done(
+                      this.handleItemHashes2
+                    )
+                    this.progress(5)
+                    $.when(itemHashes2).done(() => {
+                      itemHashes3 = this.getItemHashes3().done(
+                        this.handleItemHashes3
+                      )
+                      this.progress(5)
+                      $.when(itemHashes3).done(() => {
+                        this.progress(10)
+                        let item = 0
+                        for (item in this.char1ItemHashes) {
+                          itemIconsChar1 = this.getItemIconsChar1(item).done(
+                            this.handleItemIcon1
+                          )
+                        }
+                        this.progress(10)
+                        let item2 = 0
+                        for (item2 in this.char2ItemHashes) {
+                          itemIconsChar2 = this.getItemIconsChar2(item2).done(
+                            this.handleItemIcon2
+                          )
+                        }
+                        this.progress(10)
+                        let item3 = 0
+                        for (item3 in this.char3ItemHashes) {
+                          itemIconsChar3 = this.getItemIconsChar3(item3).done(
+                            this.handleItemIcon3
+                          )
+                        }
+                        this.progress(5)
+                        $.when(
+                          timer,
+                          itemIconsChar3,
+                          itemIconsChar2,
+                          itemIconsChar1
+                        ).done(() => {
+                          $('#myProgress').animate({ width: '0.0001%' }, 600)
+                          document.getElementById('cards').style.visibility =
+                            'visible'
+                          $('#cards').animate({ width: '100%' }, 600)
+                          this.$forceUpdate()
+                        })
+                        //  })
+                      })
+                    })
+                  })
+                })
+              })
+            })
+          })
+        })
+      })
+    })
   },
   methods: {
-    getSteamId() {
-      return '4611686018479295544'
+    progress(x) {
+      width += x
+      $('#myBar').animate({ width: `${width}%` }, 300)
     },
-    getProfile() {
-      $.ajax({
-        url: `${bungieLink}/3/Profile/${this.steam}/?components=100`,
+    getMembershipId() {
+      return $.ajax({
+        url: `${bungieSteamID}76561198117522343/`,
         headers: {
           'X-API-Key': apiKey
-        }
-      }).done(json => {
-        const name = json.Response.profile.data.userInfo.displayName
-        this.name = name
-        for (let i = 0; i < 3; i++) {
-          const character = json.Response.profile.data.characterIds[i]
-          this.sleep(2000)
-          this.chars.push(character)
-          this.getCharacter(character)
+        },
+        type: 'get'
+      })
+    },
+    handleMembershipId(data) {
+      this.membership = data.Response.membershipId
+    },
+    getCharacters() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/?components=100`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleChars(data) {
+      this.characters.push(data.Response.profile.data.characterIds[0])
+      this.characters.push(data.Response.profile.data.characterIds[1])
+      this.characters.push(data.Response.profile.data.characterIds[2])
+    },
+    getCharacter1Info() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[0]}/?components=200`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    getCharacter2Info() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[1]}/?components=200`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    getCharacter3Info() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[2]}/?components=200`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleCharInfo(data) {
+      this.clsHash.push(data.Response.character.data.classHash)
+      this.raceHash.push(data.Response.character.data.raceHash)
+      this.emblem.push(data.Response.character.data.emblemBackgroundPath)
+      this.light.push(data.Response.character.data.light)
+    },
 
-        }
-      })
-    },
-    getWeaponList(character, jsonChar, jsonRace, jsonClass, charRace, charClass, def) {
-      this.character = character
-      this.charClass = charClass
-      this.charRace = charRace
-      this.jsonChar = jsonChar
-      this.jsonRace = jsonRace
-      this.def = def
-      $.ajax({
-        url: `${bungieLink}/3/Profile/${this.steam}/Character/${character}/?components=205`,
-        headers: {
-          'X-API-Key': apiKey
-        }
-      }).done(jsonWeapon => {
-         this.getPaste(jsonChar, jsonRace, jsonClass, jsonWeapon, charRace, charClass, def)
-      })
-    },
-    getWeapon(itemHash, def) {
-      this.itemHash = itemHash
-      this.def = def
-
-      $.ajax({
-        url: bungieItem + itemHash,
-        headers: {
-          'X-API-Key': apiKey
-        }
-      }).done(jsonItems => {
-        const weaponType = jsonItems.Response.itemCategoryHashes[0]
-        const armourType = jsonItems.Response.itemCategoryHashes[1]
-        const itemIcon = jsonItems.Response.displayProperties.icon
-
-       if (weaponType === 2) {
-          this.kinetic.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else if (weaponType === 3) {
-          this.energy.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else if (weaponType === 4) {
-          this.heavy.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else if (armourType === 45) {
-          this.helmet.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else if (armourType === 46) {
-          this.arms.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else if (armourType === 47) {
-          this.chest.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else if (armourType === 48) {
-          this.legs.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else if (armourType === 49) {
-          this.classItem.push(itemIcon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-          const singeHash = jsonItems.Response.defaultDamageTypeHash
-          this.getSinge(singeHash, def)
-        } else{
-          this.trash.push(itemIcon)
-          this.trash.push(jsonItems.Response.displayProperties.name)
-        }
-        /* if (weaponType < 5 || (armourType > 44 && armourType < 50)) {
-          this.itemIcons.push(jsonItems.Response.displayProperties.icon)
-          this.itemNames.push(jsonItems.Response.displayProperties.name)
-        } */
-      })
-    },
-    /* ITEM TYPES HASH[0]
-      Kinetic : 2
-      Energy : 3
-      Heavy : 4
-      Helm : 45
-      Hands : 46
-      Chest : 47
-      Boots : 48
-      ClassItem : 49
-    */
-    getSinge(singeHash, def){
-      this.singeHash = singeHash
-      this.def = def
-      const damageTypeDef = def.Response.jsonWorldComponentContentPaths.en.DestinyDamageTypeDefinition
-       $.ajax({
-        url: bungie + damageTypeDef
-      }).done(jsonDmg => {
-        this.itemSinge.push(jsonDmg[singeHash].displayProperties.icon)
-      })
-    },
-    getCharacter(character) {
-      this.character = character
-      $.ajax({
-        url: `${bungieLink}/3/Profile/${this.steam}/Character/${character}/?components=200`,
-        headers: {
-          'X-API-Key': apiKey
-        }
-      }).done(jsonChar => {
-        const charRace = jsonChar.Response.character.data.raceHash
-        const charClass = jsonChar.Response.character.data.classHash
-        this.getCharacterDefinition(character, charRace, charClass, jsonChar)
-      })
-    },
-    getCharacterDefinition(character, charRace, charClass, jsonChar) {
-      this.character = character
-      this.charRace = charRace
-      this.charClass = charClass
-      this.jsonChar = jsonChar
-      $.ajax({
+    getManifest() {
+      return $.ajax({
         url: bungieManifest,
         headers: {
           'X-API-Key': apiKey
-        }
-      }).done(def => {
-        const raceDefinition =
-          def.Response.jsonWorldComponentContentPaths.en.DestinyRaceDefinition
-        const classDefinition =
-          def.Response.jsonWorldComponentContentPaths.en.DestinyClassDefinition
-        this.getRace(character, raceDefinition, charRace, classDefinition, charClass, jsonChar, def)
+        },
+        type: 'get'
       })
     },
-    getRace(character, raceDefinition, charRace, classDefinition, charClass, jsonChar, def) {
-      this.character = character
-      this.raceDefinition = raceDefinition
-      this.charRace = charRace
-      this.classDefinition = classDefinition
-      this.charClass = charClass
-      this.jsonChar = jsonChar
-      this.def = def
-      $.ajax({
-        url: bungie + raceDefinition
-      }).done(jsonRace => {
-        this.getClass(character, classDefinition, charClass, charRace, jsonChar, jsonRace, def)
+    handleManifest(data) {
+      this.clsManifest =
+        data.Response.jsonWorldComponentContentPaths.en.DestinyClassDefinition
+      this.raceManifest =
+        data.Response.jsonWorldComponentContentPaths.en.DestinyRaceDefinition
+    },
+    getClsManifest() {
+      return $.ajax({
+        url: bungie + this.clsManifest,
+        type: 'get'
       })
     },
-    getClass(character, classDefinition, charClass, charRace, jsonChar, jsonRace, def) {
-      this.character = character
-      this.classDefinition = classDefinition
-      this.charClass = charClass
-      this.charRace = charRace
-      this.jsonChar = jsonChar
-      this.jsonRace = jsonRace
-      this.def = def
-      $.ajax({
-        url: bungie + classDefinition
-      }).done(jsonClass => {
-        this.getWeaponList(character, jsonChar, jsonRace, jsonClass, charRace, charClass, def)
+    handleClsManifest(data) {
+      const classHash1 = this.clsHash[0]
+      this.cls.push(data[classHash1].displayProperties.name)
+      const classHash2 = this.clsHash[1]
+      this.cls.push(data[classHash2].displayProperties.name)
+      const classHash3 = this.clsHash[2]
+      this.cls.push(data[classHash3].displayProperties.name)
+    },
+    getRaceManifest() {
+      return $.ajax({
+        url: bungie + this.raceManifest,
+        type: 'get'
       })
-  },
-  getPaste(jsonChar, jsonRace, jsonClass, jsonWeapon, charRace, charClass, def) {
-    this.jsonChar = jsonChar
-    this.jsonRace = jsonRace
-    this.jsonClass = jsonClass
-    this.jsonWeapon = jsonWeapon
-    this.charClass = charClass
-    this.charRace = charRace
-    this.def = def
-    this.lights.push(jsonChar.Response.character.data.light)
-    this.emblems.push(jsonChar.Response.character.data.emblemBackgroundPath)
-    this.races.push(jsonRace[charRace].displayProperties.name)
-    this.classes.push(jsonClass[charClass].displayProperties.name)
-    for (let i = 0; i < 17; i++) {
-          const itemHash = jsonWeapon.Response.equipment.data.items[i].itemHash
-          this.getWeapon(itemHash, def)
-    }
-  },
-  sleep(milliseconds) {
-  const start = new Date().getTime()
-  for (let i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break
+    },
+    handleRaceManifest(data) {
+      const raceHash1 = this.raceHash[0]
+      this.race.push(data[raceHash1].displayProperties.name)
+      const raceHash2 = this.raceHash[1]
+      this.race.push(data[raceHash2].displayProperties.name)
+      const raceHash3 = this.raceHash[2]
+      this.race.push(data[raceHash3].displayProperties.name)
+    },
+    getItemHashes1() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[0]}/?components=205`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemHashes1(data) {
+      for (let i = 0; i < 17; i++) {
+        this.char1ItemHashes.push(
+          data.Response.equipment.data.items[i].itemHash
+        )
+        this.char1ItemInstanceId.push(
+          data.Response.equipment.data.items[i].itemInstanceId
+        )
+      }
+    },
+    getItemHashes2() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[1]}/?components=205`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemHashes2(data) {
+      for (let i = 0; i < 17; i++) {
+        this.char2ItemHashes.push(
+          data.Response.equipment.data.items[i].itemHash
+        )
+        this.char2ItemInstanceId.push(
+          data.Response.equipment.data.items[i].itemInstanceId
+        )
+      }
+    },
+    getItemHashes3() {
+      return $.ajax({
+        url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[2]}/?components=205`,
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemHashes3(data) {
+      for (let i = 0; i < 17; i++) {
+        this.char3ItemHashes.push(
+          data.Response.equipment.data.items[i].itemHash
+        )
+        this.char3ItemInstanceId.push(
+          data.Response.equipment.data.items[i].itemInstanceId
+        )
+      }
+    },
+    getItemIconsChar1(i) {
+      return $.ajax({
+        url: bungieItem + this.char1ItemHashes[i],
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    getItemIconsChar2(i) {
+      return $.ajax({
+        url: bungieItem + this.char2ItemHashes[i],
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    getItemIconsChar3(i) {
+      return $.ajax({
+        url: bungieItem + this.char3ItemHashes[i],
+        headers: {
+          'X-API-Key': apiKey
+        },
+        type: 'get'
+      })
+    },
+    handleItemIcon1(data) {
+      const weaponCategoryHash = data.Response.itemCategoryHashes[0]
+      const armourCategoryHash = data.Response.itemCategoryHashes[1]
+      if (weaponCategoryHash === 2) {
+        this.weapons.kineticIcon[0] = data.Response.displayProperties.icon
+        this.weapons.kineticName[0] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 3) {
+        this.weapons.energyIcon[0] = data.Response.displayProperties.icon
+        this.weapons.energyName[0] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 4) {
+        this.weapons.heavyIcon[0] = data.Response.displayProperties.icon
+        this.weapons.heavyName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 45) {
+        this.armour.headIcon[0] = data.Response.displayProperties.icon
+        this.armour.headName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 46) {
+        this.armour.armsIcon[0] = data.Response.displayProperties.icon
+        this.armour.armsName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 47) {
+        this.armour.chestIcon[0] = data.Response.displayProperties.icon
+        this.armour.chestName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 48) {
+        this.armour.legsIcon[0] = data.Response.displayProperties.icon
+        this.armour.legsName[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 49) {
+        this.armour.classIcon[0] = data.Response.displayProperties.icon
+        this.armour.className[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 50) {
+        this.subClassIcon[0] = data.Response.displayProperties.icon
+        this.subClassName[0] = data.Response.displayProperties.name
+      } else {
+        this.trash.push(data.Response)
+      }
+    },
+    handleItemIcon2(data) {
+      const weaponCategoryHash = data.Response.itemCategoryHashes[0]
+      const armourCategoryHash = data.Response.itemCategoryHashes[1]
+      if (weaponCategoryHash === 2) {
+        this.weapons.kineticIcon[1] = data.Response.displayProperties.icon
+        this.weapons.kineticName[1] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 3) {
+        this.weapons.energyIcon[1] = data.Response.displayProperties.icon
+        this.weapons.energyName[1] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 4) {
+        this.weapons.heavyIcon[1] = data.Response.displayProperties.icon
+        this.weapons.heavyName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 45) {
+        this.armour.headIcon[1] = data.Response.displayProperties.icon
+        this.armour.headName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 46) {
+        this.armour.armsIcon[1] = data.Response.displayProperties.icon
+        this.armour.armsName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 47) {
+        this.armour.chestIcon[1] = data.Response.displayProperties.icon
+        this.armour.chestName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 48) {
+        this.armour.legsIcon[1] = data.Response.displayProperties.icon
+        this.armour.legsName[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 49) {
+        this.armour.classIcon[1] = data.Response.displayProperties.icon
+        this.armour.className[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 50) {
+        this.subClassIcon[1] = data.Response.displayProperties.icon
+        this.subClassName[1] = data.Response.displayProperties.name
+      } else {
+        this.trash.push(data.Response)
+      }
+    },
+    handleItemIcon3(data) {
+      const weaponCategoryHash = data.Response.itemCategoryHashes[0]
+      const armourCategoryHash = data.Response.itemCategoryHashes[1]
+      if (weaponCategoryHash === 2) {
+        this.weapons.kineticIcon[2] = data.Response.displayProperties.icon
+        this.weapons.kineticName[2] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 3) {
+        this.weapons.energyIcon[2] = data.Response.displayProperties.icon
+        this.weapons.energyName[2] = data.Response.displayProperties.name
+      }
+      if (weaponCategoryHash === 4) {
+        this.weapons.heavyIcon[2] = data.Response.displayProperties.icon
+        this.weapons.heavyName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 45) {
+        this.armour.headIcon[2] = data.Response.displayProperties.icon
+        this.armour.headName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 46) {
+        this.armour.armsIcon[2] = data.Response.displayProperties.icon
+        this.armour.armsName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 47) {
+        this.armour.chestIcon[2] = data.Response.displayProperties.icon
+        this.armour.chestName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 48) {
+        this.armour.legsIcon[2] = data.Response.displayProperties.icon
+        this.armour.legsName[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 49) {
+        this.armour.classIcon[2] = data.Response.displayProperties.icon
+        this.armour.className[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 50) {
+        this.subClassIcon[2] = data.Response.displayProperties.icon
+        this.subClassName[2] = data.Response.displayProperties.name
+      } else {
+        this.trash.push(data.Response)
+      }
     }
   }
 }
-  }
-}
-
 </script>
-
 <style scoped>
-.afinity {
-  width: 13px;
-  margin-top: 4px;
-  margin-left: -8px;
+#myProgress {
+  width: 80%;
+  background-color: grey;
+  margin-left: 10%;
 }
-.gear-info {
-  position: absolute;
-  width: 90px;
-  height: 20px;
-  margin-top: -20px;
-  margin-left: 30px;
-  z-index: 10;
-  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(255,0,0,0));
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: white;
+}
+#cards {
+  visibility: hidden;
+  width: 0%;
 }
 .gear-text {
   margin-top: -5px;
@@ -802,6 +639,9 @@ export default {
   width: 90px;
   z-index: 1;
 }
+.class-img {
+  margin-bottom: 30px;
+}
 .profile-card {
   width: 29.625em;
   height: 6em;
@@ -810,6 +650,6 @@ export default {
   margin-top: -12px;
 }
 .race-text {
-  margin-right: -30px;
+  margin-right: -70px;
 }
 </style>

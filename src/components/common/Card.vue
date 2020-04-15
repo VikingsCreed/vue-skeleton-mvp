@@ -5,7 +5,7 @@
         <div id="myBar"></div>
       </div>
       <v-container grid-list-md text-xs-center fluid>
-        <v-layout row warp id="cards">
+        <v-layout row wrap id="cards">
           <v-flex v-for="n in 3" :key="n">
             <v-card class="mx-auto" max-width="29.625em">
               <v-img v-bind:src="bungie + emblem[n - 1]" class="profile-card">
@@ -27,10 +27,10 @@
                       <template v-slot:activator="{ on }">
                         <v-img
                           v-on="on"
-                          src="https://www.bungie.net/common/destiny2_content/icons/ce681395733e3b2cfe86d538e74416b5.png"
+                          v-bind:src="bungie + subClassIcon[n - 1]"
                           class="class-img mx-auto"
                         ></v-img> </template
-                      ><span>Dawnblade</span></v-tooltip
+                      ><span>{{ subClassName[n - 1] }}</span></v-tooltip
                     >
                     <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
@@ -39,16 +39,7 @@
                           v-bind:src="bungie + weapons.kineticIcon[n - 1]"
                           class="item-img mx-auto"
                         ></v-img> </template
-                      ><span>{{ weapons.kineticLight[n - 1] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />{{ lightChar1[n - 1] }}
-                      </p></v-flex
+                      ><span>{{ weapons.kineticName[n - 1] }}</span></v-tooltip
                     >
                     <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
@@ -59,15 +50,7 @@
                         ></v-img> </template
                       ><span>{{ weapons.energyName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
-                    >
+
                     <v-tooltip right max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
@@ -76,15 +59,6 @@
                           class="item-img mx-auto"
                         ></v-img> </template
                       ><span>{{ weapons.heavyName[n - 1] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                          width="width: calc(var(--item-size) / 6);"
-                        />900
-                      </p></v-flex
                     >
                   </v-flex>
                   <v-spacer></v-spacer>
@@ -98,14 +72,7 @@
                         ></v-img> </template
                       ><span>{{ armour.headName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
-                    >
+
                     <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
@@ -115,14 +82,7 @@
                         ></v-img> </template
                       ><span>{{ armour.armsName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
-                    >
+
                     <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
@@ -132,14 +92,7 @@
                         ></v-img> </template
                       ><span>{{ armour.chestName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
-                    >
+
                     <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
@@ -149,14 +102,7 @@
                         ></v-img> </template
                       ><span>{{ armour.legsName[n - 1] }}</span></v-tooltip
                     >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
-                    >
+
                     <v-tooltip left max-width="105px">
                       <template v-slot:activator="{ on }">
                         <v-img
@@ -165,14 +111,6 @@
                           class="item-img mx-auto"
                         ></v-img> </template
                       ><span>{{ armour.className[n - 1] }}</span></v-tooltip
-                    >
-                    <v-flex class="gear-info"
-                      ><p class="gear-text">
-                        <img
-                          class="afinity"
-                          src="./../../../public/solar.png"
-                        />900
-                      </p></v-flex
                     >
                   </v-flex>
                 </v-layout>
@@ -223,41 +161,27 @@ export default {
       lightChar2: [],
       lightChar3: [],
       name: [],
+      subClassIcon: [],
+      subClassName: [],
       weapons: {
         kineticIcon: [],
         kineticName: [],
-        kineticLight: [],
-        kineticSinge: [],
         energyIcon: [],
         energyName: [],
-        energyLight: [],
-        energySinge: [],
         heavyIcon: [],
-        heavyName: [],
-        heavyLight: [],
-        heavySinge: []
+        heavyName: []
       },
       armour: {
         headIcon: [],
         headName: [],
-        headLight: [],
-        headSinge: [],
         armsIcon: [],
         armsName: [],
-        armsLight: [],
-        armsSinge: [],
         chestIcon: [],
         chestName: [],
-        chestLight: [],
-        chestSinge: [],
         legsIcon: [],
         legsName: [],
-        legsLight: [],
-        legsSinge: [],
         classIcon: [],
-        className: [],
-        classLight: [],
-        classSinge: []
+        className: []
       },
       trash: []
     }
@@ -283,6 +207,7 @@ export default {
     // eslint-disable-next-line prefer-const
     membershipId = this.getMembershipId().done(this.handleMembershipId)
     $.when(membershipId).done(() => {
+      width = 0
       this.progress(10)
       chars = this.getCharacters().done(this.handleChars)
       $.when(chars).done(() => {
@@ -309,17 +234,17 @@ export default {
                   itemHashes1 = this.getItemHashes1().done(
                     this.handleItemHashes1
                   )
-                  this.progress(1)
+                  this.progress(5)
                   $.when(itemHashes1).done(() => {
                     itemHashes2 = this.getItemHashes2().done(
                       this.handleItemHashes2
                     )
-                    this.progress(1)
+                    this.progress(5)
                     $.when(itemHashes2).done(() => {
                       itemHashes3 = this.getItemHashes3().done(
                         this.handleItemHashes3
                       )
-                      this.progress(1)
+                      this.progress(5)
                       $.when(itemHashes3).done(() => {
                         this.progress(10)
                         let item = 0
@@ -342,6 +267,7 @@ export default {
                             this.handleItemIcon3
                           )
                         }
+                        this.progress(5)
                         $.when(
                           timer,
                           itemIconsChar3,
@@ -592,6 +518,10 @@ export default {
       if (armourCategoryHash === 49) {
         this.armour.classIcon[0] = data.Response.displayProperties.icon
         this.armour.className[0] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 50) {
+        this.subClassIcon[0] = data.Response.displayProperties.icon
+        this.subClassName[0] = data.Response.displayProperties.name
       } else {
         this.trash.push(data.Response)
       }
@@ -630,6 +560,10 @@ export default {
       if (armourCategoryHash === 49) {
         this.armour.classIcon[1] = data.Response.displayProperties.icon
         this.armour.className[1] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 50) {
+        this.subClassIcon[1] = data.Response.displayProperties.icon
+        this.subClassName[1] = data.Response.displayProperties.name
       } else {
         this.trash.push(data.Response)
       }
@@ -668,6 +602,10 @@ export default {
       if (armourCategoryHash === 49) {
         this.armour.classIcon[2] = data.Response.displayProperties.icon
         this.armour.className[2] = data.Response.displayProperties.name
+      }
+      if (armourCategoryHash === 50) {
+        this.subClassIcon[2] = data.Response.displayProperties.icon
+        this.subClassName[2] = data.Response.displayProperties.name
       } else {
         this.trash.push(data.Response)
       }
@@ -690,24 +628,6 @@ export default {
 #cards {
   visibility: hidden;
   width: 0%;
-}
-.afinity {
-  width: 13px;
-  margin-top: 4px;
-  margin-left: -8px;
-}
-.gear-info {
-  position: absolute;
-  width: 90px;
-  height: 20px;
-  margin-top: -20px;
-  margin-left: 30px;
-  z-index: 10;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1),
-    rgba(255, 0, 0, 0)
-  );
 }
 .gear-text {
   margin-top: -5px;

@@ -57,7 +57,7 @@
       <v-toolbar-title class="headline text-uppercase ml-0">
         <div>
           <router-link
-            :to="{ name: 'home' }"
+            :to="{ name: 'landing' }"
             tag="span"
             style="cursor: pointer"
             v-if="isTokenSet"
@@ -212,7 +212,7 @@ export default {
         return [
           {
             title: this.$t('menuItems.HOME'),
-            link: 'home',
+            link: 'landing',
             icon: 'mdi-home',
             class: 'btnHome'
           },

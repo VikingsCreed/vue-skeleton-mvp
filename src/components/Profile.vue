@@ -212,6 +212,7 @@
       <ErrorMessage />
       <SuccessMessage />
     </v-layout>
+    <D2Profile />
   </v-container>
 </template>
 
