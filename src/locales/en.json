@@ -98,15 +98,24 @@
     "CONFIRM_PASSWORD": "Confirm Password"
   },
   "landing": {
-    "HEAD": "TeamFinder",
-    "TITLE": "Landing",
-    "DESCRIPTION": "This page is publicly available.",
-    "BUY_ME_A_COFFEE": "Buy me a coffee",
+    "HEAD": "Find your Fireteam",
+    "HEAD2": "Today.",
+    "STARTINGINFO": "Destiny 2 TeamFinder is an app where players can find other guardians to play with. Easily set up a post of whatever activity you want to do and watch as people join. You can also check out your own loadout and others.",
+    "infoCards": [
+      "Fireteam", "Profile", "Invite"
+    ],
+    "infoCardsDesc": [
+      "Set up your own forum post of whatever raid, strike og other activity you want to complete. You can also search for already created posts and join waiting guardians.",
+      "Check out your own loadout right here on the app. You will also be able to check out the loadouts of players joining your post on the forum. This is very neat, considering you might require sertain weapons to be eqipped.",
+      "Simply invite the guardians joining your post by a /invite command ingame. This is easily done by us copying the invite link and ID number for you"
+    ],
+    "LEARN": "LEARN MORE",
     "BUY_ME_A_COFFEE_DESCRIPTION": "I'm doing my best to provide you a good experience when using my apps, so if you like what I'm doing and wish to say \"thanks!\", please click the button and buy me a coffee.",
     "DESCRIPTION_VUE": "This project is created to help other web developers create a basic VueJS app in an easy way.",
     "DESCRIPTION_API": "Demo is also linked to a Node.js express.js MongoDB JWT REST API project that shows how this frontend can be integrated to an API.",
     "API_DOCUMENTATION": "API documentation",
-    "FRONTEND_DOCUMENTATION": "Frontend documentation"
+    "FRONTEND_DOCUMENTATION": "Frontend documentation",
+    "PLACEHOLDER": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus urna libero, eu accumsan lacus fermentum sed. Suspendisse potenti. Vestibulum at fermentum erat. Fusce vulputate dui sed dolor hendrerit, et aliquam urna lobortis. Donec viverra ut mauris vitae rutrum. Donec vulputate, mauris et venenatis luctus, purus est fermentum nulla, eget mattis velit nibh a urna. "
   },
   "home": {
     "TITLE": "Protected Home",

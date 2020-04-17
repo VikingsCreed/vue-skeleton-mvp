@@ -1,6 +1,6 @@
 <!-- Meny for hele nettsiden -->
 <template>
-  <div>
+  <div class="adjust-y">
     <v-navigation-drawer v-model="sidebar" app disable-resize-watcher>
       <v-list>
         <v-list-tile>
@@ -265,7 +265,7 @@ export default {
 }
 </script>
 <style scoped>
-.test {
-  font-size: 1em;
+.adjust-y {
+  margin-bottom: -25px;
 }
 </style>
