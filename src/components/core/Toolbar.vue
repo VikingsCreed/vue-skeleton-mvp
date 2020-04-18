@@ -227,6 +227,12 @@ export default {
             link: 'profile',
             icon: 'mdi-face',
             class: 'btnProfile'
+          },
+          {
+            title: this.$t('menuItems.FORUM'),
+            link: 'forum',
+            icon: 'mdi-view-list',
+            class: 'btnForum'
           }
         ]
       }

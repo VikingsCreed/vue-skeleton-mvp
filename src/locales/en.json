@@ -46,6 +46,7 @@
   "menuItems": {
     "HOME": "Home",
     "ABOUT": "About",
+    "FORUM": "Forum",
     "MY_PROFILE": "My Profile",
     "SIGNUP": "Sign Up",
     "LOGIN": "Login",
@@ -140,6 +141,9 @@
     "THETEAM": "The team consist of 4 students currently studying IT 2nd year at the University college of Souteast Norway, Bø. This website is a school project and our final exam in the subject «APP2000». The assignemt was to make an applicatio for a website, either an application from the professor or one application of our own choice approved by the professor.",
     "INQURY": "For any inquires please contact us on the follow platforms found in the footer."
     
+  },
+  "forum":{
+    "TITLE": "Forum"
   },
   "login": {
     "TITLE": "Login",
