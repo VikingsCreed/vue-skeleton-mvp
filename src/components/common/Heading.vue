@@ -1,10 +1,5 @@
 <template class="adjust-y">
-  <v-parallax
-    class="fix"
-    dark
-    src="./../../../public/landing.jpg"
-    id="parallax-id"
-  >
+  <v-parallax dark src="./../../../public/landing.jpg" id="parallax-id">
     <v-row>
       <v-col class="grey--text text--darken-4 adjust-y">
         <h1 class="header-style font-weight-bold adjust-y">
@@ -36,5 +31,16 @@ export default {
 }
 .header-style {
   font-size: 6em;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    margin-right: 10%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  h1 {
+    margin-top: 1% !important;
+    color: black !important;
+  }
 }
 </style>

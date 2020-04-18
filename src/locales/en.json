@@ -108,6 +108,14 @@
       "Set up your own forum post of whatever raid, strike og other activity you want to complete. You can also search for already created posts and join waiting guardians.",
       "Check out your own loadout right here on the app. You will also be able to check out the loadouts of players joining your post on the forum. This is very neat, considering you might require sertain weapons to be eqipped.",
       "Simply invite the guardians joining your post by a /invite command ingame. This is easily done by us copying the invite link and ID number for you"
+    ], 
+    "infoCards2": [
+      "Vue.js", "Node.js", "MongoDB"
+    ],
+    "infoCards2Desc": [
+      "Vue is an open-source JavaScript framework used for making user interfaces and simple apps. It combines HTML, JS and CSS into one file, and makes it really easy to re-use code.",
+      "Node.js is an open-source JavaScript runtime enviroment that executes JavaScript code outside of a webbrowser. ",
+      "MongoDB is a document oriented NoSQL database program. MongoDB uses JSON-like documents for data storage and is eary to query"
     ],
     "LEARN": "LEARN MORE",
     "BUY_ME_A_COFFEE_DESCRIPTION": "I'm doing my best to provide you a good experience when using my apps, so if you like what I'm doing and wish to say \"thanks!\", please click the button and buy me a coffee.",
