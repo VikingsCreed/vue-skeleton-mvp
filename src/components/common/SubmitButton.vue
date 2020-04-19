@@ -23,7 +23,7 @@ export default {
       return this.$store.state.loading.showLoading
     },
     colorString() {
-      return this.color ? this.color : 'secondary'
+      return this.color ? this.color : 'blue lighten-1'
     }
   }
 }

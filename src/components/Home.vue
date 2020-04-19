@@ -1,5 +1,13 @@
 <template>
   <v-container fluid>
+    <h1 class="display-3 font-weight-bold text-xs-center mt-5">
+      Welcome {{ name }}
+    </h1>
+    <p class="text-xs-center">You are now logged in.</p>
+
+    <!-- Dialog vindu som ber deg om å verifisere eposten ville poppet opp
+        om vi hadde MailBullet.
+
     <v-layout row wrap>
       <div class="text-xs-center">
         <v-dialog v-model="showVerifyDialog" width="500" persistent>
@@ -30,8 +38,7 @@
       </div>
       <Heading :title="$t('home.GREETING', [name])" />
       <Description :description="$t('home.DESCRIPTION')" />
-    </v-layout>
-    <ProjectDescription />
+    </v-layout> -->
   </v-container>
 </template>
 
@@ -45,8 +52,9 @@ export default {
   },
   data() {
     return {
-      name: this.$store.state.auth.user.name,
-      showVerifyDialog: !this.$store.state.verify.emailVerified
+      name: this.$store.state.auth.user.name
+      // ! Returndata som sjekker om email er verifisert eller ei.
+      // showVerifyDialog: !this.$store.state.verify.emailVerified
     }
   }
 }

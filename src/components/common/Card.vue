@@ -2,11 +2,11 @@
   <v-row justify="center">
     <v-dialog v-model="dialog" width="600px">
       <template v-slot:activator="{ on }">
-        <v-btn color="black" dark v-on="on" class="mx-auto"
+        <v-btn color="red lighten-1" v-on="on" class="mx-auto"
           >Where can i find my steamID64?</v-btn
         >
       </template>
-      <v-card>
+      <v-card dark>
         <v-card-title>
           <span class="headline">{{ title.TITLE }}</span>
         </v-card-title>
@@ -22,7 +22,7 @@
         /></v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="green darken-1" text @click="dialog = false">{{
+          <v-btn color="blue lighten-1" text @click="dialog = false">{{
             title.OK
           }}</v-btn>
         </v-card-actions>

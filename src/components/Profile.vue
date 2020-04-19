@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-layout row wrap>
-      <Title :title="$t('myProfile.TITLE')" />
+      <Title :title="$t('myProfile')" />
       <v-flex xs12 sm8 offset-sm2>
         <v-dialog v-model="dialog" max-width="400px">
           <template v-slot:activator="{ on }">
