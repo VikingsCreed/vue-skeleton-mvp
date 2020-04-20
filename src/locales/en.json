@@ -135,11 +135,33 @@
     "CLOSE": "Close"
   },
   "about": {
-    "TITLE": "About us",
+    "HEAD": "About ",
+    "HEAD2": "Destiny 2 Teamfinder",
     "WELCOME": "Welcome to the unofficial Destiny 2 teamfinder!",
-    "WHATTODO": "Find a team and execute your mission seemless, fast and easy with the use of our teamfinder function, when you have created an account with us. You can simply use the karam system to give feedback directly to your team and individual players if the team.",
-    "THETEAM": "The team consist of 4 students currently studying IT 2nd year at the University college of Souteast Norway, Bø. This website is a school project and our final exam in the subject «APP2000». The assignemt was to make an applicatio for a website, either an application from the professor or one application of our own choice approved by the professor.",
-    "INQURY": "For any inquires please contact us on the follow platforms found in the footer."
+    "infowhy": [
+      "We believe that the lack of a good system ingame to find a team for various activites was damaging for the community, therefor we decided to make this tailor-made teamfinder application for Destiny 2."
+    ],
+    "infohow":[
+      "We want to make the community connection tighter and create new relations by bringing the community together i one place. When a team is created on the site the leader of the team can select the spesifications of the team and what is needed to run with the team. We hope that this will inspire and grow the community. "
+    ],
+    "whatisit": [
+      "Destiny 2 teamfinder is the unofficial teamfinder function for Destiny 2. This teamfinder function is available for everyone and anyone can make a new team! As a part of the Destiny 2 teamfinder community you'll be able to take your gameplay to a whole 'nother level."
+    ],
+    "inqury":[ 
+      "If you have any questions, comments or feedback feel free to contact us at example@d2teamfinder.com."
+    ],
+    "why":[
+      "Why?"
+    ],
+    "how": [
+      "How?"
+    ],
+    "what": [
+      "What?"
+    ],
+    "hello": [
+      "Say Hello"
+    ]
     
   },
   "forum":{

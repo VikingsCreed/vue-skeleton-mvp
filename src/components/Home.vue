@@ -9,14 +9,19 @@
               primary-title
             >
               <v-icon class="orange--text">mdi-information</v-icon>
+
               &nbsp;{{ $t('home.VERIFY_YOUR_ACCOUNT') }}
             </v-card-title>
+
             <v-card-text>
               {{ $t('home.VERIFY_YOUR_ACCOUNT_DESCRIPTION') }}
             </v-card-text>
+
             <v-divider></v-divider>
+
             <v-card-actions>
               <v-spacer></v-spacer>
+
               <v-btn
                 color="primary"
                 flat
@@ -28,9 +33,12 @@
           </v-card>
         </v-dialog>
       </div>
+
       <Heading :title="$t('home.GREETING', [name])" />
+
       <Description :description="$t('home.DESCRIPTION')" />
     </v-layout>
+
     <ProjectDescription />
   </v-container>
 </template>
@@ -40,12 +48,15 @@ export default {
   metaInfo() {
     return {
       title: this.$store.getters.appTitle,
+
       titleTemplate: `${this.$t('home.TITLE')} - %s`
     }
   },
+
   data() {
     return {
       name: this.$store.state.auth.user.name,
+
       showVerifyDialog: !this.$store.state.verify.emailVerified
     }
   }

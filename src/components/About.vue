@@ -1,16 +1,7 @@
 <template>
-  <v-container fluid>
-    <Title :title="$t('myProfile')" class="mx-auto" />
+  <v-container fluid class="px-0">
+    <HeadingAbout :head="$t('about')" />
+    <AboutCards :about="$t('about')" />
+    <AboutMap />
   </v-container>
 </template>
-
-<script>
-export default {
-  metaInfo() {
-    return {
-      title: this.$store.getters.appTitle,
-      titleTemplate: `${this.$t('about.TITLE')} - %s`
-    }
-  }
-}
-</script>
