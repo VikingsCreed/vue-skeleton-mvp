@@ -80,6 +80,14 @@
       >
     </v-container>
     <v-container class="grey--text text--darken-4" blue lighten-2 fluid>
+      <v-img
+        src="./../../../public/aboutStyle5.png"
+        class="aboutStyle5-img"
+      ></v-img>
+      <v-img
+        src="./../../../public/aboutStyle4.png"
+        class="aboutStyle4-img"
+      ></v-img>
       <v-container grid-list-md text-xs-center fluid class="margin">
         <v-layout row wrap>
           <v-flex v-for="n in 1" :key="n">
@@ -157,11 +165,34 @@ export default {
   margin-top: 4%;
   margin-left: 0%;
 }
+.aboutStyle4-img {
+  height: 20%;
+  width: 30%;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 0%;
+}
+.aboutStyle5-img {
+  height: 20%;
+  width: 30%;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 67%;
+}
 @media only screen and (max-width: 768px) {
-  .ghost-img {
+  .aboutStyle1-img {
     visibility: hidden;
   }
-  .globe-img {
+  .aboutStyle2-img {
+    visibility: hidden;
+  }
+  .aboutStyle3-img {
+    visibility: hidden;
+  }
+  .aboutStyle4-img {
+    visibility: hidden;
+  }
+  .aboutStyle5-img {
     visibility: hidden;
   }
   .mobile {
