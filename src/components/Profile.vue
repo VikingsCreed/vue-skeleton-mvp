@@ -8,7 +8,7 @@
             <v-flex text-xs-center>
               <v-btn
                 small
-                flat
+                color="blue lighten-1"
                 v-on="on"
                 @click="triggerChangePassword = true"
                 class="btnChangePassword"
@@ -16,7 +16,7 @@
               >
             </v-flex>
           </template>
-          <v-card>
+          <v-card dark>
             <form @submit.prevent="save">
               <v-card-title>
                 <span class="headline">
@@ -81,13 +81,12 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="red lighten3" flat @click="close">
+                <v-btn color="red lighten-2" @click="close">
                   {{ $t('dataTable.CANCEL') }}
                 </v-btn>
                 <SubmitButton
                   :text="$t('dataTable.SAVE')"
-                  color="yellow lighten3"
-                  flat
+                  color="blue lighten-1"
                 />
               </v-card-actions>
             </form>
@@ -125,39 +124,21 @@
                   autocomplete="off"
                 ></v-text-field>
               </v-flex>
-              <v-flex xs12 md4>
+              <v-flex xs12 md6>
                 <v-text-field
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  :label="$t('myProfile.PHONE')"
-                  v-model="phone"
-                  :data-vv-as="$t('myProfile.PHONE')"
-                  :error="errors.has('phone')"
-                  :error-messages="errors.collect('phone')"
+                  id="steamid64"
+                  name="steamid"
+                  type="text"
+                  :label="$t('myProfile.STEAMID64')"
+                  v-model="steamid64"
+                  :data-vv-as="$t('myProfile.STEAMID64')"
+                  :error="errors.has('steamid64')"
+                  :error-messages="errors.collect('steamid64')"
                   v-validate.disable="'required'"
                   autocomplete="off"
                 ></v-text-field>
               </v-flex>
-              <v-flex xs12 md4>
-                <v-autocomplete
-                  id="city"
-                  name="city"
-                  :label="$t('myProfile.CITY')"
-                  :search-input.sync="searchInput"
-                  v-model="city"
-                  :items="allCities"
-                  clearable
-                  clear-icon="mdi-close"
-                  :no-data-text="$t('myProfile.NO_RESULTS_FOUND')"
-                  :data-vv-as="$t('myProfile.CITY')"
-                  :error="errors.has('city')"
-                  :error-messages="errors.collect('city')"
-                  v-validate.disable="'required'"
-                  autocomplete="off"
-                />
-              </v-flex>
-              <v-flex xs12 md4>
+              <v-flex xs12 md6>
                 <v-text-field
                   id="country"
                   name="country"
@@ -168,34 +149,6 @@
                   :error="errors.has('country')"
                   :error-messages="errors.collect('country')"
                   v-validate.disable="'required'"
-                  autocomplete="off"
-                ></v-text-field>
-              </v-flex>
-              <v-flex xs12 md6>
-                <v-text-field
-                  id="urlTwitter"
-                  name="urlTwitter"
-                  type="url"
-                  label="Twitter"
-                  v-model="urlTwitter"
-                  data-vv-as="Twitter"
-                  :error="errors.has('urlTwitter')"
-                  :error-messages="errors.collect('urlTwitter')"
-                  v-validate.disable="'url'"
-                  autocomplete="off"
-                ></v-text-field>
-              </v-flex>
-              <v-flex xs12 md6>
-                <v-text-field
-                  id="urlGitHub"
-                  name="urlGitHub"
-                  type="url"
-                  label="GitHub"
-                  v-model="urlGitHub"
-                  data-vv-as="GitHub"
-                  :error="errors.has('urlGitHub')"
-                  :error-messages="errors.collect('urlGitHub')"
-                  v-validate.disable="'url'"
                   autocomplete="off"
                 ></v-text-field>
               </v-flex>
@@ -212,7 +165,7 @@
       <ErrorMessage />
       <SuccessMessage />
     </v-layout>
-    <D2Profile />
+    <D2Profile :steamid="steamid64" />
   </v-container>
 </template>
 
@@ -252,13 +205,13 @@ export default {
     email() {
       return this.$store.state.profile.profile.email
     },
-    phone: {
+    steamid64: {
       get() {
-        return this.$store.state.profile.profile.phone
+        return this.$store.state.profile.profile.steamid64
       },
       set(value) {
         const data = {
-          key: 'phone',
+          key: 'steamid64',
           value
         }
         this.addProfileData(data)
@@ -267,18 +220,6 @@ export default {
     allCities() {
       return this.$store.state.cities.allCities
     },
-    city: {
-      get() {
-        return this.$store.state.profile.profile.city
-      },
-      set(value) {
-        const data = {
-          key: 'city',
-          value
-        }
-        this.addProfileData(data)
-      }
-    },
     country: {
       get() {
         return this.$store.state.profile.profile.country
@@ -286,30 +227,6 @@ export default {
       set(value) {
         const data = {
           key: 'country',
-          value
-        }
-        this.addProfileData(data)
-      }
-    },
-    urlTwitter: {
-      get() {
-        return this.$store.state.profile.profile.urlTwitter
-      },
-      set(value) {
-        const data = {
-          key: 'urlTwitter',
-          value
-        }
-        this.addProfileData(data)
-      }
-    },
-    urlGitHub: {
-      get() {
-        return this.$store.state.profile.profile.urlGitHub
-      },
-      set(value) {
-        const data = {
-          key: 'urlGitHub',
           value
         }
         this.addProfileData(data)
@@ -325,17 +242,11 @@ export default {
       'saveProfile'
     ]),
     async submit() {
-      const valid = await this.$validator.validateAll()
-      if (valid) {
-        await this.saveProfile({
-          name: this.name,
-          phone: this.phone,
-          city: this.city,
-          country: this.country,
-          urlTwitter: this.urlTwitter,
-          urlGitHub: this.urlGitHub
-        })
-      }
+      await this.saveProfile({
+        name: this.name,
+        country: this.country,
+        steamid64: this.steamid64
+      })
     },
     close() {
       this.triggerChangePassword = false
@@ -343,19 +254,16 @@ export default {
     },
     async save() {
       try {
-        const valid = await this.$validator.validateAll()
-        if (valid) {
-          await this.changeMyPassword({
-            oldPassword: this.oldPassword,
-            newPassword: this.newPassword
-          })
-          this.oldPassword = ''
-          this.newPassword = ''
-          this.confirmPassword = ''
-          this.triggerChangePassword = false
-          this.close()
-          return
-        }
+        await this.changeMyPassword({
+          oldPassword: this.oldPassword,
+          newPassword: this.newPassword
+        })
+        this.oldPassword = ''
+        this.newPassword = ''
+        this.confirmPassword = ''
+        this.triggerChangePassword = false
+        this.close()
+        return
         // eslint-disable-next-line no-unused-vars
       } catch (error) {
         this.oldPassword = ''

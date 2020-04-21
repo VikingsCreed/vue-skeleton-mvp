@@ -73,15 +73,11 @@ const actions = {
 
 const mutations = {
   [types.FILL_PROFILE](state, data) {
-    state.profile.verified = data.verified
     state.profile.name = data.name
     state.profile.lastname = data.lastname
     state.profile.email = data.email
-    state.profile.phone = data.phone
-    state.profile.city = data.city
+    state.profile.steamid64 = data.steamid64
     state.profile.country = data.country
-    state.profile.urlTwitter = data.urlTwitter
-    state.profile.urlGitHub = data.urlGitHub
   },
   [types.ADD_PROFILE_DATA](state, data) {
     switch (data.key) {
@@ -91,20 +87,11 @@ const mutations = {
       case 'lastname':
         state.profile.lastname = data.value
         break
-      case 'phone':
-        state.profile.phone = data.value
-        break
-      case 'city':
-        state.profile.city = data.value
+      case 'steamid64':
+        state.profile.steamid64 = data.value
         break
       case 'country':
         state.profile.country = data.value
-        break
-      case 'urlTwitter':
-        state.profile.urlTwitter = data.value
-        break
-      case 'urlGitHub':
-        state.profile.urlGitHub = data.value
         break
       default:
         break
@@ -114,15 +101,11 @@ const mutations = {
 
 const state = {
   profile: {
-    verified: false,
     name: '',
     lastname: '',
     email: '',
-    phone: '',
-    city: '',
-    country: '',
-    urlTwitter: '',
-    urlGitHub: ''
+    steamid64: '',
+    country: ''
   }
 }
 

@@ -49,7 +49,7 @@ export default {
     successMessage() {
       setTimeout(() => {
         this.showSuccessMessage = this.successMessage !== ''
-      }, 100)
+      }, 50)
     }
   }
 }

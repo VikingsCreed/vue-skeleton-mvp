@@ -137,6 +137,9 @@ const bungieItem = `${bungieManifest}/DestinyInventoryItemDefinition/`
 let width = 0
 export default {
   name: 'Card',
+  props: {
+    steamid: String
+  },
   data() {
     return {
       membership: String,
@@ -202,7 +205,7 @@ export default {
     let itemIconsChar2
     let itemIconsChar3
     const timer = $.Deferred()
-    setTimeout(timer.resolve, 10000)
+    setTimeout(timer.resolve, 12000)
     // const timeOut = $.Deferred()
     // eslint-disable-next-line prefer-const
     membershipId = this.getMembershipId().done(this.handleMembershipId)
@@ -299,7 +302,7 @@ export default {
     },
     getMembershipId() {
       return $.ajax({
-        url: `${bungieSteamID}76561198117522343/`,
+        url: bungieSteamID + this.steamid,
         headers: {
           'X-API-Key': apiKey
         },
