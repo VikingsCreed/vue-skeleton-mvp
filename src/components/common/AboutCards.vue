@@ -81,10 +81,6 @@
     </v-container>
     <v-container class="grey--text text--darken-4" blue lighten-2 fluid>
       <v-img
-        src="./../../../public/aboutStyle5.png"
-        class="aboutStyle5-img"
-      ></v-img>
-      <v-img
         src="./../../../public/aboutStyle4.png"
         class="aboutStyle4-img"
       ></v-img>
@@ -166,18 +162,11 @@ export default {
   margin-left: 0%;
 }
 .aboutStyle4-img {
-  height: 20%;
-  width: 30%;
+  height: 10%;
+  width: 27%;
   position: absolute;
   margin-top: 5%;
-  margin-left: 0%;
-}
-.aboutStyle5-img {
-  height: 20%;
-  width: 30%;
-  position: absolute;
-  margin-top: 5%;
-  margin-left: 67%;
+  margin-left: 69%;
 }
 @media only screen and (max-width: 768px) {
   .aboutStyle1-img {
@@ -190,9 +179,6 @@ export default {
     visibility: hidden;
   }
   .aboutStyle4-img {
-    visibility: hidden;
-  }
-  .aboutStyle5-img {
     visibility: hidden;
   }
   .mobile {

@@ -7,7 +7,9 @@
           {{ head.HEAD2 }}
         </h1>
         <div class="my-2">
-          <v-btn x-large color="red lighten-1" dark>{{ head.LEARN }}</v-btn>
+          <v-btn x-large color="red lighten-1" dark href="about">{{
+            head.LEARN
+          }}</v-btn>
         </div>
       </v-col>
     </v-row>
