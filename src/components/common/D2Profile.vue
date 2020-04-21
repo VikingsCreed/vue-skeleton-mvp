@@ -137,6 +137,9 @@ const bungieItem = `${bungieManifest}/DestinyInventoryItemDefinition/`
 let width = 0
 export default {
   name: 'Card',
+  props: {
+    phone: String
+  },
   data() {
     return {
       membership: String,
@@ -299,7 +302,7 @@ export default {
     },
     getMembershipId() {
       return $.ajax({
-        url: `${bungieSteamID}76561198117522343/`,
+        url: bungieSteamID + this.phone,
         headers: {
           'X-API-Key': apiKey
         },

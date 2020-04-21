@@ -54,15 +54,13 @@ export default {
   metaInfo() {
     return {
       title: this.$store.getters.appTitle,
-
       titleTemplate: `${this.$t('home.TITLE')} - %s`
     }
   },
 
   data() {
     return {
-      name: this.$store.state.auth.user.name,
-      showVerifyDialog: !this.$store.state.verify.emailVerified
+      name: this.$store.state.auth.user.name
     }
   }
 }

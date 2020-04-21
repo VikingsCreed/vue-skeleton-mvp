@@ -3,7 +3,7 @@ export default [
     path: '/profile',
     name: 'profile',
     meta: {
-      requiresAuth: true
+      requiresAuth: false
     },
     component: () =>
       import(/* webpackChunkName: "profile" */ '@/components/Profile.vue')

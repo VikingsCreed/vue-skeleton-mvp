@@ -205,6 +205,7 @@
     "EMAIL_VERIFIED": "E-mail verified successfully"
   },
   "myProfile": {
+    "NAME": "Name",
     "TITLE": "My profile",
     "CHANGE_MY_PASSWORD": "Change My Password",
     "CURRENT_PASSWORD": "Current Password",
