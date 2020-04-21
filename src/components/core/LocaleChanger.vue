@@ -1,5 +1,5 @@
 <template>
-  <v-menu v-model="showMenu" offset-y>
+  <v-menu dark v-model="showMenu" offset-y>
     <v-btn class="btnLocaleActivation" slot="activator" flat>
       <v-icon>mdi-earth</v-icon>
       &nbsp;{{ displayLocale }}

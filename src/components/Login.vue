@@ -1,8 +1,7 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
-      <Title :title="$t('login.TITLE')" />
-      <Description :description="$t('login.DESCRIPTION')" />
+    <v-layout row wrap class="mt-5">
+      <Title :title="$t('login')" />
       <v-flex xs12 sm6 offset-sm3>
         <form @submit.prevent="submit">
           <v-layout column>
@@ -36,16 +35,6 @@
             </v-flex>
             <v-flex text-xs-center mt-5>
               <SubmitButton :text="$t('login.LOGIN')" />
-            </v-flex>
-            <v-flex text-xs-center>
-              <v-btn
-                :to="{ name: 'forgotPassword' }"
-                color="white"
-                small
-                flat
-                class="btnForgotPassword"
-                >{{ $t('login.FORGOT_PASSWORD') }}
-              </v-btn>
             </v-flex>
           </v-layout>
         </form>
