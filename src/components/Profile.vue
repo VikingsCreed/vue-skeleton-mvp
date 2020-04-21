@@ -8,7 +8,7 @@
             <v-flex text-xs-center>
               <v-btn
                 small
-                flat
+                color="blue lighten-1"
                 v-on="on"
                 @click="triggerChangePassword = true"
                 class="btnChangePassword"
@@ -16,7 +16,7 @@
               >
             </v-flex>
           </template>
-          <v-card>
+          <v-card dark>
             <form @submit.prevent="save">
               <v-card-title>
                 <span class="headline">
@@ -81,13 +81,12 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="red lighten3" flat @click="close">
+                <v-btn color="red lighten-2" @click="close">
                   {{ $t('dataTable.CANCEL') }}
                 </v-btn>
                 <SubmitButton
                   :text="$t('dataTable.SAVE')"
-                  color="yellow lighten3"
-                  flat
+                  color="blue lighten-1"
                 />
               </v-card-actions>
             </form>
@@ -125,7 +124,7 @@
                   autocomplete="off"
                 ></v-text-field>
               </v-flex>
-              <v-flex xs12 md4>
+              <v-flex xs12 md6>
                 <v-text-field
                   id="steamid64"
                   name="steamid"
@@ -139,7 +138,7 @@
                   autocomplete="off"
                 ></v-text-field>
               </v-flex>
-              <v-flex xs12 md4>
+              <v-flex xs12 md6>
                 <v-text-field
                   id="country"
                   name="country"
@@ -166,6 +165,7 @@
       <ErrorMessage />
       <SuccessMessage />
     </v-layout>
+    <D2Profile :steamid="steamid64" />
   </v-container>
 </template>
 
