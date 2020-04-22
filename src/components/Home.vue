@@ -8,10 +8,10 @@
     <v-container>
       <v-flex text-xs-center mt-5>
         <v-btn x-large color="blue lighten-1" dark href="profile">{{
-          $t('home.GOTOFORUM')
+          $t('home.GOTOMYPROFILE')
         }}</v-btn>
         <v-btn x-large color="blue lighten-1" dark href="forum">{{
-          $t('home.GOTOMYPROFILE')
+          $t('home.GOTOFORUM')
         }}</v-btn>
       </v-flex>
       <!-- Dialog vindu som ber deg om å verifisere eposten ville poppet opp
