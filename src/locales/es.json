@@ -109,10 +109,11 @@
   },
   "home": {
     "TITLE": "Inicio Protegido",
-    "GREETING": "Bienvenido(a) %{0}",
+    "GREETING": "Bienvenido(a)",
     "GOTOFORUM": "Ir al foro",
     "GOTOMYPROFILE": "Ir a mi perfil",
-    "GOTOHOME": "Ir a casa"
+    "GOTOHOME": "Ir a casa",
+    "LOGGEDIN": "Ahora está conectado."
   },
   "about": {
     "HEAD": "Acerca de ",

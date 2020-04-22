@@ -109,10 +109,11 @@
   },
   "home": {
     "TITLE": "Protected Home",
-    "GREETING": "Welcome %{0}",
+    "GREETING": "Welcome",
     "GOTOFORUM": "Go to Forum",
     "GOTOMYPROFILE": "Go to My Profile",
-    "GOTOHOME": "Go to Home"
+    "GOTOHOME": "Go to Home",
+    "LOGGEDIN": "You are now logged in."
   },
   "about": {
     "HEAD": "About ",

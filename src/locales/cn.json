@@ -109,10 +109,11 @@
   },
   "home": {
     "TITLE": "后台主页",
-    "GREETING": "欢迎您 %{0}",
+    "GREETING": "欢迎您",
     "GOTOFORUM": "前往论坛",
     "GOTOMYPROFILE": "转到我的个人资料",
-    "GOTOHOME": "回家"
+    "GOTOHOME": "回家",
+    "LOGGEDIN": "您现在已登录。"
   },
   "about": {
     "HEAD": "关于 ",

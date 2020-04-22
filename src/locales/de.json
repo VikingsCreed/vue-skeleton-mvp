@@ -109,10 +109,11 @@
     },
     "home": {
         "TITLE": "Geschütztes Zuhause",
-        "GREETING": "Herzlich willkommen %{0}",
+        "GREETING": "Herzlich willkommen ",
         "GOTOFORUM": "Gehe zum Forum",
         "GOTOMYPROFILE": "Geh auf mein Profil",
-        "GOTOHOME": "Zur Startseite"
+        "GOTOHOME": "Zur Startseite",
+        "LOGGEDIN": "Sie sind jetzt eingeloggt."
   },
     "about": {
         "HEAD": "Über ",

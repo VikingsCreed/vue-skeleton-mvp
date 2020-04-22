@@ -1,9 +1,9 @@
 <template>
   <v-container fluid>
     <h1 class="display-3 font-weight-bold text-xs-center mt-5">
-      Welcome {{ name }}
+      {{ $t('home.GREETING') }} {{ name }}
     </h1>
-    <p class="text-xs-center">You are now logged in.</p>
+    <p class="text-xs-center">{{ $t('home.LOGGEDIN') }}</p>
 
     <v-container>
       <v-flex text-xs-center mt-5>
