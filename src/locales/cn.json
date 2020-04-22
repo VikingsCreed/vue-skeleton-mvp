@@ -10,8 +10,11 @@
     "404": "页面没有找到",
     "EMAIL_IS_NOT_VALID": "您的邮箱不正确",
     "IS_EMPTY": "您输入的内容为空",
+    "NAME_EMPTY": "名称",
+    "STEAM_EMPTY": "Steam",
     "ERROR": "系统错误",
     "MISSING": "您提交的内容有误，请重试",
+    
     "NOT_FOUND_OR_ALREADY_VERIFIED": "不存在或者已经验证过",
     "NOT_FOUND_OR_ALREADY_USED": "不存在或已经使用过",
     "NOT_FOUND": "页面没有找到",
@@ -36,13 +39,10 @@
   "loading": {
     "PLEASE_WAIT": "请您耐心等待..."
   },
-  "footer": {
-    "MADE_WITH": "Made With",
-    "BY": "by"
-  },
   "menuItems": {
     "HOME": "主页",
     "ABOUT": "关于",
+    "FORUM": "论坛",
     "MY_PROFILE": "个人中心",
     "SIGNUP": "注册",
     "LOGIN": "登录",
@@ -50,7 +50,6 @@
   },
   "adminItems": {
     "ADMIN": "管理",
-    "CITIES": "城市列表",
     "USERS": "用户列表"
   },
   "roles": {
@@ -72,12 +71,6 @@
     "OF": "属于",
     "SEARCH": "搜索"
   },
-  "cities": {
-    "TITLE": "城市列表",
-    "headers": {
-      "FIRSTNAME": "名称"
-    }
-  },
   "users": {
     "TITLE": "用户",
     "headers": {
@@ -85,39 +78,77 @@
       "LASTNAME": "姓",
       "EMAIL": "邮箱",
       "ROLE": "角色",
-      "VERIFIED": "已验证",
       "CITY": "城市",
       "COUNTRY": "国家",
-      "PHONE": "电话"
+      "STEAMID64": "SteamId64"
     },
     "PASSWORD": "密码",
     "CONFIRM_PASSWORD": "验证密码"
   },
   "landing": {
-    "TITLE": "首页",
-    "DESCRIPTION": "这个页面开放访问",
-    "BUY_ME_A_COFFEE": "送杯咖啡给我吧",
-    "BUY_ME_A_COFFEE_DESCRIPTION": "你在使用我的应用时，我尽力地为你提供最好的体验。所以，如果你喜欢我所做的并且想说 \"谢谢\" 的话,请点击下面的链接送我一杯咖啡吧。",
-    "DESCRIPTION_VUE": "这个项目是为了其他的Web开发者能够简单快速学习VueJS而创建的。",
-    "DESCRIPTION_API": "Demo同时也关联到了Node.js、express.js、MongoDB、JWT和REST API等项目，也向你展示了如何与API集成。",
-    "API_DOCUMENTATION": "API文档",
-    "FRONTEND_DOCUMENTATION": "前端文档"
+    "HEAD": "找到你的消防队",
+    "HEAD2": "今天.",
+    "STARTINGINFO": "Destiny 2 TeamFinder是一个应用程序，玩家可以在其中找到其他监护人玩耍。 轻松设置您想做的任何活动的帖子，并看着人们加入。 您还可以签出自己的加载项和其他内容。",
+    "infoCards": [
+      "消防队", "轮廓", "邀请"
+    ],
+    "infoCardsDesc": [
+      "设置自己的论坛帖子，进行任何突袭，进行其他您想完成的活动。 您还可以搜索已创建的帖子并加入等待的监护人。",
+      "直接在应用程序上签出自己的加载项。 您还可以在论坛上查看加入您的帖子的玩家的下载量。 考虑到您可能需要配备某些武器，这非常整洁。",
+      "只需通过游戏中的/ invite命令邀请监护人加入您的帖子。 通过我们为您复制邀请链接和ID号，您可以轻松完成此操作"
+    ], 
+    "infoCards2": [
+      "Vue.js", "Node.js", "MongoDB"
+    ],
+    "infoCards2Desc": [
+      "Vue是一个开放源代码的JavaScript框架，用于制作用户界面和简单的应用程序。 它将HTML，JS和CSS组合到一个文件中，并且非常容易重用代码。",
+      "Node.js是一个开放源代码的JavaScript运行时环境，可以在Web浏览器之外执行JavaScript代码。",
+      "MongoDB是面向文档的NoSQL数据库程序。 MongoDB使用类似JSON的文档进行数据存储，查询起来很容易"
+    ],
+    "LEARN": "学到更多"
   },
   "home": {
     "TITLE": "后台主页",
     "GREETING": "欢迎您 %{0}",
-    "DESCRIPTION": "这个页面仅供有权限的用户访问",
-    "VERIFY_YOUR_ACCOUNT": "重要: 验证你的账号",
-    "VERIFY_YOUR_ACCOUNT_DESCRIPTION": "您必须要验证您的账号，通过点击链接验邮箱，验证后您可以体验所有特性。",
-    "CLOSE": "关闭"
+    "GOTOFORUM": "前往论坛",
+    "GOTOMYPROFILE": "转到我的个人资料",
+    "GOTOHOME": "回家"
   },
   "about": {
-    "TITLE": "关于",
-    "DESCRIPTION": "这个页面公开访问"
+    "HEAD": "关于 ",
+    "HEAD2": "Destiny 2 Teamfinder",
+    "WELCOME": "欢迎来到非官方的Destiny2团队发现者！",
+    "infowhy": [
+      "我们认为，缺少一个好的系统来为各种活动寻找团队的游戏对社区造成了损害，因此，我们决定为Destiny 2开发此量身定制的Teamfinder应用程序。"
+    ],
+    "infohow":[
+      "我们希望通过将社区聚集到一个地方来加强社区之间的联系并建立新的关系。 在站点上创建团队后，团队负责人可以选择团队的具体情况以及与团队一起运行所需的内容。 我们希望这将激发并发展社区。"
+    ],
+    "whatisit": [
+      "Destiny 2 Teamfinder是Destiny 2的非官方Teamfinder功能。此Teamfinder功能适用于所有人，任何人都可以组建一个新团队！ 作为Destiny 2 Teamfinder社区的一部分，您将可以使您的游戏玩法达到一个全新的水平。"
+    ],
+    "inqury":[ 
+      "如果您有任何疑问，意见或反馈，请随时通过example@d2teamfinder.com与我们联系。"
+    ],
+    "why":[
+      "为什么？"
+    ],
+    "how": [
+      "怎么样？"
+    ],
+    "what": [
+      "什么？"
+    ],
+    "hello": [
+      "问好"
+    ]
+    
+  },
+  "forum":{
+    "TITLE": "论坛"
   },
   "login": {
     "TITLE": "登录",
-    "DESCRIPTION": "这是个DEMO，数据库每30分钟会删除数据。所以任何数据都会在很短的时间内丢失。邮箱:admin@admin.com <br/> 密码:12345。",
     "EMAIL": "邮箱",
     "PASSWORD": "密码",
     "LOGIN": "登录",
@@ -148,11 +179,8 @@
     "CONFIRM_PASSWORD": "确认密码",
     "SIGN_ME_UP": "注册"
   },
-  "verify": {
-    "TITLE": "验证邮箱",
-    "EMAIL_VERIFIED": "邮箱验证成功"
-  },
   "myProfile": {
+    "NAME": "名称",
     "TITLE": "个人中心",
     "CHANGE_MY_PASSWORD": "修改我的密码",
     "CURRENT_PASSWORD": "当前密码",
@@ -162,14 +190,20 @@
     "FIRSTNAME": "姓名",
     "LASTNAME": "姓",
     "EMAIL": "邮箱",
-    "PHONE": "电话",
-    "CITY": "城市",
+    "STEAMID64": "SteamID64",
     "NO_RESULTS_FOUND": "未找到结果",
     "COUNTRY": "国家",
     "SAVE": "保存",
     "PROFILE_SAVED_SUCCESSFULLY": "个人信息保存成功"
   },
-  "test": {
-    "TEST": "这是一个测试"
+  "steamID64Help":{
+    "TITLE": "在哪里可以找到您的SteamID64",
+    "STEP1": "1：转到： ",
+    "STEP2": "2：在输入提示中输入您的Steam帐户名称。  ",
+    "STEP3": "3：点击查找",
+    "STEP4": "4：找到个人资料后，您会看到在第3行列出了steamID64",
+    "LINK": "https://steamid.io/",
+    "OPTIONAL": "或者，如果您只想测试以下站点，则可以只使用此steamID64：76561198117522343",
+    "OK": "得到它了！"
   }
 }

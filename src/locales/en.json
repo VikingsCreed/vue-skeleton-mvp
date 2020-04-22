@@ -11,7 +11,7 @@
     "EMAIL_IS_NOT_VALID": "E-mail not valid",
     "IS_EMPTY": "Empty fields",
     "NAME_EMPTY": "Name",
-    "STEAM_EMPTY": "steam",
+    "STEAM_EMPTY": "Steam",
     "ERROR": "Error",
     "MISSING": "Missing fields",
 
@@ -39,10 +39,6 @@
   "loading": {
     "PLEASE_WAIT": "Please wait..."
   },
-  "footer": {
-    "MADE_WITH": "Made with",
-    "BY": "by"
-  },
   "menuItems": {
     "HOME": "Home",
     "ABOUT": "About",
@@ -54,7 +50,6 @@
   },
   "adminItems": {
     "ADMIN": "Admin",
-    "CITIES": "Cities",
     "USERS": "Users"
   },
   "roles": {
@@ -76,12 +71,6 @@
     "OF": "of",
     "SEARCH": "Search"
   },
-  "cities": {
-    "TITLE": "Cities",
-    "headers": {
-      "FIRSTNAME": "Firstname"
-    }
-  },
   "users": {
     "TITLE": "Users",
     "headers": {
@@ -89,11 +78,9 @@
       "LASTNAME": "Lastname",
       "EMAIL": "E-mail",
       "ROLE": "Role",
-      "VERIFIED": "Verified",
       "CITY": "City",
       "COUNTRY": "Country",
-      "PHONE": "Phone",
-      "STEAMID64": "Steamid64"
+      "STEAMID64": "SteamId64"
     },
     "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Confirm Password"
@@ -118,21 +105,14 @@
       "Node.js is an open-source JavaScript runtime enviroment that executes JavaScript code outside of a webbrowser. ",
       "MongoDB is a document oriented NoSQL database program. MongoDB uses JSON-like documents for data storage and is eary to query"
     ],
-    "LEARN": "LEARN MORE",
-    "BUY_ME_A_COFFEE_DESCRIPTION": "I'm doing my best to provide you a good experience when using my apps, so if you like what I'm doing and wish to say \"thanks!\", please click the button and buy me a coffee.",
-    "DESCRIPTION_VUE": "This project is created to help other web developers create a basic VueJS app in an easy way.",
-    "DESCRIPTION_API": "Demo is also linked to a Node.js express.js MongoDB JWT REST API project that shows how this frontend can be integrated to an API.",
-    "API_DOCUMENTATION": "API documentation",
-    "FRONTEND_DOCUMENTATION": "Frontend documentation",
-    "PLACEHOLDER": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus urna libero, eu accumsan lacus fermentum sed. Suspendisse potenti. Vestibulum at fermentum erat. Fusce vulputate dui sed dolor hendrerit, et aliquam urna lobortis. Donec viverra ut mauris vitae rutrum. Donec vulputate, mauris et venenatis luctus, purus est fermentum nulla, eget mattis velit nibh a urna. "
+    "LEARN": "LEARN MORE"
   },
   "home": {
     "TITLE": "Protected Home",
     "GREETING": "Welcome %{0}",
-    "DESCRIPTION": "This page is only available privately when the users log in with their credentials",
-    "VERIFY_YOUR_ACCOUNT": "IMPORTANT: Verify your account",
-    "VERIFY_YOUR_ACCOUNT_DESCRIPTION": "You must verify your account by clicking the link sent to your E-mail to be able to enjoy all our app features",
-    "CLOSE": "Close"
+    "GOTOFORUM": "Go to Forum",
+    "GOTOMYPROFILE": "Go to My Profile",
+    "GOTOHOME": "Go to Home"
   },
   "about": {
     "HEAD": "About ",
@@ -169,7 +149,6 @@
   },
   "login": {
     "TITLE": "Login",
-    "DESCRIPTION": "This is a demo. Database resets every 30 mins. So anything you do will be lost after a short time.<br />E-mail: admin@admin.com <br />Password: 12345",
     "EMAIL": "E-mail",
     "PASSWORD": "Password",
     "LOGIN": "Login",
@@ -200,10 +179,6 @@
     "CONFIRM_PASSWORD": "Confirm Password",
     "SIGN_ME_UP": "Sign me up"
   },
-  "verify": {
-    "TITLE": "E-mail verification",
-    "EMAIL_VERIFIED": "E-mail verified successfully"
-  },
   "myProfile": {
     "NAME": "Name",
     "TITLE": "My profile",
@@ -215,16 +190,11 @@
     "FIRSTNAME": "Firstname",
     "LASTNAME": "Lastname",
     "EMAIL": "E-mail",
-    "PHONE": "Phone",
-    "CITY": "City",
     "STEAMID64": "SteamID64",
     "NO_RESULTS_FOUND": "No results found",
     "COUNTRY": "Country",
     "SAVE": "Save",
     "PROFILE_SAVED_SUCCESSFULLY": "Profile saved successfuly"
-  },
-  "test": {
-    "TEST": "This is a test"
   },
   "steamID64Help":{
     "TITLE": "Where you can find your SteamID64",
@@ -236,5 +206,4 @@
     "OPTIONAL": "Or you can just this steamID64 if you just want to test this site: 76561198117522343",
     "OK": "Got it!"
   }
-
 }

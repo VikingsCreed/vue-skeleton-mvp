@@ -10,8 +10,11 @@
         "404": "404 Seite nicht gefunden",
         "EMAIL_IS_NOT_VALID": "E-Mail ungültig",
         "IS_EMPTY": "Leerfelder",
+        "NAME_EMPTY": "Name",
+        "STEAM_EMPTY": "Steam",
         "ERROR": "Error",
         "MISSING": "Fehlende Felder",
+        
         "NOT_FOUND_OR_ALREADY_VERIFIED": "Nicht gefunden oder bereits verifiziert",
         "NOT_FOUND_OR_ALREADY_USED": "Nicht gefunden oder bereits verwendet",
         "NOT_FOUND": "Nicht gefunden",
@@ -36,10 +39,10 @@
     "loading": {
         "PLEASE_WAIT": "Warten Sie mal..."
     },
-    
     "menuItems": {
         "HOME": "Zuhause",
         "ABOUT": "Über",
+        "FORUM": "Forum",
         "MY_PROFILE": "Mein Profil",
         "SIGNUP": "Anmelden",
         "LOGIN": "Einloggen",
@@ -47,7 +50,6 @@
     },
     "adminItems": {
         "ADMIN": "Admin",
-        "CITIES": "Städte",
         "USERS": "Benutzer"
     },
     "roles": {
@@ -69,12 +71,6 @@
         "OF": "von",
         "SEARCH": "Suche"
     },
-    "cities": {
-        "TITLE": "Städte",
-        "headers": {
-            "FIRSTNAME": "Name"
-        }
-    },
     "users": {
         "TITLE": "Benutzer",
         "headers": {
@@ -82,35 +78,77 @@
             "LASTNAME": "Familienname",
             "EMAIL": "E-mail",
             "ROLE": "Rolle",
-            "VERIFIED": "Verifiziert",
             "CITY": "Stadt",
             "COUNTRY": "Land",
-            "PHONE": "Telefon"
+            "STEAMID64": "SteamId64"
         },
         "PASSWORD": "Passwort",
         "CONFIRM_PASSWORD": "Kennwort bestätigen"
     },
     "landing": {
-        "TITLE": "Landung"
+        "HEAD": "Finde dein Feuerteam",
+        "HEAD2": "Heute.",
+        "STARTINGINFO": "Destiny 2 TeamFinder ist eine App, mit der Spieler andere Wächter finden können, mit denen sie spielen können. Richten Sie ganz einfach einen Beitrag mit den Aktivitäten ein, die Sie ausführen möchten, und beobachten Sie, wie Personen beitreten. Sie können auch Ihr eigenes Loadout und andere überprüfen.",
+        "infoCards": [
+            "Feuerwehrteam", "Profil", "Einladen"
+        ],
+        "infoCardsDesc": [
+            "Richten Sie Ihren eigenen Forumsbeitrag für jeden Raid ein und schlagen Sie andere Aktivitäten an, die Sie abschließen möchten. Sie können auch nach bereits erstellten Posts suchen und sich wartenden Wächtern anschließen.",
+            "Schauen Sie sich hier in der App Ihr eigenes Loadout an. Sie können auch die Auslastung der Spieler überprüfen, die sich Ihrem Beitrag im Forum anschließen. Dies ist sehr ordentlich, wenn man bedenkt, dass bestimmte Waffen ausgerüstet werden müssen.",
+            "Laden Sie einfach die Wächter, die sich Ihrem Beitrag anschließen, mit einem Befehl / einladen ein. Dies können Sie ganz einfach tun, indem Sie den Einladungslink und die ID-Nummer für Sie kopieren"
+          ], 
+        "infoCards2": [
+            "Vue.js", "Node.js", "MongoDB"
+        ],
+        "infoCards2Desc": [
+            "Vue ist ein Open-Source-JavaScript-Framework, mit dem Benutzeroberflächen und einfache Apps erstellt werden. Es kombiniert HTML, JS und CSS in einer Datei und erleichtert die Wiederverwendung von Code.",
+            "Node.js ist eine Open-Source-JavaScript-Laufzeitumgebung, die JavaScript-Code außerhalb eines Webbrowsers ausführt.",
+            "MongoDB ist ein dokumentorientiertes NoSQL-Datenbankprogramm. MongoDB verwendet JSON-ähnliche Dokumente zur Datenspeicherung und kann schnell abgefragt werden"
+        ],
+        "LEARN": "ERFAHREN SIE MEHR"
     },
     "home": {
         "TITLE": "Geschütztes Zuhause",
         "GREETING": "Herzlich willkommen %{0}",
-        "DESCRIPTION": "Diese Seite ist nur privat verfügbar, wenn sich die Benutzer mit ihren Anmeldeinformationen anmelden",
-        "VERIFY_YOUR_ACCOUNT": "WICHTIG: Überprüfen Sie Ihr Konto",
-        "VERIFY_YOUR_ACCOUNT_DESCRIPTION": "Sie müssen Ihr Konto überprüfen, indem Sie auf den Link klicken, der an Ihre E-Mail gesendet wurde, um alle unsere App-Funktionen nutzen zu können",
-        "CLOSE": "Schließen"
-    },
+        "GOTOFORUM": "Gehe zum Forum",
+        "GOTOMYPROFILE": "Geh auf mein Profil",
+        "GOTOHOME": "Zur Startseite"
+  },
     "about": {
-        "TITLE": "Über uns",
-        "WELCOME": "Willkommen beim inoffiziellen Destiny 2 Teamfinder!",
-        "WHATTODO": "Finden Sie ein Team und führen Sie Ihre Mission scheinbar schnell und einfach mit der Verwendung unserer Teamfinder-Funktion aus, wenn Sie ein Konto bei uns erstellt haben. Sie können einfach das Karam-System verwenden, um Feedback direkt an Ihr Team und einzelne Spieler zu geben, wenn das Team.",
-        "THETEAM": "Das Team besteht aus 4 Studenten, die derzeit IT 2. Jahr an der Universität von Souteast Norway, Bé studieren. Diese Website ist ein Schulprojekt und unsere Abschlussprüfung im Fach APP2000. Die Beauftragten war es, eine Applicatio für eine Website zu machen, entweder eine Anwendung des Professors oder eine Anwendung unserer eigenen Wahl vom Professor genehmigt.",
-        "INQURY": "Für alle Anfragen kontaktieren Sie uns bitte auf den folgenden Plattformen in der Fußzeile."
-    },
+        "HEAD": "Über ",
+        "HEAD2": "Destiny 2 Teamfinder",
+        "WELCOME": "Willkommen im inoffiziellen Destiny2 Teamfinder!",
+        "infowhy": [
+            "We believe that the lack of a good system ingame to find a team for various activites was damaging for the community, therefor we decided to make this tailor-made teamfinder application for Destiny 2."
+        ],
+        "infohow":[
+            "Wir glauben, dass das Fehlen eines guten Systems im Spiel, um ein Team für verschiedene Aktivitäten zu finden, der Community schadete. Deshalb haben wir uns entschlossen, diese maßgeschneiderte Teamfinder-Anwendung für Destiny 2 zu entwickeln."
+        ],
+        "whatisit": [
+            "Destiny 2 Teamfinder ist die inoffizielle Teamfinder-Funktion für Destiny 2. Diese Teamfinder-Funktion ist für alle verfügbar und jeder kann ein neues Team bilden! Als Teil der Destiny 2 Teamfinder-Community kannst du dein Gameplay auf ein ganz anderes Level bringen."
+        ],
+        "inqury":[ 
+            "Wenn Sie Fragen, Kommentare oder Feedback haben, wenden Sie sich bitte an example@d2teamfinder.com."
+        ],
+        "why":[
+            "Warum?"
+        ],
+        "how": [
+            "Wie?"
+        ],
+        "what": [
+            "Was?"
+        ],
+        "hello": [
+            "Sag Hallo"
+        ]
+    
+  },
+  "forum":{
+    "TITLE": "Forum"
+  },
     "login": {
         "TITLE": "Einloggen",
-        "DESCRIPTION": "",
         "EMAIL": "E-mail",
         "PASSWORD": "Passwort",
         "LOGIN": "Einloggen",
@@ -141,11 +179,8 @@
         "CONFIRM_PASSWORD": "Kennwort bestätigen",
         "SIGN_ME_UP": "Melden Sie mich an"
     },
-    "verify": {
-        "TITLE": "E-Mail-Verifizierung",
-        "EMAIL_VERIFIED": "E-Mail erfolgreich verifiziert"
-    },
     "myProfile": {
+        "NAME": "Name",
         "TITLE": "Mein Profil",
         "CHANGE_MY_PASSWORD": "Ändere mein Passwort",
         "CURRENT_PASSWORD": "Jetziges Passwort",
@@ -155,14 +190,20 @@
         "FIRSTNAME": "Name",
         "LASTNAME": "Familienname",
         "EMAIL": "E-mail",
-        "PHONE": "Telefon",
-        "CITY": "Stadt",
+        "STEAMID64": "SteamID64",
         "NO_RESULTS_FOUND": "keine Ergebnisse gefunden",
         "COUNTRY": "Land",
         "SAVE": "Speichern",
         "PROFILE_SAVED_SUCCESSFULLY": "Profil erfolgreich gespeichert"
     },
-    "test": {
-        "TEST": "Das ist ein Test"
-    }
+    "steamID64Help":{
+        "TITLE": "Wo finden Sie Ihre SteamID64",
+        "STEP1": "1: Gehe zu: ",
+        "STEP2": "2: Geben Sie Ihren Steam-Kontonamen in die Eingabeaufforderung ein.  ",
+        "STEP3": "3: Klicken Sie auf Nachschlagen",
+        "STEP4": "4: Wenn Sie Ihr Profil gefunden haben, können Sie sehen, dass Ihre SteamID64 in Zeile 3 aufgeführt ist",
+        "LINK": "https://steamid.io/",
+        "OPTIONAL": "Oder Sie können nur diese SteamID64 verwenden, wenn Sie nur diese Site testen möchten: 76561198117522343",
+        "OK": "Verstanden!"
+      }
 }

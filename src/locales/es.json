@@ -10,8 +10,11 @@
     "404": "404 Página no encontrada",
     "EMAIL_IS_NOT_VALID": "E-mail no válido",
     "IS_EMPTY": "Campos vacíos",
+    "NAME_EMPTY": "Nombre",
+    "STEAM_EMPTY": "Steam",
     "ERROR": "Error",
     "MISSING": "Campos faltantes",
+    
     "NOT_FOUND_OR_ALREADY_VERIFIED": "No encontrado o ya fue verificado",
     "NOT_FOUND_OR_ALREADY_USED": "No encontrado o ya fue usado",
     "NOT_FOUND": "No encontrado",
@@ -36,13 +39,10 @@
   "loading": {
     "PLEASE_WAIT": "Por favor espere..."
   },
-  "footer": {
-    "MADE_WITH": "Hecho con",
-    "BY": "por"
-  },
   "menuItems": {
     "HOME": "Inicio",
     "ABOUT": "Acerca",
+    "FORUM": "Foro",
     "MY_PROFILE": "Mi Perfil",
     "SIGNUP": "Registro",
     "LOGIN": "Ingresar",
@@ -50,7 +50,6 @@
   },
   "adminItems": {
     "ADMIN": "Admin",
-    "CITIES": "Ciudades",
     "USERS": "Usuarios"
   },
   "roles": {
@@ -72,54 +71,84 @@
     "OF": "de",
     "SEARCH": "Buscar"
   },
-  "cities": {
-    "TITLE": "Ciudades",
-    "headers": {
-      "FIRSTNAME": "Nombre"
-    }
-  },
   "users": {
     "TITLE": "Usuarios",
     "headers": {
       "FIRSTNAME": "Nombre",
+      "LASTNAME": "Apellido",
       "EMAIL": "E-mail",
       "ROLE": "Rol",
-      "VERIFIED": "Verificado",
       "CITY": "Ciudad",
       "COUNTRY": "País",
-      "PHONE": "Teléfono"
+      "STEAMID64": "SteamId64"
     },
     "PASSWORD": "Contraseña",
     "CONFIRM_PASSWORD": "Confirmar Contraseña"
   },
   "landing": {
-    "TITLE": "Página de aterrizaje",
-    "DESCRIPTION": "Esta página está disponible públicamente",
-    "BUY_ME_A_COFFEE": "Cómprame un café",
-    "BUY_ME_A_COFFEE_DESCRIPTION": "Estoy haciendo lo mejor para proveer una buena experiencia cuando uses mis aplicaciones, así que si te gusta lo que estoy haciendo y quieres decir \"¡gracias!\", por favor haz click en el botón y cómprame un café.",
-    "DESCRIPTION_VUE": "Este proyecto fue creado para ayudar a que otros desarrolladores web construyan una app básica en VueJS.",
-    "DESCRIPTION_API": "Este demo está enlazado a una API hecha con Node.js express.js MongoDB JWT, que muestra cómo este proyecto de frontend puede ser enlazado con una API.",
-    "API_DOCUMENTATION": "Documentación API",
-    "FRONTEND_DOCUMENTATION": "Documentación frontend"
+    "HEAD": "Encuentra tu equipo de bomberos",
+    "HEAD2": "Hoy.",
+    "STARTINGINFO": "Destiny 2 TeamFinder es una aplicación donde los jugadores pueden encontrar otros guardianes para jugar. Configure fácilmente una publicación de cualquier actividad que desee hacer y observe cómo se unen las personas. También puede consultar su propia carga y otras.",
+    "infoCards": [
+      "Equipo de fuego", "Perfil", "Einladen"
+    ],
+    "infoCardsDesc": [
+      "Configure su propia publicación en el foro de cualquier redada, ataque u otra actividad que desee completar. También puede buscar publicaciones ya creadas y unirse a guardianes en espera.",
+      "Echa un vistazo a tu propia carga aquí en la aplicación. También podrás ver las cargas de jugadores que se unen a tu publicación en el foro. Esto es muy bueno, teniendo en cuenta que es posible que requiera ciertas armas para equiparlas.",
+      "Simplemente invite a los guardianes a unirse a su publicación mediante un comando / invite en el juego. Esto lo hacemos fácilmente copiando el enlace de invitación y el número de identificación."
+    ], 
+    "infoCards2": [
+      "Vue.js", "Node.js", "MongoDB"
+    ],
+    "infoCards2Desc": [
+      "Vue es un marco de JavaScript de código abierto que se utiliza para crear interfaces de usuario y aplicaciones simples. Combina HTML, JS y CSS en un solo archivo, y hace que sea muy fácil reutilizar el código.",
+      "Node.js es un entorno de tiempo de ejecución JavaScript de código abierto que ejecuta código JavaScript fuera de un navegador web.",
+      "MongoDB es un programa de base de datos NoSQL orientado a documentos. MongoDB utiliza documentos similares a JSON para el almacenamiento de datos y es fácil de consultar"
+    ],
+    "LEARN": "ERFAHREN SIE MEHR"
   },
   "home": {
     "TITLE": "Inicio Protegido",
     "GREETING": "Bienvenido(a) %{0}",
-    "DESCRIPTION": "Esta página está disponible únicamente de forma privada cuando el usuario ingresa con sus credenciales",
-    "VERIFY_YOUR_ACCOUNT": "IMPORTANTE: Verifica tu cuenta",
-    "VERIFY_YOUR_ACCOUNT_DESCRIPTION": "Debes verificar tu cuenta haciendo click en el enlace enviado a tu E-mail para que puedas disfrutar de todas las características de nuestra aplicación",
-    "CLOSE": "Cerrar"
+    "GOTOFORUM": "Ir al foro",
+    "GOTOMYPROFILE": "Ir a mi perfil",
+    "GOTOHOME": "Ir a casa"
   },
   "about": {
-    "TITLE": "Acerca de nosotros",
-    "WELCOME": "¡Bienvenido al no oficial Destiny 2 teamfinder!",
-    "WHATTODO": "Encuentra un equipo y ejecuta tu misión sin parecer, rápida y fácil con el uso de nuestra función teamfinder, cuando hayas creado una cuenta con nosotros. Simplemente puedes usar el sistema karam para dar retroalimentación directamente a tu equipo y jugadores individuales si el equipo.",
-    "THETEAM": "El equipo está formado por 4 estudiantes que actualmente estudian 2o año de TI en la Universidad de Souteast Norway, Bo. Este sitio web es un proyecto escolar y nuestro examen final en la asignatura «APP2000». El asignado era hacer un aplicador para un sitio web, ya sea una solicitud del profesor o una aplicación de nuestra propia elección aprobada por el profesor.",
-    "INQURY": "Para cualquier consulta por favor póngase en contacto con nosotros en las plataformas de seguimiento que se encuentran en el pie de página."
+    "HEAD": "Acerca de ",
+    "HEAD2": "Destiny 2 Teamfinder",
+    "WELCOME": "¡Bienvenido al buscador de equipo no oficial de Destiny2!",
+    "infowhy": [
+      "Creemos que la falta de un buen sistema en el juego para encontrar un equipo para diversas actividades fue perjudicial para la comunidad, por lo que decidimos hacer esta aplicación de buscador de equipo a medida para Destiny 2."
+    ],
+    "infohow":[
+      "Queremos estrechar la conexión con la comunidad y crear nuevas relaciones al unir a la comunidad en un solo lugar. Cuando se crea un equipo en el sitio, el líder del equipo puede seleccionar las especificaciones del equipo y lo que se necesita para correr con el equipo. Esperamos que esto inspire y haga crecer la comunidad."
+    ],
+    "whatisit": [
+      "Teamfinder de Destiny 2 es la función de Teamfinder no oficial para Destiny 2. ¡Esta función de Teamfinder está disponible para todos y cualquiera puede formar un nuevo equipo! Como parte de la comunidad de Teamfinder de Destiny 2, podrás llevar tu juego a otro nivel."
+    ],
+    "inqury":[ 
+      "Si tiene alguna pregunta, comentario o comentario, no dude en contactarnos en example@d2teamfinder.com."
+    ],
+    "why":[
+      "¿Por qué?"
+    ],
+    "how": [
+      "¿Cómo?"
+    ],
+    "what": [
+      "¿Qué?"
+    ],
+    "hello": [
+      "Di hola"
+    ]
+    
+  },
+  "forum":{
+    "TITLE": "Foro"
   },
   "login": {
     "TITLE": "Ingresar",
-    "DESCRIPTION": "Este es un demo. La base de datos se purga cada 30 minutos. Cualquier cambio que se realice se perderá luego de este tiempo.<br />E-mail: admin@admin.com <br />Password: 12345",
     "EMAIL": "E-mail",
     "PASSWORD": "Contraseña",
     "LOGIN": "Ingresar",
@@ -142,16 +171,16 @@
   "signup": {
     "TITLE": "Registro",
     "FIRSTNAME": "Nombre",
+    "LASTNAME": "Lastname",
     "EMAIL": "E-mail",
     "PASSWORD": "Contraseña",
+    "COUNTRY": "País",
+    "STEAMID64": "SteamID64",
     "CONFIRM_PASSWORD": "Confirmar Contraseña",
     "SIGN_ME_UP": "Registrarme"
   },
-  "verify": {
-    "TITLE": "Verificación de E-mail",
-    "EMAIL_VERIFIED": "E-mail verificado exitosamente"
-  },
   "myProfile": {
+    "NAME": "Nombre",
     "TITLE": "Mi Perfil",
     "CHANGE_MY_PASSWORD": "Cambiar Mi Contraseña",
     "CURRENT_PASSWORD": "Contraseña Actual",
@@ -159,15 +188,22 @@
     "CONFIRM_NEW_PASSWORD": "Confirmar Nueva Contraseña",
     "PASSWORD_CHANGED": "Contraseña cambiada exitosamente",
     "FIRSTNAME": "Nombre",
+    "LASTNAME": "Apellido",
     "EMAIL": "E-mail",
-    "PHONE": "Teléfono",
-    "CITY": "Ciudad",
+    "STEAMID64": "SteamID64",
     "NO_RESULTS_FOUND": "No se encontraron resultados",
     "COUNTRY": "País",
     "SAVE": "Guardar",
     "PROFILE_SAVED_SUCCESSFULLY": "Perfil guardado exitosamente"
   },
-  "test": {
-    "TEST": "Esto es una prueba"
+  "steamID64Help":{
+    "TITLE": "Donde puede encontrar su SteamID64",
+    "STEP1": "1: Ir a: ",
+    "STEP2": "2: Ingrese el nombre de su cuenta de Steam en la solicitud de ingreso.  ",
+    "STEP3": "3: haga clic en buscar",
+    "STEP4": "4: Cuando haya encontrado su perfil, puede ver que su steamID64 aparece en la línea 3",
+    "LINK": "https://steamid.io/",
+    "OPTIONAL": "O puede simplemente usar este steamID64 si solo desea probar este sitio: 76561198117522343",
+    "OK": "¡Entendido!"
   }
 }
