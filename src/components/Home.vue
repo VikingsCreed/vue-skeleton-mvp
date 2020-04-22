@@ -4,6 +4,19 @@
       Welcome {{ name }}
     </h1>
     <p class="text-xs-center">You are now logged in.</p>
+    <div class="margin">
+      <div class="my-2">
+        <v-btn x-large color="red lighten-1" dark href="landing">{{
+          home.GOTOHOME
+        }}</v-btn>
+        <v-btn x-large color="red lighten-1" dark href="profile">{{
+          home.GOTOMYPROFILE
+        }}</v-btn>
+        <v-btn x-large color="red lighten-1" dark href="forum">{{
+          home.GOTOFORUM
+        }}</v-btn>
+      </div>
+    </div>
 
     <!-- Dialog vindu som ber deg om å verifisere eposten ville poppet opp
         om vi hadde MailBullet.
@@ -65,3 +78,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.margin {
+  margin-top: 10%;
+  margin: 5%;
+}
+</style>
