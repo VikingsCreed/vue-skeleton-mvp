@@ -31,8 +31,7 @@ const actions = {
         lastname: payload.lastname,
         email: payload.email,
         role: payload.role,
-        phone: payload.phone,
-        city: payload.city,
+        steamid64: payload.steamid64,
         country: payload.country
       }
       api

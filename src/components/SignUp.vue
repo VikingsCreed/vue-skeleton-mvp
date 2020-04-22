@@ -18,20 +18,6 @@
                 autocomplete="off"
               ></v-text-field>
             </v-flex>
-
-            <v-flex>
-              <v-text-field
-                id="lastname"
-                name="lastname"
-                :label="$t('signup.LASTNAME')"
-                v-model="lastname"
-                :data-vv-as="$t('signup.LASTNAME')"
-                :error="errors.has('lastname')"
-                :error-messages="errors.collect('lastname')"
-                v-validate.disable="'required'"
-                autocomplete="off"
-              ></v-text-field>
-            </v-flex>
             <v-flex>
               <v-text-field
                 id="email"
@@ -129,7 +115,6 @@ export default {
   data() {
     return {
       firstname: '',
-      lastname: '',
       email: '',
       password: '',
       confirmPassword: '',
@@ -144,7 +129,6 @@ export default {
       if (valid) {
         await this.userSignUp({
           name: this.name,
-          lastname: this.lastname,
           email: this.email,
           password: this.password,
           country: this.country,

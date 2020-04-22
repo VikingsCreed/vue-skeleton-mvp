@@ -1,6 +1,6 @@
-<template>
+<template dark>
   <div>
-    <v-layout wrap>
+    <v-layout wrap my-5 dark>
       <v-flex xs12 sm12 md4 mt-3 pl-4>
         <v-toolbar-title>{{ $t('users.TITLE') }}</v-toolbar-title>
       </v-flex>
@@ -20,9 +20,10 @@
           v-model="dialog"
           max-width="800px"
           content-class="dlgNewEditItem"
+          dark
         >
           <template v-slot:activator="{ on }">
-            <v-btn color="secondary" v-on="on" class="btnNewItem pr-4">
+            <v-btn color="blue lighten-1" v-on="on" class="btnNewItem pr-4">
               <v-icon class="mr-2">mdi-plus</v-icon>
               {{ $t('dataTable.NEW_ITEM') }}
             </v-btn>
@@ -46,15 +47,6 @@
                       <div name="updatedAt">
                         {{ getFormat(editedItem.updatedAt) }}
                       </div>
-                    </v-flex>
-                    <v-flex xs12 md4>
-                      <label for="verified">{{
-                        $t('users.headers.VERIFIED')
-                      }}</label>
-                      <div
-                        name="verified"
-                        v-html="trueFalse(editedItem.verified)"
-                      ></div>
                     </v-flex>
                   </template>
                   <v-flex xs12 md6>
@@ -135,23 +127,6 @@
                     ></v-select>
                   </v-flex>
                   <v-flex xs12 md6>
-                    <v-autocomplete
-                      id="city"
-                      name="city"
-                      :label="$t('users.headers.CITY')"
-                      :search-input.sync="searchInput"
-                      v-model="editedItem.city"
-                      :items="allCities"
-                      clearable
-                      :data-vv-as="$t('users.headers.CITY')"
-                      :error="errors.has('city')"
-                      :error-messages="errors.collect('city')"
-                      v-validate.disable="'required'"
-                      autocomplete="off"
-                      class="inputCity"
-                    />
-                  </v-flex>
-                  <v-flex xs12 md6>
                     <v-text-field
                       id="country"
                       name="country"
@@ -166,14 +141,14 @@
                   </v-flex>
                   <v-flex xs12 md6>
                     <v-text-field
-                      id="phone"
-                      name="phone"
+                      id="steamid64"
+                      name="steamid64"
                       type="tel"
-                      v-model="editedItem.phone"
-                      :label="$t('users.headers.PHONE')"
-                      :data-vv-as="$t('users.headers.PHONE')"
-                      :error="errors.has('phone')"
-                      :error-messages="errors.collect('phone')"
+                      v-model="editedItem.steamid64"
+                      :label="$t('users.headers.STEAMID64')"
+                      :data-vv-as="$t('users.headers.STEAMID64')"
+                      :error="errors.has('steamid64')"
+                      :error-messages="errors.collect('steamid64')"
                       v-validate.disable="'required'"
                       autocomplete="off"
                     ></v-text-field>
@@ -184,20 +159,12 @@
 
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn
-                color="red lighten3"
-                flat
-                @click="close"
-                class="btnCancel"
-                >{{ $t('dataTable.CANCEL') }}</v-btn
-              >
-              <v-btn
-                color="yellow lighten3"
-                flat
-                @click="save"
-                class="btnSave"
-                >{{ $t('dataTable.SAVE') }}</v-btn
-              >
+              <v-btn color="red lighten2" @click="close" class="btnCancel">{{
+                $t('dataTable.CANCEL')
+              }}</v-btn>
+              <v-btn color="blue lighten1" @click="save" class="btnSave">{{
+                $t('dataTable.SAVE')
+              }}</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -246,10 +213,8 @@
         <td>{{ props.item.name }}</td>
         <td>{{ props.item.email }}</td>
         <td>{{ roleName(props.item.role) }}</td>
-        <td v-html="trueFalse(props.item.verified)"></td>
-        <td>{{ props.item.city }}</td>
         <td>{{ props.item.country }}</td>
-        <td>{{ props.item.phone }}</td>
+        <td>{{ props.item.steamid64 }}</td>
         <td>{{ getFormat(props.item.createdAt) }}</td>
         <td>{{ getFormat(props.item.updatedAt) }}</td>
       </template>
@@ -286,7 +251,7 @@ export default {
       pagination: {},
       editedItem: {},
       defaultItem: {},
-      fieldsToSearch: ['name', 'email', 'role', 'city', 'country', 'phone']
+      fieldsToSearch: ['name', 'email', 'role', 'country', 'steamid64']
     }
   },
   computed: {
@@ -331,28 +296,16 @@ export default {
           value: 'role'
         },
         {
-          text: this.$i18n.t('users.headers.VERIFIED'),
-          align: 'left',
-          sortable: true,
-          value: 'verified'
-        },
-        {
-          text: this.$i18n.t('users.headers.CITY'),
-          align: 'left',
-          sortable: true,
-          value: 'city'
-        },
-        {
           text: this.$i18n.t('users.headers.COUNTRY'),
           align: 'left',
           sortable: true,
           value: 'country'
         },
         {
-          text: this.$i18n.t('users.headers.PHONE'),
+          text: this.$i18n.t('users.headers.STEAMID64'),
           align: 'left',
           sortable: true,
-          value: 'phone'
+          value: 'steamid64'
         },
         {
           text: this.$i18n.t('common.CREATED'),
@@ -450,8 +403,8 @@ export default {
             title: this.$t('common.WARNING'),
             buttonTrueText: this.$t('common.DELETE'),
             buttonFalseText: this.$t('common.CANCEL'),
-            buttonTrueColor: 'red lighten3',
-            buttonFalseColor: 'yellow lighten3'
+            buttonTrueColor: 'red lighten2',
+            buttonFalseColor: 'blue lighten1'
           }
         )
         if (response) {
@@ -492,8 +445,7 @@ export default {
               email: this.editedItem.email,
               password: this.editedItem.password,
               role: this.editedItem.role,
-              phone: this.editedItem.phone,
-              city: this.editedItem.city,
+              steamid64: this.editedItem.steamid64,
               country: this.editedItem.country
             })
             await this.getUsers(

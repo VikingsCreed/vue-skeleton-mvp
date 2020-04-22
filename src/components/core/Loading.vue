@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="showLoading" persistent width="300">
+  <v-dialog dark v-model="showLoading" persistent width="300">
     <v-card color="secondary white--text">
       <v-card-text>
         {{ $t('loading.PLEASE_WAIT') }}
