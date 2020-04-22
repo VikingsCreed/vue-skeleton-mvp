@@ -85,7 +85,7 @@
   "users": {
     "TITLE": "Users",
     "headers": {
-      "FIRSTNAME": "Firstname",
+      "NAME": "Name",
       "LASTNAME": "Lastname",
       "EMAIL": "E-mail",
       "ROLE": "Role",
@@ -93,7 +93,7 @@
       "CITY": "City",
       "COUNTRY": "Country",
       "PHONE": "Phone",
-      "STEAMID64": "Steamid64"
+      "STEAMID64": "SteamID64"
     },
     "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Confirm Password"

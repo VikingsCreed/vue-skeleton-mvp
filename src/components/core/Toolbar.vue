@@ -54,7 +54,7 @@
       <span class="hidden-md-and-up">
         <v-toolbar-side-icon @click="sidebar = !sidebar"></v-toolbar-side-icon>
       </span>
-      <v-toolbar-title class="headline text-uppercase ml-0">
+      <v-toolbar-title class="headline ml-0">
         <div>
           <router-link
             :to="{ name: 'landing' }"
