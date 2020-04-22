@@ -102,9 +102,11 @@
               ></v-text-field>
               <Card :title="$t('steamID64Help')" />
             </v-flex>
-            <v-flex text-xs-center mt-5>
-              <SubmitButton :text="$t('signup.SIGN_ME_UP')" />
-            </v-flex>
+            <div fluid class="margin">
+              <v-flex text-xs-center mt-5>
+                <SubmitButton :text="$t('signup.SIGN_ME_UP')" />
+              </v-flex>
+            </div>
           </v-layout>
         </form>
       </v-flex>
@@ -158,3 +160,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.margin {
+  margin-bottom: 5%;
+}
+</style>
