@@ -1,4 +1,4 @@
-<!-- Meny for hele nettsiden -->
+<!-- Meny for hele nettsiden redigert av Erlend Ellefsen og Robin Ellingsen -->
 <template>
   <div class="adjust-y">
     <v-navigation-drawer v-model="sidebar" app disable-resize-watcher>

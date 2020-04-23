@@ -13,4 +13,5 @@ Vue.use(Vuetify, {
   },
   iconfont: 'mdi'
 })
+// Delete knappen på admin siden
 Vue.use(VuetifyConfirm)

@@ -1,11 +1,14 @@
+<!-- Kode skrevet av Erlend Ellefsen -->
 <template>
   <div id="app">
+    <!-- Lager progress bar -->
     <v-app id="inspire">
       <div id="myProgress">
         <div id="myBar"></div>
       </div>
       <v-container grid-list-md text-xs-center fluid>
         <v-layout row wrap id="cards">
+          <!-- Lager 3 cards, en til hver karakter -->
           <v-flex v-for="n in 3" :key="n">
             <v-card class="mx-auto" max-width="29.625em">
               <v-img v-bind:src="bungie + emblem[n - 1]" class="profile-card">
@@ -137,11 +140,14 @@ const bungieItem = `${bungieManifest}/DestinyInventoryItemDefinition/`
 let width = 0
 export default {
   name: 'Card',
+  // Henter steamid verdien fra parent component
   props: {
     steamid: String
   },
   data() {
     return {
+      // Alle verdiene som returneres til nettsiden
+      // Verdiene blir fylt ut av scriptet som kommer under
       membership: String,
       bungie: 'https://www.bungie.net',
       test: [1, 2, 3],
@@ -189,6 +195,7 @@ export default {
       trash: []
     }
   },
+  // mounted gjør at scriptet starter etter <template> er lastet
   mounted() {
     let membershipId
     let chars
@@ -204,15 +211,27 @@ export default {
     let itemIconsChar1
     let itemIconsChar2
     let itemIconsChar3
+    // Bruker en jquery timer for å vise all informasjon på likt.
     const timer = $.Deferred()
     setTimeout(timer.resolve, 12000)
-    // const timeOut = $.Deferred()
+    // konstanten kaller på getMembershipId, når api requesten er ferdig(.done) sender den json filen til
+    // handleMembershipId som henter ut informasjonen som trengs
     // eslint-disable-next-line prefer-const
     membershipId = this.getMembershipId().done(this.handleMembershipId)
     $.when(membershipId).done(() => {
+      // Kaller på denne en gang til, ettsom noen ganger er query til databasen tregere enn mounted og trenger litt ekstra tid
+      membershipId = this.getMembershipId().done(this.handleMembershipId)
       width = 0
+      // Sender progress til progressbar
       this.progress(10)
       chars = this.getCharacters().done(this.handleChars)
+      /*
+       * Når konstanten chars er utført gjør den neste funskjon
+       * Dette er fordi API requestene kan ta alt fra noen millisekunder til ett helt sekund.
+       * Så om man ikke "venter" på at en funskjon skal bli ferdig vil informasjon som trengs ved neste
+       * funksjon ikke bli ferdig før neste API request sendes.
+       * Derfor har jeg valgt å bruke $.when
+       */
       $.when(chars).done(() => {
         this.progress(5)
         charInfo1 = this.getCharacter1Info().done(this.handleCharInfo)
@@ -280,6 +299,7 @@ export default {
                           $('#myProgress').animate({ width: '0.0001%' }, 600)
                           document.getElementById('cards').style.visibility =
                             'visible'
+
                           $('#cards').animate({ width: '100%' }, 600)
                           this.$forceUpdate()
                         })
@@ -296,10 +316,12 @@ export default {
     })
   },
   methods: {
+    // Enkel jQuery animasjon for progress bar
     progress(x) {
       width += x
       $('#myBar').animate({ width: `${width}%` }, 300)
     },
+    // Spør Bungie API etter karakteren den innloggede brukeren
     getMembershipId() {
       return $.ajax({
         url: bungieSteamID + this.steamid,
@@ -309,9 +331,11 @@ export default {
         type: 'get'
       })
     },
+    // Henter ut Bungie membershipId som brukes i de fleste API requests
     handleMembershipId(data) {
       this.membership = data.Response.membershipId
     },
+    // Hanter karakterene til den innloggede brukeren.
     getCharacters() {
       return $.ajax({
         url: `${bungieLink}/3/Profile/${this.membership}/?components=100`,
@@ -326,6 +350,11 @@ export default {
       this.characters.push(data.Response.profile.data.characterIds[1])
       this.characters.push(data.Response.profile.data.characterIds[2])
     },
+    /*
+     * Henter nytting informasjon om hver karakter
+     * Hvilken klasse, rase, emblemer og level.
+     */
+
     getCharacter1Info() {
       return $.ajax({
         url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[0]}/?components=200`,
@@ -359,7 +388,12 @@ export default {
       this.emblem.push(data.Response.character.data.emblemBackgroundPath)
       this.light.push(data.Response.character.data.light)
     },
-
+    /*
+     * Henter Bungie Manifest data
+     * Manifest data brukes til å hente generel informasjon som er
+     * lik for alle spillere.
+     * Som feks rasenavn og klassenavn.
+     */
     getManifest() {
       return $.ajax({
         url: bungieManifest,
@@ -403,6 +437,10 @@ export default {
       const raceHash3 = this.raceHash[2]
       this.race.push(data[raceHash3].displayProperties.name)
     },
+    /*
+     * Henter alle items fra hver karakter. ItemHashes brukes til å skille mellom alle
+     * gjenstander en spiller har
+     */
     getItemHashes1() {
       return $.ajax({
         url: `${bungieLink}/3/Profile/${this.membership}/Character/${this.characters[0]}/?components=205`,
@@ -418,6 +456,8 @@ export default {
           data.Response.equipment.data.items[i].itemHash
         )
         this.char1ItemInstanceId.push(
+          // Denne lagres for eventuell videreutvikling senere.
+          // InstanceId kan brukes til å hente ut spesifikke data til bestemte våpen, ikke bare felles data.
           data.Response.equipment.data.items[i].itemInstanceId
         )
       }
@@ -460,6 +500,7 @@ export default {
         )
       }
     },
+    // Henter alle ikonene til alle gjenstandene
     getItemIconsChar1(i) {
       return $.ajax({
         url: bungieItem + this.char1ItemHashes[i],
@@ -487,6 +528,13 @@ export default {
         type: 'get'
       })
     },
+
+    /*
+     * Ettersom jeg ønsket at API requestene skulle være asyncrone og skje så fort som mulig
+     * Måtte alle ikoner hardkodes til bestemte variabler.
+     * Uten hardkoding kommer ikke ikoner på riktig plass.
+     * Dette gjør at man trenger færre API request og resulterer i at scriptet kjøres fortere
+     */
     handleItemIcon1(data) {
       const weaponCategoryHash = data.Response.itemCategoryHashes[0]
       const armourCategoryHash = data.Response.itemCategoryHashes[1]

@@ -20,47 +20,6 @@
           }}</v-btn>
         </v-flex>
       </div>
-      <!-- Dialog vindu som ber deg om å verifisere eposten ville poppet opp
-        om vi hadde MailBullet.
-
-    <v-layout row wrap>
-      <div class="text-xs-center">
-        <v-dialog v-model="showVerifyDialog" width="500" persistent>
-          <v-card>
-            <v-card-title
-              class="headline grey lighten-2 black--text dlgVerifyAccount"
-              primary-title
-            >
-              <v-icon class="orange--text">mdi-information</v-icon>
-
-              &nbsp;{{ $t('home.VERIFY_YOUR_ACCOUNT') }}
-            </v-card-title>
-
-            <v-card-text>
-              {{ $t('home.VERIFY_YOUR_ACCOUNT_DESCRIPTION') }}
-            </v-card-text>
-
-            <v-divider></v-divider>
-
-            <v-card-actions>
-              <v-spacer></v-spacer>
-
-              <v-btn
-                color="primary"
-                flat
-                @click="showVerifyDialog = false"
-                class="btnClose"
-                >{{ $t('home.CLOSE') }}</v-btn
-              >
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
-      </div>
-
-      <Heading :title="$t('home.GREETING', [name])" />
-
-      <Description :description="$t('home.DESCRIPTION')" />
-    </v-layout> -->
     </v-container>
   </v-container>
 </template>

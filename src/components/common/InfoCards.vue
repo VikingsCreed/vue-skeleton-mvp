@@ -1,3 +1,4 @@
+<!-- Kode skrevet av Erlend Ellefsen -->
 <template>
   <div id="app">
     <v-container class="grey--text text--darken-4" red lighten-1 fluid>
@@ -75,6 +76,7 @@ export default {
   },
   data() {
     return {
+      // Ikoner blir hentet fra Font Awesome
       icons: ['group', 'portrait', 'group_add'],
       icons2: [
         'fab fa-vuejs firstIcon titleIcons',

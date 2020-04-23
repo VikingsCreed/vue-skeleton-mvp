@@ -1,3 +1,4 @@
+<!-- Viser Error melding, om der skulle komme ett error fra backend -->
 <template>
   <v-container v-show="showErrorMessage">
     <v-layout>

@@ -152,15 +152,7 @@
     "TITLE": "登录",
     "EMAIL": "邮箱",
     "PASSWORD": "密码",
-    "LOGIN": "登录",
-    "FORGOT_PASSWORD": "忘记密码?"
-  },
-  "forgotPassword": {
-    "TITLE": "忘记了密码",
-    "EMAIL": "邮箱",
-    "DESCRIPTION": "输入您的邮件地址，我们将会发送给您一段恢复密码的邮件。",
-    "RECOVER": "找回密码",
-    "RESET_EMAIL_SENT": "我们已将恢复密码的邮件发送到了你的邮箱里。"
+    "LOGIN": "登录"
   },
   "resetPassword": {
     "TITLE": "修改密码",

@@ -1,3 +1,4 @@
+<!-- Loading når siden query db -->
 <template>
   <v-dialog dark v-model="showLoading" persistent width="300">
     <v-card color="secondary white--text">

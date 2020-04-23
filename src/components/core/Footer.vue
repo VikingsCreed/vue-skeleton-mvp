@@ -1,4 +1,4 @@
-<!--Footer for hele nettsiden-->
+<!-- Footer for hele nettsiden laget av Erlend Ellefsen -->
 <template>
   <v-footer dark padless>
     <v-card class="flex" flat tile>

@@ -152,15 +152,7 @@
     "TITLE": "Ingresar",
     "EMAIL": "E-mail",
     "PASSWORD": "Contraseña",
-    "LOGIN": "Ingresar",
-    "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?"
-  },
-  "forgotPassword": {
-    "TITLE": "Olvidé mi contraseña",
-    "EMAIL": "E-mail",
-    "DESCRIPTION": "Ingresa tu E-mail para que podamos enviarte un mensaje con instrucciones para recuperar tu contraseña",
-    "RECOVER": "Recuperar",
-    "RESET_EMAIL_SENT": "Hemos enviado un mensaje a %{0} con instrucciones para recuperar tu contraseña"
+    "LOGIN": "Ingresar"
   },
   "resetPassword": {
     "TITLE": "Cambiar Contraseña",
