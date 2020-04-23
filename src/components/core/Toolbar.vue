@@ -5,6 +5,7 @@
       <v-list>
         <v-list-tile>
           <v-list-tile-content class="test">{{ appTitle }}</v-list-tile-content>
+          <LocaleChanger />
           <v-list-tile-action>
             <v-btn icon @click.stop="sidebar = !sidebar">
               <v-icon>mdi-chevron-left</v-icon>
@@ -257,8 +258,5 @@ export default {
 <style scoped>
 .adjust-y {
   margin-bottom: -25px;
-}
-.adjust-admin {
-  margin-top: 1.5rem;
 }
 </style>

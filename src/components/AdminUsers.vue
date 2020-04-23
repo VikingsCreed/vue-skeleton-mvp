@@ -261,9 +261,6 @@ export default {
         { name: this.$t('roles.USER'), value: 'user' }
       ]
     },
-    allCities() {
-      return this.$store.state.cities.allCities
-    },
     formTitle() {
       return this.editedItem._id
         ? this.$t('dataTable.EDIT_ITEM')
@@ -355,13 +352,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'getAllCities',
-      'getUsers',
-      'editUser',
-      'saveUser',
-      'deleteUser'
-    ]),
+    ...mapActions(['getUsers', 'editUser', 'saveUser', 'deleteUser']),
     getFormat(date) {
       window.__localeId__ = this.$store.getters.locale
       return getFormat(date, 'iii, MMMM d yyyy, h:mm a')
@@ -462,9 +453,6 @@ export default {
         this.close()
       }
     }
-  },
-  async mounted() {
-    await this.getAllCities()
   }
 }
 </script>
