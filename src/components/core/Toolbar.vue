@@ -1,4 +1,4 @@
-<!-- Meny for hele nettsiden -->
+<!-- Meny for hele nettsiden redigert av Erlend Ellefsen og Robin Ellingsen -->
 <template>
   <div class="adjust-y">
     <v-navigation-drawer v-model="sidebar" app disable-resize-watcher>
@@ -93,7 +93,7 @@
             :key="index"
             :to="{ name: item.link }"
             exact
-            :class="[item.class]"
+            :class="['hidden-sm-and-down', item.class]"
           >
             <v-icon>mdi-lock</v-icon>
             &nbsp;{{ $t('adminItems.ADMIN') }}

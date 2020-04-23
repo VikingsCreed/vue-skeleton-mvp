@@ -152,15 +152,7 @@
         "TITLE": "Einloggen",
         "EMAIL": "E-mail",
         "PASSWORD": "Passwort",
-        "LOGIN": "Einloggen",
-        "FORGOT_PASSWORD": "Passwort vergessen?"
-    },
-    "forgotPassword": {
-        "TITLE": "Ich habe mein Passwort vergessen",
-        "EMAIL": "E-mail",
-        "DESCRIPTION": "Geben Sie Ihre E-Mail-Adresse ein, damit wir Ihnen eine Nachricht mit Anweisungen zum Wiederherstellen Ihres Passworts senden können",
-        "RECOVER": "Genesen",
-        "RESET_EMAIL_SENT": "Wir haben eine Nachricht an %{0} mit Anweisungen zum Wiederherstellen Ihres Passworts gesendet"
+        "LOGIN": "Einloggen"
     },
     "resetPassword": {
         "TITLE": "Passwort ändern",

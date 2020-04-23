@@ -1,3 +1,5 @@
+<!-- Template for submitbutton
+     Redigert av Erlend Ellefsen -->
 <template>
   <v-btn
     :color="colorString"

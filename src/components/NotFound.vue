@@ -1,7 +1,8 @@
+<!-- Om router ikke kjenner igjen hvilen side du spørr etter redigert av Erlend Ellefsen -->
 <template>
   <v-container fluid>
     <v-layout row wrap>
-      <Heading :title="$t('errors.404')" />
+      <Title :title="$t('errors')" />
     </v-layout>
   </v-container>
 </template>

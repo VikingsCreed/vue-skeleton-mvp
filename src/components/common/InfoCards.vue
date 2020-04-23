@@ -1,3 +1,4 @@
+<!-- Kode skrevet av Erlend Ellefsen -->
 <template>
   <div id="app">
     <v-container class="grey--text text--darken-4" red lighten-1 fluid>
@@ -38,8 +39,8 @@
             text-xs-left
             class="display-4 font-weight-bold createdTitle mobile"
           >
-            Created with<br />
-            Vue.
+            {{ landing.CARDTITLE }}<br />
+            {{ landing.CARDTITLE2 }}
             <br />
             <i v-bind:class="[icons2[0]]"></i><i v-bind:class="[icons2[1]]"></i
             ><i v-bind:class="[icons2[2]]"></i>
@@ -49,7 +50,7 @@
             <v-hover v-slot:default="{ hover }" close-delay="200">
               <v-card
                 class="mx-auto cards grey--text text--darken-4"
-                max-width="25em"
+                max-width="20em"
                 min-width="20em"
                 :elevation="hover ? 16 : 2"
               >
@@ -75,6 +76,7 @@ export default {
   },
   data() {
     return {
+      // Ikoner blir hentet fra Font Awesome
       icons: ['group', 'portrait', 'group_add'],
       icons2: [
         'fab fa-vuejs firstIcon titleIcons',
@@ -138,7 +140,7 @@ export default {
   margin-top: -1%;
   margin-left: 85%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .ghost-img {
     visibility: hidden;
   }
@@ -150,7 +152,7 @@ export default {
     margin-left: 25%;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 361px) {
   .cardText {
     width: 100%;
     margin-left: 0;

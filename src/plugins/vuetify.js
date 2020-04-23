@@ -7,10 +7,11 @@ import '@mdi/font/css/materialdesignicons.css'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: colors.yellow.lighten3,
-    secondary: colors.shades.black,
+    primary: colors.green.lighten1,
+    secondary: colors.blue.lighten1,
     error: colors.orange.darken3
   },
   iconfont: 'mdi'
 })
+// Delete knappen på admin siden
 Vue.use(VuetifyConfirm)

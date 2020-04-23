@@ -1,3 +1,4 @@
+<!-- Kode skrevet av Erlend Ellefsen -->
 <template>
   <v-app>
     <div id="app">

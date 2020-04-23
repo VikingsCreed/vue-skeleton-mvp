@@ -1,3 +1,4 @@
+<!-- Kode skrevet av Erlend Ellefsen -->
 <template>
   <v-container fluid>
     <Title :title="$t('forum')" class="mx-auto" />

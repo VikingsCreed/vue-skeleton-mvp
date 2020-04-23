@@ -1,3 +1,4 @@
+<!-- Redigert av Erlend Ellefsen -->
 <template>
   <v-container fluid>
     <v-layout row wrap>
@@ -165,7 +166,7 @@
       <ErrorMessage />
       <SuccessMessage />
     </v-layout>
-    <D2Profile :steamid="steamid64" />
+    <D2Profile eager :steamid="steamid64" />
   </v-container>
 </template>
 
@@ -216,9 +217,6 @@ export default {
         }
         this.addProfileData(data)
       }
-    },
-    allCities() {
-      return this.$store.state.cities.allCities
     },
     country: {
       get() {

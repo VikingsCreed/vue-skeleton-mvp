@@ -1,4 +1,5 @@
-<template dark>
+<!-- Redigert av Erlend Ellefsen -->
+<template root>
   <div>
     <v-layout wrap my-5 dark>
       <v-flex xs12 sm12 md4 mt-3 pl-4>
@@ -109,9 +110,8 @@
                       ></v-text-field>
                     </v-flex>
                   </template>
-                  <v-flex xs12 md6>
+                  <v-flex xs12 md6 dark>
                     <v-select
-                      clearable
                       id="role"
                       name="role"
                       v-model="editedItem.role"
@@ -254,6 +254,7 @@ export default {
       fieldsToSearch: ['name', 'email', 'role', 'country', 'steamid64']
     }
   },
+  // computed henter returnerer data som skal vises på siden
   computed: {
     roles() {
       return [
@@ -329,6 +330,7 @@ export default {
     dialog(value) {
       return value ? true : this.close()
     },
+    // pagination gjør at du kan bla
     pagination: {
       async handler() {
         try {
@@ -351,6 +353,7 @@ export default {
       }, 400)
     }
   },
+  // Metoder for henting av informasjon til siden
   methods: {
     ...mapActions(['getUsers', 'editUser', 'saveUser', 'deleteUser']),
     getFormat(date) {
@@ -417,6 +420,7 @@ export default {
         this.editedItem = Object.assign({}, this.defaultItem)
       }, 300)
     },
+    // Lagrer redigerte verdier
     async save() {
       try {
         const valid = await this.$validator.validateAll()
@@ -457,7 +461,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 table.v-table {
   max-width: none;
 }

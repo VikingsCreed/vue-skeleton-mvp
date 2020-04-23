@@ -14,9 +14,7 @@ axios.interceptors.request.use(
     // then send Authorization header with token from localstorage
     const urlsExcludedForBearerHeader = [
       '/login',
-      '/forgot',
       '/register',
-      '/reset',
       `${window.location.origin}/version.json`
     ]
     if (urlsExcludedForBearerHeader.indexOf(config.url) === -1) {

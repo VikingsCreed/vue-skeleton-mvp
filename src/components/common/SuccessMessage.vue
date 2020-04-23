@@ -1,3 +1,4 @@
+<!-- Viser Success melding, når du feks lagrer profilen din -->
 <template>
   <v-container v-show="showSuccessMessage">
     <v-layout>
