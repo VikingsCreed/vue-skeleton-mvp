@@ -108,7 +108,8 @@
           <v-icon left>mdi-exit-to-app</v-icon>
           {{ $t('menuItems.LOGOUT') }}
         </v-btn>
-        <LocaleChanger />
+
+        <LocaleChanger :class="['hidden-sm-and-down']" />
       </v-toolbar-items>
     </v-toolbar>
   </div>
