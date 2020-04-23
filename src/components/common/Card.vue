@@ -2,9 +2,9 @@
   <v-row justify="center">
     <v-dialog v-model="dialog" width="600px">
       <template v-slot:activator="{ on }">
-        <v-btn color="red lighten-1" v-on="on" class="mx-auto"
-          >Where can i find my steamID64?</v-btn
-        >
+        <v-btn color="red lighten-1" v-on="on" class="mx-auto">{{
+          title.WHERE
+        }}</v-btn>
       </template>
       <v-card dark>
         <v-card-title>

@@ -205,6 +205,10 @@
         "STEP4": "4: Wenn Sie Ihr Profil gefunden haben, können Sie sehen, dass Ihre SteamID64 in Zeile 3 aufgeführt ist",
         "LINK": "https://steamid.io/",
         "OPTIONAL": "Oder Sie können nur diese SteamID64 verwenden, wenn Sie nur diese Site testen möchten: 76561198117522343",
-        "OK": "Verstanden!"
+        "OK": "Verstanden!",
+        "WHERE": "Wo finde ich meine SteamID64?"
+      },
+      "footer":{ 
+        "INFO": "Verbinden Sie sich mit uns in sozialen Netzwerken!"
       }
 }

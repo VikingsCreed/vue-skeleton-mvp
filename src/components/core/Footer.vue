@@ -3,9 +3,7 @@
   <v-footer dark padless>
     <v-card class="flex" flat tile>
       <v-card-title class="grey">
-        <strong class="subheading"
-          >Get connected with us on social networks!</strong
-        >
+        <strong class="subheading">{{ $t('footer.INFO') }}</strong>
 
         <v-spacer></v-spacer>
 
