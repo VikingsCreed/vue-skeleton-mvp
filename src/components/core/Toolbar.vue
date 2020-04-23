@@ -85,29 +85,19 @@
           <v-icon>{{ item.icon }}</v-icon>
           &nbsp;{{ item.title }}
         </v-btn>
-
-        <v-menu v-if="admin" offset-y class="hidden-sm-and-down">
-          <v-btn slot="activator" flat class="btnAdmin">
+        <template v-if="admin">
+          <v-btn
+            flat
+            v-for="(item, index) in adminItems"
+            :key="index"
+            :to="{ name: item.link }"
+            exact
+            :class="[item.class]"
+          >
             <v-icon>mdi-lock</v-icon>
             &nbsp;{{ $t('adminItems.ADMIN') }}
           </v-btn>
-          <v-list>
-            <v-list-tile
-              active-class="white--text"
-              v-for="(item, index) in adminItems"
-              :key="index"
-              :to="{ name: item.link }"
-              exact
-              :class="[item.class]"
-            >
-              <v-list-tile-title>
-                <v-icon>{{ item.icon }}</v-icon>
-                {{ item.title }}
-              </v-list-tile-title>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
-
+        </template>
         <v-btn
           flat
           v-if="isTokenSet"
@@ -194,12 +184,6 @@ export default {
     adminItems() {
       return [
         {
-          title: this.$t('adminItems.CITIES'),
-          link: 'admin-cities',
-          icon: 'mdi-city',
-          class: 'btnAdminCities'
-        },
-        {
           title: this.$t('adminItems.USERS'),
           link: 'admin-users',
           icon: 'mdi-account-supervisor',
@@ -273,5 +257,8 @@ export default {
 <style scoped>
 .adjust-y {
   margin-bottom: -25px;
+}
+.adjust-admin {
+  margin-top: 1.5rem;
 }
 </style>
