@@ -1,4 +1,4 @@
-<!-- Footer for hele nettsiden laget av Erlend Ellefsen -->
+<!-- Footer for hele nettsiden laget av Erlend Ellefsen, redigert av Robin Ellingsen -->
 <template>
   <v-footer dark padless>
     <v-card class="flex" flat tile>
@@ -7,7 +7,7 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
+        <v-btn v-for="icon in icons" :key="icon" class="mx-6" dark icon>
           <v-icon size="24px">{{ icon }}</v-icon>
         </v-btn>
       </v-card-title>
@@ -33,3 +33,9 @@ export default {
   })
 }
 </script>
+<style scoped>
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 360px) {
+}
+</style>

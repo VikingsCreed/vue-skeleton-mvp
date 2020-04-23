@@ -1,3 +1,4 @@
+<!-- Kode skrevet av Robin Elligsen -->
 <template>
   <div id="app">
     <v-container class="grey--text text--darken-4" red lighten-1 fluid>

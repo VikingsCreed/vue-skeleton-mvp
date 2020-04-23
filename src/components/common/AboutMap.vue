@@ -1,3 +1,4 @@
+<!-- Kode skrevet av Robin Elligsen -->
 <template>
   <v-container class="grey--text text--darken-4" blue lighten-2 fluid>
     <v-container class="adjustpos">
