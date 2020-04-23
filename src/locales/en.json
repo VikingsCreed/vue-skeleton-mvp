@@ -105,6 +105,8 @@
       "Node.js is an open-source JavaScript runtime enviroment that executes JavaScript code outside of a webbrowser. ",
       "MongoDB is a document oriented NoSQL database program. MongoDB uses JSON-like documents for data storage and is eary to query"
     ],
+    "CARDTITLE": "Created with",
+    "CARDTITLE2": "Vue.",
     "LEARN": "LEARN MORE"
   },
   "home": {

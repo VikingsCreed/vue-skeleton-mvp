@@ -1,5 +1,5 @@
 <!-- Redigert av Erlend Ellefsen -->
-<template>
+<template root>
   <div>
     <v-layout wrap my-5 dark>
       <v-flex xs12 sm12 md4 mt-3 pl-4>

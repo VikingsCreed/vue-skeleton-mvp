@@ -92,7 +92,7 @@
             :key="index"
             :to="{ name: item.link }"
             exact
-            :class="[item.class]"
+            :class="['hidden-sm-and-down', item.class]"
           >
             <v-icon>mdi-lock</v-icon>
             &nbsp;{{ $t('adminItems.ADMIN') }}

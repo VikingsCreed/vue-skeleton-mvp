@@ -233,6 +233,8 @@ export default {
        * Derfor har jeg valgt å bruke $.when
        */
       $.when(chars).done(() => {
+        // Kaller på denne en gang til, ettsom noen ganger er query til databasen tregere enn mounted og trenger litt ekstra tid
+        membershipId = this.getMembershipId().done(this.handleMembershipId)
         this.progress(5)
         charInfo1 = this.getCharacter1Info().done(this.handleCharInfo)
         $.when(charInfo1).done(() => {
