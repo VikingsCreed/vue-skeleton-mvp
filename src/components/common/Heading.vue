@@ -6,10 +6,12 @@
           {{ head.HEAD }}<br />
           {{ head.HEAD2 }}
         </h1>
-        <div class="my-2">
-          <v-btn x-large color="red lighten-1" dark href="about">{{
-            head.LEARN
-          }}</v-btn>
+        <div id="app">
+          <div class="my-2">
+            <v-btn x-large color="red lighten-1" dark :to="{ name: 'about' }"
+              >{{ head.LEARN }}
+            </v-btn>
+          </div>
         </div>
       </v-col>
     </v-row>
