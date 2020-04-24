@@ -705,4 +705,21 @@ export default {
 .race-text {
   margin-right: -70px;
 }
+@media only screen and (max-width: 361px) {
+  .profile-card {
+    width: 100%;
+  }
+  .race-text {
+    margin-right: -60px;
+    font-size: 2em !important;
+    margin-left: -40px;
+  }
+  .class-img {
+    width: 100%;
+    height: 25%;
+  }
+  .emblem-text {
+    margin-right: -10px;
+  }
+}
 </style>
