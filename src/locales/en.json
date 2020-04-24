@@ -153,6 +153,14 @@
     "TITLE": "Forum",
     "RAID": "What raid?"
   },
+  "forumNotice": {
+    "NOTICE": "Forum Notice",
+    "YES": "Take me to the Forum",
+    "NO": "Take me back",
+    "DIALOG": "This forum is visually working, but the backend is not working. What you are about to see is a template of what we envisioned it to be."
+
+
+  },
   "login": {
     "TITLE": "Login",
     "EMAIL": "E-mail",

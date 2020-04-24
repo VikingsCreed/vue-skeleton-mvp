@@ -29,6 +29,10 @@ import AboutMap from '@/components/common/AboutMap.vue'
 
 import ForumPages from '@/components/common/ForumPages.vue'
 
+import ForumNotice from '@/components/common/ForumNotice.vue'
+
+import ForumPost from '@/components/common/ForumPost.vue'
+
 Vue.component('Heading', Heading)
 
 Vue.component('HeadingAbout', HeadingAbout)
@@ -54,3 +58,7 @@ Vue.component('AboutCards', AboutCards)
 Vue.component('AboutMap', AboutMap)
 
 Vue.component('ForumPages', ForumPages)
+
+Vue.component('ForumNotice', ForumNotice)
+
+Vue.component('ForumPost', ForumPost)

@@ -175,6 +175,7 @@
             </v-expansion-panel>
           </template>
         </v-row>
+        <ForumPost />
       </v-container>
     </div>
   </v-app>
