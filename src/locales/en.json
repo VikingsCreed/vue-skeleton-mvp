@@ -148,7 +148,8 @@
     
   },
   "forum":{
-    "TITLE": "Forum"
+    "TITLE": "Forum",
+    "RAID": "What raid?"
   },
   "login": {
     "TITLE": "Login",
