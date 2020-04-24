@@ -52,9 +52,7 @@
             </v-expansion-panel>
           </template>
         </v-row>
-        <v-container black class="forum-post">
-          <h1>TEST</h1>
-        </v-container>
+        <ForumPost />
       </v-container>
     </div>
   </v-app>

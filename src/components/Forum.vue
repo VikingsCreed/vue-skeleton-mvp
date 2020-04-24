@@ -1,7 +1,8 @@
-<!-- Kode skrevet av Erlend Ellefsen -->
+<!-- Kode skrevet av Erlend Ellefsen og Robin Ellingsen -->
 <template>
   <v-container fluid>
     <Title :title="$t('forum')" class="mx-auto" />
+    <ForumNotice :class="['marginForumNotice']" />
 
     <forumPages :title="$t('forum')" />
   </v-container>
@@ -18,3 +19,8 @@ export default {
   }
 }
 </script>
+<style>
+.marginForumNotice {
+  margin-left: 81vh;
+}
+</style>

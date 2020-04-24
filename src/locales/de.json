@@ -148,6 +148,12 @@
   },
   "forum":{
     "TITLE": "Forum"
+  },  
+  "forumNotice": {
+    "NOTICE": "Forum Notice",
+    "YES": "Bring mich ins Forum",
+    "NO": "Nimm mich zurück",
+    "DIALOG": "Dieses Forum funktioniert visuell, aber das Backend funktioniert nicht. Was Sie sehen werden, ist eine Vorlage dessen, was wir uns vorgestellt haben."
   },
     "login": {
         "TITLE": "Einloggen",

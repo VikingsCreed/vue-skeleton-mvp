@@ -149,6 +149,12 @@
   "forum":{
     "TITLE": "Foro"
   },
+  "forumNotice": {
+    "NOTICE": "Aviso del foro",
+    "YES": "Llevame al foro",
+    "NO": "Llévame de vuelta",
+    "DIALOG": "Este foro funciona visualmente, pero el backend no funciona. Lo que está a punto de ver es una plantilla de lo que imaginamos que fuera."
+  },
   "login": {
     "TITLE": "Ingresar",
     "EMAIL": "E-mail",
