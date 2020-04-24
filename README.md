@@ -1,7 +1,6 @@
 ### Destiny 2 TeamFinder.
+
 This is a university project for the Univerity of South-Eastern Norway building on <https://github.com/davellanedam/vue-skeleton-mvp>
-
-
 
 ### Using Git (recommended)
 
