@@ -1,3 +1,4 @@
+<!-- Kode skrevet av Robin Elligsen -->
 <template class="adjust-y">
   <v-parallax dark src="./../../../public/about.png" id="imgAbout">
     <v-row>

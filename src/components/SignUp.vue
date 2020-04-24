@@ -1,3 +1,4 @@
+<!-- Kode redigert av Robin Elligsen og Erlend Ellefsen -->
 <template>
   <v-container fluid>
     <v-layout row wrap>
@@ -148,5 +149,12 @@ export default {
 <style scoped>
 .margin {
   margin-bottom: 5%;
+}
+@media only screen and (max-width: 768px) {
+  .margin {
+    margin-bottom: 15%;
+  }
+}
+@media only screen and (max-width: 360px) {
 }
 </style>
