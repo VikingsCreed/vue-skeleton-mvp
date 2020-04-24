@@ -23,24 +23,21 @@
           </v-list-tile-action>
           <v-list-tile-content>{{ item.title }}</v-list-tile-content>
         </v-list-tile>
-
-        <v-list-group v-if="admin" prepend-icon="mdi-lock" no-action>
-          <v-list-tile slot="activator">
-            <v-list-tile-title>{{ $t('adminItems.ADMIN') }}</v-list-tile-title>
-          </v-list-tile>
+        <template v-if="admin">
           <v-list-tile
             v-for="(item, index) in adminItems"
             :key="index"
             :to="{ name: item.link }"
             exact
           >
-            <v-list-tile-content class="d-inline mt-3">
-              <v-icon>{{ item.icon }}</v-icon>
-              {{ item.title }}
+            <v-list-tile-action>
+              <v-icon>mdi-lock</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              {{ $t('adminItems.ADMIN') }}
             </v-list-tile-content>
           </v-list-tile>
-        </v-list-group>
-
+        </template>
         <v-list-tile v-if="isTokenSet" @click="userLogout">
           <v-list-tile-action>
             <v-icon>mdi-exit-to-app</v-icon>
