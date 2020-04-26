@@ -8,7 +8,12 @@
         <v-spacer></v-spacer>
 
         <v-btn v-for="icon in icons" :key="icon" class="mx-6" dark icon>
-          <v-icon size="24px">{{ icon }}</v-icon>
+          <a
+            class="links"
+            target="_blank"
+            href="https://github.com/VikingsCreed/vue-skeleton-mvp"
+            ><v-icon size="24px">{{ icon }}</v-icon></a
+          >
         </v-btn>
       </v-card-title>
 
@@ -36,4 +41,9 @@ export default {
   })
 }
 </script>
-<style scoped></style>
+<style scoped>
+.links {
+  text-decoration: none !important;
+  color: white;
+}
+</style>
