@@ -19,8 +19,7 @@ export default {
     head: String
   },
   mounted() {
-    document.getElementById('imgAbout').style.width = '185vw'
-    document.getElementById('imgAbout').style.height = '110vh'
+    document.getElementById('imgAbout').style.height = '100vh'
   }
 }
 </script>
@@ -39,10 +38,14 @@ export default {
     font-size: 4.5em;
   }
 }
+
 @media only screen and (max-width: 360px) {
   h1 {
     margin-top: 1% !important;
     color: black !important;
+  }
+  .header-style {
+    font-size: 4.5em;
   }
 }
 </style>

@@ -17,7 +17,14 @@
                 min-width="20em"
                 :elevation="hover ? 16 : 2"
               >
-                <h1 class="display-1 margin font-weight-bold">
+                <v-icon
+                  class="material-icons margin"
+                  size="80"
+                  color="grey darken-4"
+                >
+                  help
+                </v-icon>
+                <h1 class="display-1 font-weight-bold">
                   {{ about.why[n - 1] }}
                 </h1>
                 <p class="cardInfoText">{{ about.infowhy[n - 1] }}</p>
@@ -42,11 +49,16 @@
                 min-width="20em"
                 :elevation="hover ? 16 : 2"
               >
-                <h1 class="display-1 margin font-weight-bold">
+                <v-icon
+                  class="material-icons margin"
+                  size="80"
+                  color="grey darken-4"
+                >
+                  new_releases
+                </v-icon>
+                <h1 class="display-1 font-weight-bold">
                   {{ about.how[n - 1] }}
                 </h1>
-
-                <i class="margin"></i>
                 <p class="cardInfoText">{{ about.infohow[n - 1] }}</p>
               </v-card>
             </v-hover>
@@ -69,7 +81,14 @@
                 min-width="20em"
                 :elevation="hover ? 16 : 2"
               >
-                <h1 class="display-1 margin font-weight-bold">
+                <v-icon
+                  class="material-icons margin"
+                  size="80"
+                  color="grey darken-4"
+                >
+                  help
+                </v-icon>
+                <h1 class="display-1 font-weight-bold">
                   {{ about.what[n - 1] }}
                 </h1>
                 <i class="margin"></i>
@@ -95,7 +114,14 @@
                 min-width="20em"
                 :elevation="hover ? 16 : 2"
               >
-                <h1 class="display-1 margin font-weight-bold">
+                <v-icon
+                  class="material-icons margin"
+                  size="80"
+                  color="grey darken-4"
+                >
+                  textsms
+                </v-icon>
+                <h1 class="display-1 font-weight-bold">
                   {{ about.hello[n - 1] }}
                 </h1>
                 <i class="margin"></i>
@@ -125,7 +151,7 @@ export default {
 }
 .cards {
   background-color: transparent;
-  height: 450px;
+  height: 500px;
 }
 .cardText {
   width: 70%;
@@ -182,9 +208,9 @@ export default {
   .aboutStyle4-img {
     visibility: hidden;
   }
-  .mobile {
-    font-size: 5em !important;
-    margin-left: 25%;
+  .cards {
+    width: 500px;
+    height: 500px;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -193,10 +219,12 @@ export default {
     margin-left: 0;
   }
   .cards {
-    height: 550px;
+    height: 700px;
+    width: 300px;
   }
   .mobile {
-    margin-left: 0;
+    font-size: 5em !important;
+    margin-left: 25%;
   }
 }
 </style>
