@@ -705,7 +705,7 @@ export default {
 .race-text {
   margin-right: -70px;
 }
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 450px) {
   .profile-card {
     width: 100%;
   }

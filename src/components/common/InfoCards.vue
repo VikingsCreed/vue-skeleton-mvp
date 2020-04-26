@@ -140,7 +140,7 @@ export default {
   margin-top: -1%;
   margin-left: 85%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .ghost-img {
     visibility: hidden;
   }
@@ -152,7 +152,7 @@ export default {
     margin-left: 25%;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 450px) {
   .cardText {
     width: 100%;
     margin-left: 0;

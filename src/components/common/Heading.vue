@@ -37,12 +37,12 @@ export default {
 .header-style {
   font-size: 6em;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   h1 {
     margin-right: 10%;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 450px) {
   h1 {
     margin-top: 1% !important;
     color: black !important;
