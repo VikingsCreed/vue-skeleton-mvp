@@ -181,7 +181,7 @@
       :items="items"
       :pagination.sync="pagination"
       :total-items="totalItems"
-      class="elevation-1"
+      class="elevation-1 margin"
     >
       <template v-slot:items="props">
         <td class="fill-height px-0">
@@ -464,5 +464,13 @@ export default {
 <style scoped>
 table.v-table {
   max-width: none;
+}
+.margin {
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 800px) {
+  .margin {
+    margin-bottom: 25%;
+  }
 }
 </style>
