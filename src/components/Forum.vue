@@ -1,9 +1,8 @@
 <!-- Kode skrevet av Erlend Ellefsen og Robin Ellingsen -->
 <template>
-  <v-container fluid>
-    <Title :title="$t('forum')" class="mx-auto" />
+  <v-container>
+    <Title :title="$t('forum')" />
     <ForumNotice :class="['marginForumNotice']" />
-
     <forumPages :title="$t('forum')" />
   </v-container>
 </template>
@@ -20,18 +19,8 @@ export default {
 }
 </script>
 <style>
-.marginForumNotice {
-  margin-left: 81vh;
-}
-
 @media only screen and (max-width: 768px) {
-  .marginForumNotice {
-    margin-left: 17.5vh;
-  }
 }
 @media only screen and (max-width: 360px) {
-  .marginForumNotice {
-    margin-left: 14vh;
-  }
 }
 </style>
