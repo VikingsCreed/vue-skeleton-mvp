@@ -169,7 +169,7 @@ export default {
   margin-top: 5%;
   margin-left: 69%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .aboutStyle1-img {
     visibility: hidden;
   }
@@ -187,7 +187,7 @@ export default {
     margin-left: 25%;
   }
 }
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 450px) {
   .cardText {
     width: 100%;
     margin-left: 0;

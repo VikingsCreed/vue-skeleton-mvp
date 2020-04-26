@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app dark class="app">
     <Toolbar />
 
     <v-content>
@@ -109,5 +109,8 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+.app {
+  overflow-y: hidden;
 }
 </style>

@@ -21,11 +21,9 @@
   margin-left: 36vh;
   margin-bottom: 10vh;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .adjustpos {
     visibility: hidden;
   }
-}
-@media only screen and (max-width: 361px) {
 }
 </style>
