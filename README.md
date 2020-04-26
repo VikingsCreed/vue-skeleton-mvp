@@ -39,44 +39,8 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-
-```bash
-npm run test
-```
-
 ### Lints and fixes files
 
 ```bash
 npm run lint
 ```
-
-### Formatting markdown files
-
-```bash
-npm run remark
-```
-
-### Run your end-to-end tests
-
-```bash
-npm run test:e2e
-```
-
-### Run your unit tests
-
-```bash
-npm run test:unit
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## Bugs or improvements
-
-Feel free to report any bugs or improvements. Pull requests are always welcome.
-
-## License
-
-This project is open-sourced software licensed under the MIT License. See the LICENSE file for more information.
