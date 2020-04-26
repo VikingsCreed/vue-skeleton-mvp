@@ -1,3 +1,4 @@
+// Redigert av Robin Ellingsen og Erlend Ellefsen
 import i18n from '@/plugins/i18n'
 import * as types from '@/store/mutation-types'
 import { isPast, format, parseISO } from 'date-fns'

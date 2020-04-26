@@ -1,3 +1,4 @@
+<!-- Redigert av Robin Ellingsen -->
 <template>
   <v-menu dark v-model="showMenu" offset-y>
     <v-btn class="btnLocaleActivation" slot="activator" flat>

@@ -1,3 +1,5 @@
+// Redigert av Robin Ellingsen og Erlend Ellefsen
+
 import Vue from 'vue'
 import VeeValidate from 'vee-validate'
 import en from 'vee-validate/dist/locale/en'

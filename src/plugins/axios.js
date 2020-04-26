@@ -1,3 +1,4 @@
+// Redigert av Erlend Ellefsen
 import Vue from 'vue'
 import axios from 'axios'
 import { checkIfTokenNeedsRefresh } from '@/utils/utils.js'

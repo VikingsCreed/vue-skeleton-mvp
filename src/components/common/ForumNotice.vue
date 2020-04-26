@@ -1,4 +1,4 @@
-<!-- Skrevet av Robin Ellingsen -->
+<!-- Skrevet av Robin Ellingsen, et dialog vindu med informasjon om forumet og 2 knapper som sender deg enten til forumet eller til landing -->
 <template>
   <v-flex xs12 text-xs-center mt-5 mb-3>
     <v-row class="mx-auto">

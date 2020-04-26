@@ -1,4 +1,5 @@
-<!-- Skrevet av Robin Ellingsen -->
+<!-- Skrevet av Robin Ellingsen, inneholder flere lag med dialog vinduer som skal illustrere hvordan
+forumet skal se ut og hvordan man lett kan bli med i et Fireteam  -->
 <template>
   <div>
     <v-flex xs12 text-xs-center mt-5 mb-3>

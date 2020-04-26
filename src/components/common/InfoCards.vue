@@ -1,4 +1,4 @@
-<!-- Kode skrevet av Erlend Ellefsen -->
+<!-- Kode skrevet av Erlend Ellefsen, oversetting av Robin -->
 <template>
   <div id="app">
     <v-container class="grey--text text--darken-4" red lighten-1 fluid>

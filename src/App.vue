@@ -1,3 +1,4 @@
+<!-- Redigert av Robin Ellingsen -->
 <template>
   <v-app dark class="app">
     <Toolbar />

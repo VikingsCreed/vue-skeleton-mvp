@@ -1,4 +1,4 @@
-<!--Redigert av Robin Ellingsen-->
+<!--Redigert av Robin Ellingsen og Erlend Ellefsen-->
 <template>
   <v-container fluid>
     <h1 class="display-3 font-weight-bold text-xs-center mt-5">

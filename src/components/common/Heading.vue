@@ -1,4 +1,4 @@
-<!-- Kode skrevet av Erlend Ellefsen -->
+<!-- Kode skrevet av Erlend Ellefsen, oversetting av Robin -->
 <template class="adjust-y">
   <v-parallax dark src="./../../../public/landing.jpg" id="parallax-id">
     <v-row>

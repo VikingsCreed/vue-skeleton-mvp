@@ -23,6 +23,7 @@
           </v-list-tile-action>
           <v-list-tile-content>{{ item.title }}</v-list-tile-content>
         </v-list-tile>
+
         <template v-if="admin">
           <v-list-tile
             v-for="(item, index) in adminItems"
@@ -167,6 +168,7 @@ export default {
   },
   data() {
     return {
+      isDark: false,
       sidebar: false
     }
   },

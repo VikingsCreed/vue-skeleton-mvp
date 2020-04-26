@@ -1,3 +1,4 @@
+// Redigert av Robin Ellingsen
 // app
 export const SET_APP_VERSION = 'SET_APP_VERSION'
 // locale

@@ -1,4 +1,4 @@
-<!-- Om router ikke kjenner igjen hvilen side du spørr etter redigert av Erlend Ellefsen -->
+<!-- Om router ikke kjenner igjen hvilken side du spørr etter redigert av Erlend Ellefsen -->
 <template>
   <v-container fluid>
     <v-layout row wrap>

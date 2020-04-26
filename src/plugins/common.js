@@ -1,4 +1,4 @@
-// Redigert av Erlend Ellefsen
+// Redigert av Erlend Ellefsen og Robin Ellingsen
 // Her importeres alle child-komponenter som brukes på siden.
 
 import Vue from 'vue'
@@ -6,8 +6,6 @@ import Vue from 'vue'
 import Heading from '@/components/common/Heading.vue'
 
 import HeadingAbout from '@/components/common/HeadingAbout.vue'
-
-import Description from '@/components/common/Description.vue'
 
 import ErrorMessage from '@/components/common/ErrorMessage.vue'
 
@@ -36,8 +34,6 @@ import ForumPost from '@/components/common/ForumPost.vue'
 Vue.component('Heading', Heading)
 
 Vue.component('HeadingAbout', HeadingAbout)
-
-Vue.component('Description', Description)
 
 Vue.component('ErrorMessage', ErrorMessage)
 

@@ -1,3 +1,4 @@
+<!-- Kode redigert av Erlend Ellefsen -->
 <template>
   <v-container fluid>
     <v-layout row wrap class="mt-5">

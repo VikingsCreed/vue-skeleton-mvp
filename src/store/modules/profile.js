@@ -1,3 +1,4 @@
+// Redigert av Erlend Ellefsen
 import * as types from '@/store/mutation-types'
 import api from '@/services/api/profile'
 import { buildSuccess, handleError } from '@/utils/utils.js'
