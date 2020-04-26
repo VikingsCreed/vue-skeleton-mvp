@@ -23,4 +23,15 @@ export default {
 .marginForumNotice {
   margin-left: 81vh;
 }
+
+@media only screen and (max-width: 768px) {
+  .marginForumNotice {
+    margin-left: 17.5vh;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .marginForumNotice {
+    margin-left: 14vh;
+  }
+}
 </style>
