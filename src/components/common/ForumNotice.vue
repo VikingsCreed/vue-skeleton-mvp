@@ -2,7 +2,7 @@
 <template>
   <v-flex xs12 text-xs-center mt-5 mb-3>
     <v-row class="mx-auto">
-      <v-dialog v-model="dialog" persistent max-width="390">
+      <v-dialog v-model="dialog" persistent max-width="390" dark>
         <template v-slot:activator="{ on }">
           <v-btn color="red lighten-1" v-on="on">{{
             $t('forumNotice.NOTICE')

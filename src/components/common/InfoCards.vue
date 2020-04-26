@@ -107,7 +107,7 @@ export default {
 }
 .cards {
   background-color: transparent;
-  height: 450px;
+  height: 500px;
 }
 .cardText {
   width: 70%;

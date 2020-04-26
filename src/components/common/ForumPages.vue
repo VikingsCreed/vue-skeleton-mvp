@@ -4,6 +4,7 @@
     <div id="app">
       <v-container grey darken-2 class="container">
         <v-row>
+          <!-- Dialogpanel for å lage nytt lag -->
           <v-dialog v-model="dialog" width="500">
             <template v-slot:activator="{ on }">
               <div class="add-button">
@@ -89,6 +90,7 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+          <!-- Et panel som viser forskjellige filter -->
           <template>
             <v-expansion-panel>
               <v-expansion-panel-content>
@@ -175,6 +177,10 @@
             </v-expansion-panel>
           </template>
         </v-row>
+        <h3 class="font-weight-light">
+          Click the image bellow to check out the template for a forum post
+        </h3>
+        <!-- Forum post template -->
         <ForumPost />
       </v-container>
     </div>
@@ -188,6 +194,7 @@ export default {
   },
   data() {
     return {
+      // Verdier for å åpne dialogviuer og tekst
       selected: [],
       dialog: false,
       panel: [0, 1],

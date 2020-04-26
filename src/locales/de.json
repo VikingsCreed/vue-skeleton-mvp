@@ -106,6 +106,8 @@
             "Node.js ist eine Open-Source-JavaScript-Laufzeitumgebung, die JavaScript-Code außerhalb eines Webbrowsers ausführt.",
             "MongoDB ist ein dokumentorientiertes NoSQL-Datenbankprogramm. MongoDB verwendet JSON-ähnliche Dokumente zur Datenspeicherung und kann schnell abgefragt werden"
         ],
+        "CARDTITLE": "Created with",
+        "CARDTITLE2": "Vue.",
         "LEARN": "ERFAHREN SIE MEHR"
     },
     "home": {
