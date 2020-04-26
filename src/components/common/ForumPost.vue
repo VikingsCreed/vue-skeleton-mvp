@@ -201,7 +201,7 @@ export default {
     margin-top: -10%;
   }
   .shrinkBanner {
-    width: 110%;
+    width: 100%;
   }
   .margin {
     margin-right: 0%;
