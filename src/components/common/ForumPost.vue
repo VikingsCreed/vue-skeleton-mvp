@@ -11,7 +11,7 @@
           dark
           @click="dialog = true"
         >
-          <img src="./../../../public/Forumpost2.jpg" />
+          <img class="shrinkPost" src="./../../../public/Forumpost2.jpg" />
         </v-btn>
 
         <v-dialog
@@ -180,12 +180,33 @@ export default {
     width: 95%;
   }
   .shrinkBanner {
-    width: 50%;
+    width: 80%;
+  }
+  .margin {
+    margin-right: 0%;
+  }
+  .adjustH {
+    margin-right: 0%;
+  }
+  .shrinkPost {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 361px) {
   .dialog-button {
     margin-top: -10%;
+  }
+  .shrinkBanner {
+    width: 90%;
+  }
+  .margin {
+    margin-right: 0%;
+  }
+  .adjustH {
+    margin-right: 0%;
+  }
+  .shrinkPost {
+    width: 110%;
   }
 }
 </style>
