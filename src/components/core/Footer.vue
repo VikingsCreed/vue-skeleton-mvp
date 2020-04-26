@@ -15,6 +15,9 @@
       <v-card-text class="py-2 white--text text-xs-center">
         {{ new Date().getFullYear() }} — <strong>TeamFinder</strong>
       </v-card-text>
+      <br />
+      <br />
+      <br />
     </v-card>
   </v-footer>
 </template>
@@ -33,9 +36,4 @@ export default {
   })
 }
 </script>
-<style scoped>
-@media only screen and (max-width: 768px) {
-}
-@media only screen and (max-width: 360px) {
-}
-</style>
+<style scoped></style>
