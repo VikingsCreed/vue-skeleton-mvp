@@ -151,15 +151,24 @@
   },
   "forum":{
     "TITLE": "Forum",
-    "RAID": "What raid?"
+    "RAID": "What raid?",
+    "INFO": "Click the image bellow to check out the template for a forum post"
   },
   "forumNotice": {
     "NOTICE": "Forum Notice",
     "YES": "Take me to the Forum",
     "NO": "Take me back",
     "DIALOG": "This forum is visually working, but the backend is not working. What you are about to see is a template of what we envisioned it to be."
-
-
+  },
+  "forumPost": {
+    "JOIN": "Join FireTeam!",
+    "TIP": "Press 'Join FireTeam' and select your character to join the fireteam!",
+    "TIPBTN": "WHAT TO DO?",
+    "LDR": "Fireteam Leader",
+    "TEAM": "The team",
+    "SELECTLABLE": "Chose you character",
+    "CLOSE": "Close"
+    
   },
   "login": {
     "TITLE": "Login",

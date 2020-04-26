@@ -149,13 +149,23 @@
     
   },
   "forum":{
-    "TITLE": "论坛"
+    "TITLE": "论坛",
+    "INFO": "点击下面的图片，查看论坛帖子的模板"
   },
   "forumNotice": {
     "NOTICE": "论坛公告",
     "YES": "带我去论坛",
     "NO": "带我回去",
     "DIALOG": "该论坛在外观上正常工作，但后端不正常。 您将要看到的是我们所设想的模板。"
+  },
+  "forumPost": {
+    "JOIN": "加入FireTeam！",
+    "TIP": "按“加入FireTeam”，然后选择您的角色加入Fireteam！",
+    "TIPBTN": "该怎么办？",
+    "LDR": "消防队长",
+    "TEAM": "团队",
+    "SELECTLABLE": "选择你的角色",
+    "CLOSE": "关"
   },
   "login": {
     "TITLE": "登录",

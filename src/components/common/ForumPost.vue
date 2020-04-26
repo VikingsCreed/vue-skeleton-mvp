@@ -41,14 +41,15 @@
                     class="ma-2"
                     @click="dialog2 = !dialog2"
                   >
-                    Join fireteam!
+                    {{ $t('forumPost.JOIN') }}
                   </v-btn>
                   <v-tooltip right>
                     <template v-slot:activator="{ on }">
-                      <v-btn class="ma-2" v-on="on">What to do?</v-btn>
+                      <v-btn class="ma-2" v-on="on">{{
+                        $t('forumPost.TIPBTN')
+                      }}</v-btn>
                     </template>
-                    Press "Join Fireteam" and select you character to join the
-                    fireteam!
+                    {{ $t('forumPost.TIP') }}
                   </v-tooltip>
                 </div>
               </div>
@@ -57,7 +58,7 @@
                   <v-list-item-content>
                     <div class="adjustH">
                       <h1 class="text-xs-center">
-                        Fireteam Leader
+                        {{ $t('forumPost.LDR') }}
                       </h1>
                     </div>
                     <div class="text-xs-center">
@@ -77,7 +78,9 @@
                 <v-list-item-content>
                   <div class="adjustH">
                     <div class="text-xs-center">
-                      <h2 class="header-style font-weight-bold">The team</h2>
+                      <h2 class="header-style font-weight-bold">
+                        {{ $t('forumPost.TEAM') }}
+                      </h2>
                     </div>
                   </div>
                 </v-list-item-content>
@@ -127,7 +130,7 @@
         <v-dialog v-model="dialog2" max-width="500px">
           <v-card dark>
             <v-card-title class="black--text headline green lighten-1">
-              Join Fireteam
+              {{ $t('forumPost.CLOSE') }}
             </v-card-title>
             <v-card-text>
               <v-select
@@ -138,10 +141,10 @@
             </v-card-text>
             <v-card-actions>
               <v-btn color="red lighten-1" text @click="dialog2 = false">
-                Close
+                {{ $t('forumPost.CLOSE') }}
               </v-btn>
               <v-btn color="blue lighten-1" text @click="dialog2 = false">
-                Join Fireteam
+                {{ $t('forumPost.JOIN') }}
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -197,7 +200,7 @@ export default {
     margin-top: -10%;
   }
   .shrinkBanner {
-    width: 90%;
+    width: 110%;
   }
   .margin {
     margin-right: 0%;

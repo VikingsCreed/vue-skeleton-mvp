@@ -178,7 +178,7 @@
           </template>
         </v-row>
         <h3 class="font-weight-light">
-          Click the image bellow to check out the template for a forum post
+          {{ $t('forum.INFO') }}
         </h3>
         <!-- Forum post template -->
         <ForumPost />

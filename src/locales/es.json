@@ -149,13 +149,23 @@
     
   },
   "forum":{
-    "TITLE": "Foro"
+    "TITLE": "Foro",
+    "INFO": "Haga clic en la imagen a continuación para ver la plantilla para una publicación en el foro"
   },
   "forumNotice": {
     "NOTICE": "Aviso del foro",
     "YES": "Llevame al foro",
     "NO": "Llévame de vuelta",
     "DIALOG": "Este foro funciona visualmente, pero el backend no funciona. Lo que está a punto de ver es una plantilla de lo que imaginamos que fuera."
+  },
+  "forumPost": {
+    "JOIN": "¡Únete a FireTeam!",
+    "TIPBTN": "¿QUÉ HACER?",
+    "TIP": "¡Presiona 'Únete al FireTeam' y selecciona tu personaje para unirte al Fireteam!",
+    "LDR": "Líder de equipo de fuego",
+    "TEAM": "El equipo",
+    "SELECTLABLE": "Elegí tu personaje",
+    "CLOSE": "Cerca"
   },
   "login": {
     "TITLE": "Ingresar",
