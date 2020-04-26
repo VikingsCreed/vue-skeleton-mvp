@@ -106,6 +106,8 @@
       "Node.js是一个开放源代码的JavaScript运行时环境，可以在Web浏览器之外执行JavaScript代码。",
       "MongoDB是面向文档的NoSQL数据库程序。 MongoDB使用类似JSON的文档进行数据存储，查询起来很容易"
     ],
+    "CARDTITLE": "Created with",
+    "CARDTITLE2": "Vue.",
     "LEARN": "学到更多"
   },
   "home": {

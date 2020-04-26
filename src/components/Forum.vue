@@ -18,9 +18,3 @@ export default {
   }
 }
 </script>
-<style>
-@media only screen and (max-width: 768px) {
-}
-@media only screen and (max-width: 360px) {
-}
-</style>

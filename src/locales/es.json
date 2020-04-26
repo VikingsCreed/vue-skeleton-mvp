@@ -106,6 +106,8 @@
       "Node.js es un entorno de tiempo de ejecución JavaScript de código abierto que ejecuta código JavaScript fuera de un navegador web.",
       "MongoDB es un programa de base de datos NoSQL orientado a documentos. MongoDB utiliza documentos similares a JSON para el almacenamiento de datos y es fácil de consultar"
     ],
+    "CARDTITLE": "Created with",
+    "CARDTITLE2": "Vue.",
     "LEARN": "ERFAHREN SIE MEHR"
   },
   "home": {

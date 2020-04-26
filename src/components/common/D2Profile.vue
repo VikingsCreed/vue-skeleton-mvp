@@ -721,5 +721,8 @@ export default {
   .emblem-text {
     margin-right: -10px;
   }
+  #cards {
+    margin-bottom: 10%;
+  }
 }
 </style>
