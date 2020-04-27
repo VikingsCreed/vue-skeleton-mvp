@@ -7,7 +7,7 @@ This is a university project for the Univerity of South-Eastern Norway building 
 1.  Clone the project from github. Change "myproject" to your project name.
 
 ```bash
-git clone https://github.com/davellanedam/vue-skeleton-mvp.git ./myproject
+git clone https://github.com/VikingsCreed/vue-skeleton-mvp.git ./myproject
 ```
 
 ### Using manual download ZIP
@@ -38,5 +38,5 @@ npm run build
 ### Lints and fixes files
 
 ```bash
-npm run lint
+npm run lint --fix
 ```
