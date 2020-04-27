@@ -131,7 +131,7 @@ forumet skal se ut og hvordan man lett kan bli med i et Fireteam  -->
         <v-dialog v-model="dialog2" max-width="500px">
           <v-card dark>
             <v-card-title class="black--text headline green lighten-1">
-              {{ $t('forumPost.CLOSE') }}
+              {{ $t('forumPost.JOIN') }}
             </v-card-title>
             <v-card-text>
               <v-select
