@@ -213,7 +213,7 @@ export default {
     let itemIconsChar3
     // Bruker en jquery timer for å vise all informasjon på likt.
     const timer = $.Deferred()
-    setTimeout(timer.resolve, 12000)
+    setTimeout(timer.resolve, 15000)
     // konstanten kaller på getMembershipId, når api requesten er ferdig(.done) sender den json filen til
     // handleMembershipId som henter ut informasjonen som trengs
     // eslint-disable-next-line prefer-const
