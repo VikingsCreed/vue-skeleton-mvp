@@ -91,7 +91,7 @@
             </v-flex>
             <div fluid class="margin">
               <v-flex text-xs-center mt-5>
-                <SubmitButton :text="$t('signup.SIGN_ME_UP')" />
+                <SubmitButton :text="$t('signup.SIGN_ME_UP')" class="margin" />
               </v-flex>
             </div>
           </v-layout>
