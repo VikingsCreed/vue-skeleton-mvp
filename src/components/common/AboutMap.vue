@@ -20,7 +20,7 @@
 
 <style scoped>
 .adjustpos {
-  margin-left: 22%;
+  margin-left: 17%;
   margin-bottom: 10vh;
 }
 @media only screen and (max-width: 800px) {
